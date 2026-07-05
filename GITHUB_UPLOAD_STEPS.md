@@ -75,7 +75,7 @@ KeyScan Android v1.0.0
 Release APK 文件：
 
 ```text
-app/build/outputs/apk/release/app-release.apk
+app/build/outputs/apk/release/KeyScan-v1.0.0-release.apk
 ```
 
 如果只是公开源码，不建议把签名密钥或密码配置作为 Release 附件上传。

@@ -1,5 +1,7 @@
 # KeyScan 密扫
 
+[![Donate](https://img.shields.io/badge/Donate-Buy%20me%20a%20coffee-07C160?style=for-the-badge)](DONATE.md)
+
 KeyScan 是一款非商业开源的 Android 安全工具箱，围绕二维码扫描、二维码生成、密码账本、OTP 双因子认证、随机密码生成和加密 WebDAV 备份构建。
 
 本项目使用 Java + AndroidX 开发，所有敏感数据均以本地加密存储为核心设计目标。
@@ -78,6 +80,10 @@ release 签名配置位于 `release/` 目录。签名密钥和密码配置属于
 - `app/build/`
 
 当前 `.gitignore` 已经覆盖这些路径。
+
+## 支持项目
+
+如果 KeyScan 对你有帮助，欢迎 [请开发者喝杯咖啡](DONATE.md)。
 
 ## 许可
 

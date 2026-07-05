@@ -23,5 +23,5 @@ $env:JAVA_HOME='C:\Program Files\Android\Android Studio\jbr'
 Signed APK output:
 
 ```text
-app/build/outputs/apk/release/app-release.apk
+app/build/outputs/apk/release/KeyScan-v1.0.0-release.apk
 ```
