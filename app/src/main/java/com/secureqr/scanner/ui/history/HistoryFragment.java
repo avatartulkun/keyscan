@@ -33,6 +33,7 @@ import com.google.android.material.chip.Chip;
 import com.secureqr.scanner.R;
 import com.secureqr.scanner.data.model.ScanRecord;
 import com.secureqr.scanner.data.repository.RecordRepository;
+import com.secureqr.scanner.utils.NavigationHelper;
 import com.secureqr.scanner.utils.QRGenerator;
 
 import java.util.List;
@@ -63,6 +64,7 @@ public class HistoryFragment extends Fragment {
         Chip chipText = view.findViewById(R.id.chip_text);
         batchSelectButton = view.findViewById(R.id.btn_batch_select);
         deleteSelectedButton = view.findViewById(R.id.btn_delete_selected);
+        view.findViewById(R.id.btn_history_home).setOnClickListener(v -> NavigationHelper.openHome(this));
 
         adapter = new HistoryAdapter(new HistoryAdapter.Listener() {
             @Override

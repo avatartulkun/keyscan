@@ -40,7 +40,6 @@ import androidx.camera.lifecycle.ProcessCameraProvider;
 import androidx.camera.view.PreviewView;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.mlkit.vision.barcode.BarcodeScanner;
@@ -51,9 +50,9 @@ import com.google.mlkit.vision.common.InputImage;
 import com.secureqr.scanner.R;
 import com.secureqr.scanner.data.model.ScanRecord;
 import com.secureqr.scanner.data.repository.RecordRepository;
-import com.secureqr.scanner.ui.home.HomeFragment;
 import com.secureqr.scanner.ui.password.PasswordForgeFragment;
 import com.secureqr.scanner.ui.otp.OtpAuthFragment;
+import com.secureqr.scanner.utils.NavigationHelper;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -141,7 +140,7 @@ public class ScannerFragment extends Fragment {
             updateContinuousButtonTint(isChecked);
             Toast.makeText(requireContext(), isChecked ? "已开启连续扫描" : "已切换为单次扫描", Toast.LENGTH_SHORT).show();
         });
-        home.setOnClickListener(v -> openHome());
+        home.setOnClickListener(v -> NavigationHelper.openHome(this));
         flash.setOnClickListener(v -> toggleTorch());
         gallery.setOnClickListener(v -> galleryPicker.launch("image/*"));
         importImageButton.setOnClickListener(v -> galleryPicker.launch("image/*"));
@@ -155,14 +154,6 @@ public class ScannerFragment extends Fragment {
         } else {
             cameraPermission.launch(Manifest.permission.CAMERA);
         }
-    }
-
-    private void openHome() {
-        getParentFragmentManager().popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
-        getParentFragmentManager()
-                .beginTransaction()
-                .replace(R.id.fragment_container, new HomeFragment())
-                .commit();
     }
 
     @ExperimentalGetImage

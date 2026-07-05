@@ -21,6 +21,7 @@ import androidx.fragment.app.Fragment;
 
 import com.secureqr.scanner.R;
 import com.secureqr.scanner.data.repository.PasswordGenerationRepository;
+import com.secureqr.scanner.utils.NavigationHelper;
 import com.secureqr.scanner.utils.PasswordGeneratorEngine;
 
 public class RandomPasswordGeneratorFragment extends Fragment {
@@ -48,6 +49,7 @@ public class RandomPasswordGeneratorFragment extends Fragment {
         lengthText = view.findViewById(R.id.tv_length);
         strengthProgress = view.findViewById(R.id.progress_strength);
         strengthText = view.findViewById(R.id.tv_strength);
+        view.findViewById(R.id.btn_random_password_home).setOnClickListener(v -> NavigationHelper.openHome(this));
 
         SeekBar lengthSeek = view.findViewById(R.id.seek_length);
         CheckBox upper = view.findViewById(R.id.cb_upper);

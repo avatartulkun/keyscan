@@ -29,6 +29,7 @@ import com.secureqr.scanner.data.repository.OtpRepository;
 import com.secureqr.scanner.data.repository.PasswordRepository;
 import com.secureqr.scanner.data.repository.RecordRepository;
 import com.secureqr.scanner.utils.CryptoHelper;
+import com.secureqr.scanner.utils.NavigationHelper;
 import com.secureqr.scanner.utils.WebDAVClient;
 
 import org.json.JSONArray;
@@ -81,6 +82,7 @@ public class ExportFragment extends Fragment {
         recordRepository = RecordRepository.getInstance(requireContext());
         passwordRepository = PasswordRepository.getInstance(requireContext());
         otpRepository = OtpRepository.getInstance(requireContext());
+        view.findViewById(R.id.btn_export_home).setOnClickListener(v -> NavigationHelper.openHome(this));
         scanCount = view.findViewById(R.id.tv_scan_count);
         passwordCount = view.findViewById(R.id.tv_password_count);
         otpCount = view.findViewById(R.id.tv_otp_count);

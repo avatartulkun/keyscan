@@ -34,6 +34,7 @@ import com.secureqr.scanner.data.repository.OtpRepository;
 import com.secureqr.scanner.data.repository.PasswordRepository;
 import com.secureqr.scanner.data.repository.RecordRepository;
 import com.secureqr.scanner.utils.CryptoHelper;
+import com.secureqr.scanner.utils.NavigationHelper;
 import com.secureqr.scanner.utils.PinLockHelper;
 import com.secureqr.scanner.utils.WebDAVClient;
 
@@ -103,6 +104,7 @@ public class SettingsFragment extends Fragment {
         repository = RecordRepository.getInstance(requireContext());
         passwordRepository = PasswordRepository.getInstance(requireContext());
         otpRepository = OtpRepository.getInstance(requireContext());
+        view.findViewById(R.id.btn_webdav_home).setOnClickListener(v -> NavigationHelper.openHome(this));
         webdavUrl = view.findViewById(R.id.et_webdav_url);
         webdavUser = view.findViewById(R.id.et_webdav_user);
         webdavPass = view.findViewById(R.id.et_webdav_pass);

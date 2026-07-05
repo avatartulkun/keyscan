@@ -329,6 +329,8 @@
     <string name="option_force_light">强制亮色</string>
     <string name="option_force_dark">强制暗色</string>
     <string name="option_home">首页</string>
+    <string name="home_shortcut">首页</string>
+    <string name="home_shortcut_desc">返回首页</string>
     <string name="option_scan_page">扫码页</string>
     <string name="option_password_ledger">密码账本</string>
     <string name="option_otp_authenticator">OTP 认证器</string>

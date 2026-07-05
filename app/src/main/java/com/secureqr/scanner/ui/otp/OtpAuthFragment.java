@@ -23,7 +23,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.camera.core.ExperimentalGetImage;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -31,9 +30,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.secureqr.scanner.R;
 import com.secureqr.scanner.data.model.OtpToken;
 import com.secureqr.scanner.data.repository.OtpRepository;
-import com.secureqr.scanner.ui.home.HomeFragment;
 import com.secureqr.scanner.ui.scanner.ScannerFragment;
 import com.secureqr.scanner.utils.CryptoHelper;
+import com.secureqr.scanner.utils.NavigationHelper;
 import com.secureqr.scanner.utils.OtpHelper;
 
 import java.io.BufferedReader;
@@ -100,18 +99,10 @@ public class OtpAuthFragment extends Fragment {
         });
         view.findViewById(R.id.btn_otp_add).setOnClickListener(this::showAddMenu);
         view.findViewById(R.id.btn_otp_export).setOnClickListener(v -> exportTokens());
-        view.findViewById(R.id.btn_otp_home).setOnClickListener(v -> openHome());
+        view.findViewById(R.id.btn_otp_home).setOnClickListener(v -> NavigationHelper.openHome(this));
         getParentFragmentManager().setFragmentResultListener(OTP_SCAN_REQUEST, getViewLifecycleOwner(), (requestKey, result) -> addFromUri(result.getString(OTP_SCAN_VALUE, "")));
         observe("");
         handler.post(ticker);
-    }
-
-    private void openHome() {
-        getParentFragmentManager().popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
-        getParentFragmentManager()
-                .beginTransaction()
-                .replace(R.id.fragment_container, new HomeFragment())
-                .commit();
     }
 
     private void observe(String query) {

@@ -28,6 +28,7 @@ import com.secureqr.scanner.MainActivity;
 import com.secureqr.scanner.R;
 import com.secureqr.scanner.utils.AppConstants;
 import com.secureqr.scanner.utils.LocaleHelper;
+import com.secureqr.scanner.utils.NavigationHelper;
 import com.secureqr.scanner.utils.PinLockHelper;
 
 import java.util.Arrays;
@@ -45,6 +46,7 @@ public class AppearanceFragment extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        view.findViewById(R.id.btn_appearance_home).setOnClickListener(v -> NavigationHelper.openHome(this));
         pinStatus = view.findViewById(R.id.tv_password_forge_pin_status);
         bindSpinner(view.findViewById(R.id.sp_auto_lock), "setting_auto_lock", getString(R.string.option_1_minute),
                 Arrays.asList(getString(R.string.option_now), getString(R.string.option_1_minute), getString(R.string.option_5_minutes), getString(R.string.option_10_minutes), getString(R.string.option_never)));

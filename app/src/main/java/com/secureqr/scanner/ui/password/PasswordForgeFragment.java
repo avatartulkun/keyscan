@@ -45,6 +45,7 @@ import com.secureqr.scanner.data.model.PasswordEntry;
 import com.secureqr.scanner.data.repository.PasswordRepository;
 import com.secureqr.scanner.ui.scanner.ScannerFragment;
 import com.secureqr.scanner.utils.ExcelExportHelper;
+import com.secureqr.scanner.utils.NavigationHelper;
 import com.secureqr.scanner.utils.PasswordGeneratorEngine;
 
 import java.io.File;
@@ -105,6 +106,7 @@ public class PasswordForgeFragment extends Fragment {
 
         view.findViewById(R.id.btn_add_password_entry).setOnClickListener(v -> showAddDialog());
         view.findViewById(R.id.btn_password_menu).setOnClickListener(this::showMenu);
+        view.findViewById(R.id.btn_password_home).setOnClickListener(v -> NavigationHelper.openHome(this));
         SearchView searchView = view.findViewById(R.id.search_password_entries);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override

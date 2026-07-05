@@ -329,6 +329,8 @@
     <string name="option_force_light">Force light</string>
     <string name="option_force_dark">Force dark</string>
     <string name="option_home">Home</string>
+    <string name="home_shortcut">Home</string>
+    <string name="home_shortcut_desc">Back to home</string>
     <string name="option_scan_page">Scanner</string>
     <string name="option_password_ledger">Password Ledger</string>
     <string name="option_otp_authenticator">OTP Authenticator</string>

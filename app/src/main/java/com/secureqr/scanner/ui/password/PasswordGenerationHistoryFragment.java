@@ -26,6 +26,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.secureqr.scanner.R;
 import com.secureqr.scanner.data.model.PasswordGenerationRecord;
 import com.secureqr.scanner.data.repository.PasswordGenerationRepository;
+import com.secureqr.scanner.utils.NavigationHelper;
 import com.secureqr.scanner.utils.QRGenerator;
 
 public class PasswordGenerationHistoryFragment extends Fragment {
@@ -44,6 +45,7 @@ public class PasswordGenerationHistoryFragment extends Fragment {
         historyRepository = PasswordGenerationRepository.getInstance(requireContext());
         view.findViewById(R.id.btn_back_generation_history).setOnClickListener(v ->
                 requireActivity().getSupportFragmentManager().popBackStack());
+        view.findViewById(R.id.btn_generation_history_home).setOnClickListener(v -> NavigationHelper.openHome(this));
         RecyclerView historyList = view.findViewById(R.id.recycler_generation_history);
         historyList.setLayoutManager(new LinearLayoutManager(requireContext()));
         adapter = new PasswordGenerationHistoryAdapter(new PasswordGenerationHistoryAdapter.Listener() {
