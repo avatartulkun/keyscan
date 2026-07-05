@@ -5,10 +5,13 @@ import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.ColorStateList;
+import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
+import android.os.Looper;
 import android.text.InputType;
 import android.text.TextUtils;
 import android.text.Editable;
@@ -21,6 +24,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupMenu;
 import android.widget.ProgressBar;
@@ -45,8 +49,12 @@ import com.secureqr.scanner.data.model.PasswordEntry;
 import com.secureqr.scanner.data.repository.PasswordRepository;
 import com.secureqr.scanner.ui.scanner.ScannerFragment;
 import com.secureqr.scanner.utils.ExcelExportHelper;
+import com.secureqr.scanner.utils.LanCredentialShareServer;
 import com.secureqr.scanner.utils.NavigationHelper;
 import com.secureqr.scanner.utils.PasswordGeneratorEngine;
+import com.secureqr.scanner.utils.QRGenerator;
+
+import org.json.JSONObject;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -62,6 +70,7 @@ public class PasswordForgeFragment extends Fragment {
     public static final String PASSWORD_SCAN_VALUE = "password_scan_value";
 
     private static final String EXCEL_MIME = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
+    private static final long LAN_SHARE_DURATION_MS = 60_000L;
 
     private PasswordRepository repository;
     private PasswordEntryAdapter adapter;
@@ -72,6 +81,7 @@ public class PasswordForgeFragment extends Fragment {
     private PasswordEntry pendingScanEntry;
     private String pendingScanSite = "";
     private String pendingScanAccount = "";
+    private LanCredentialShareServer activeLanShareServer;
 
     @Nullable
     @Override
@@ -206,43 +216,220 @@ public class PasswordForgeFragment extends Fragment {
         showCredentialDialog(entry, entry.remark, entry.account, entry.password);
     }
 
+    @Override
+    public void onDestroyView() {
+        stopActiveLanShare();
+        super.onDestroyView();
+    }
+
     private void showCredentialDialog(@Nullable PasswordEntry editingEntry, String initialSite, String initialAccount, String initialPassword) {
         CredentialEditor editor = new CredentialEditor(editingEntry, initialSite, initialAccount, initialPassword);
         activeEditor = editor;
-        AlertDialog dialog = new AlertDialog.Builder(requireContext())
+        AlertDialog.Builder builder = new AlertDialog.Builder(requireContext())
                 .setTitle(editingEntry == null ? R.string.credential_add_title : R.string.credential_edit_title)
                 .setView(editor.root)
                 .setNegativeButton(R.string.cancel, null)
-                .setPositiveButton(R.string.save, null)
-                .create();
+                .setPositiveButton(R.string.save, null);
+        if (editingEntry != null) {
+            builder.setNeutralButton(R.string.lan_send_to_computer, null);
+        }
+        AlertDialog dialog = builder.create();
         activeCredentialDialog = dialog;
         dialog.setOnDismissListener(d -> {
             if (activeEditor == editor) activeEditor = null;
             if (activeCredentialDialog == dialog) activeCredentialDialog = null;
         });
-        dialog.setOnShowListener(d -> dialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(v -> {
-            String site = editor.siteInput.getText().toString().trim();
-            String account = editor.accountInput.getText().toString().trim();
-            if (TextUtils.isEmpty(site) || TextUtils.isEmpty(account)) {
-                Toast.makeText(requireContext(), R.string.credential_fill_complete_info, Toast.LENGTH_SHORT).show();
-                if (TextUtils.isEmpty(site)) editor.siteInput.setError(getString(R.string.credential_site_empty_error));
-                if (TextUtils.isEmpty(account)) editor.accountInput.setError(getString(R.string.credential_account_empty_error));
-                return;
+        dialog.setOnShowListener(d -> {
+            dialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(v -> {
+                String site = editor.siteInput.getText().toString().trim();
+                String account = editor.accountInput.getText().toString().trim();
+                if (TextUtils.isEmpty(site) || TextUtils.isEmpty(account)) {
+                    Toast.makeText(requireContext(), R.string.credential_fill_complete_info, Toast.LENGTH_SHORT).show();
+                    if (TextUtils.isEmpty(site)) editor.siteInput.setError(getString(R.string.credential_site_empty_error));
+                    if (TextUtils.isEmpty(account)) editor.accountInput.setError(getString(R.string.credential_account_empty_error));
+                    return;
+                }
+                PasswordEntry entry = editingEntry == null ? new PasswordEntry() : editingEntry;
+                entry.remark = site;
+                entry.account = account;
+                entry.password = editor.currentPassword;
+                if (editingEntry == null) {
+                    entry.createdAt = System.currentTimeMillis();
+                    repository.insert(entry);
+                } else {
+                    repository.update(entry);
+                }
+                dialog.dismiss();
+                Toast.makeText(requireContext(), R.string.credential_save_success, Toast.LENGTH_SHORT).show();
+            });
+            if (editingEntry != null) {
+                dialog.getButton(AlertDialog.BUTTON_NEUTRAL).setOnClickListener(v -> confirmLanShare(editor));
             }
-            PasswordEntry entry = editingEntry == null ? new PasswordEntry() : editingEntry;
-            entry.remark = site;
-            entry.account = account;
-            entry.password = editor.currentPassword;
-            if (editingEntry == null) {
-                entry.createdAt = System.currentTimeMillis();
-                repository.insert(entry);
-            } else {
-                repository.update(entry);
-            }
-            dialog.dismiss();
-            Toast.makeText(requireContext(), R.string.credential_save_success, Toast.LENGTH_SHORT).show();
-        }));
+        });
         dialog.show();
+    }
+
+    private void confirmLanShare(CredentialEditor editor) {
+        String website = editor.siteInput.getText().toString().trim();
+        String account = editor.accountInput.getText().toString().trim();
+        String password = editor.currentPassword == null ? "" : editor.currentPassword;
+        if (TextUtils.isEmpty(website) || TextUtils.isEmpty(account) || TextUtils.isEmpty(password)) {
+            Toast.makeText(requireContext(), R.string.lan_share_fill_required, Toast.LENGTH_SHORT).show();
+            return;
+        }
+        new AlertDialog.Builder(requireContext())
+                .setTitle(R.string.lan_share_confirm_title)
+                .setMessage(R.string.lan_share_confirm_message)
+                .setNegativeButton(R.string.cancel, null)
+                .setPositiveButton(R.string.confirm, (dialog, which) -> showLanShareDialog(website, account, password))
+                .show();
+    }
+
+    private void showLanShareDialog(String website, String account, String password) {
+        stopActiveLanShare();
+        long expiresAt = System.currentTimeMillis() + LAN_SHARE_DURATION_MS;
+        final AlertDialog[] dialogHolder = new AlertDialog[1];
+        final Handler handler = new Handler(Looper.getMainLooper());
+        final boolean[] finished = {false};
+        try {
+            String credentialJson = new JSONObject()
+                    .put("type", "credential")
+                    .put("website", website)
+                    .put("account", account)
+                    .put("password", password)
+                    .toString();
+            LanCredentialShareServer server = new LanCredentialShareServer(credentialJson, expiresAt, new LanCredentialShareServer.Listener() {
+                @Override
+                public void onServed() {
+                    handler.post(() -> {
+                        if (finished[0]) return;
+                        finished[0] = true;
+                        handler.removeCallbacksAndMessages(null);
+                        activeLanShareServer = null;
+                        if (!isAdded()) return;
+                        AlertDialog dialog = dialogHolder[0];
+                        if (dialog != null && dialog.isShowing()) dialog.dismiss();
+                        Toast.makeText(requireContext(), R.string.lan_share_sent, Toast.LENGTH_SHORT).show();
+                    });
+                }
+
+                @Override
+                public void onExpired() {
+                    handler.post(() -> {
+                        if (finished[0]) return;
+                        finished[0] = true;
+                        handler.removeCallbacksAndMessages(null);
+                        activeLanShareServer = null;
+                        if (!isAdded()) return;
+                        AlertDialog dialog = dialogHolder[0];
+                        if (dialog != null && dialog.isShowing()) dialog.dismiss();
+                        Toast.makeText(requireContext(), R.string.lan_share_timeout, Toast.LENGTH_LONG).show();
+                    });
+                }
+
+                @Override
+                public void onError(Exception error) {
+                    handler.post(() -> {
+                        if (finished[0]) return;
+                        finished[0] = true;
+                        handler.removeCallbacksAndMessages(null);
+                        activeLanShareServer = null;
+                        if (!isAdded()) return;
+                        AlertDialog dialog = dialogHolder[0];
+                        if (dialog != null && dialog.isShowing()) dialog.dismiss();
+                        showLanShareError(error);
+                    });
+                }
+            });
+            server.start();
+            activeLanShareServer = server;
+
+            JSONObject qrPayload = new JSONObject()
+                    .put("type", "keyscan_lan_share")
+                    .put("url", server.getBaseUrl())
+                    .put("token", server.getToken())
+                    .put("expiresAt", server.getExpiresAt());
+
+            LinearLayout content = new LinearLayout(requireContext());
+            content.setOrientation(LinearLayout.VERTICAL);
+            content.setPadding(dp(18), dp(10), dp(18), dp(4));
+
+            TextView status = createLanShareText(getString(R.string.lan_share_waiting), 18, true, R.color.text_main);
+            TextView countdown = createLanShareText("", 14, false, R.color.text_secondary);
+            TextView url = createLanShareText(server.getShareUrl(), 13, false, R.color.text_main);
+            url.setTextIsSelectable(true);
+            TextView hint = createLanShareText(getString(R.string.lan_share_hint), 12, false, R.color.text_secondary);
+            ImageView qr = new ImageView(requireContext());
+            Bitmap qrBitmap = QRGenerator.generateQR(qrPayload.toString(), dp(220));
+            if (qrBitmap != null) {
+                qr.setImageBitmap(qrBitmap);
+            }
+            qr.setAdjustViewBounds(true);
+            qr.setContentDescription(getString(R.string.lan_share_qr_desc));
+
+            content.addView(status);
+            content.addView(countdown, topParams(28, 6));
+            content.addView(url, topParams(56, 8));
+            LinearLayout.LayoutParams qrParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, dp(240));
+            qrParams.topMargin = dp(8);
+            content.addView(qr, qrParams);
+            content.addView(hint, topParams(44, 8));
+
+            Runnable ticker = new Runnable() {
+                @Override
+                public void run() {
+                    if (finished[0]) return;
+                    long remaining = Math.max(0, (server.getExpiresAt() - System.currentTimeMillis() + 999) / 1000);
+                    countdown.setText(getString(R.string.lan_share_countdown, remaining));
+                    if (remaining > 0) {
+                        handler.postDelayed(this, 1000);
+                    }
+                }
+            };
+            ticker.run();
+
+            AlertDialog dialog = new AlertDialog.Builder(requireContext())
+                    .setTitle(R.string.lan_share_title)
+                    .setView(content)
+                    .setNegativeButton(R.string.cancel, null)
+                    .create();
+            dialogHolder[0] = dialog;
+            dialog.setOnDismissListener(d -> {
+                handler.removeCallbacksAndMessages(null);
+                if (!finished[0]) {
+                    stopActiveLanShare();
+                }
+            });
+            dialog.show();
+        } catch (Exception error) {
+            stopActiveLanShare();
+            showLanShareError(error);
+        }
+    }
+
+    private void showLanShareError(Exception error) {
+        String message = error.getMessage();
+        if ("No LAN IPv4 address found".equals(message)) {
+            Toast.makeText(requireContext(), R.string.lan_share_no_lan, Toast.LENGTH_LONG).show();
+        } else {
+            Toast.makeText(requireContext(), getString(R.string.lan_share_failed, message == null ? "" : message), Toast.LENGTH_LONG).show();
+        }
+    }
+
+    private TextView createLanShareText(String text, int sp, boolean bold, int colorRes) {
+        TextView view = new TextView(requireContext());
+        view.setText(text);
+        view.setTextSize(sp);
+        view.setTextColor(ContextCompat.getColor(requireContext(), colorRes));
+        if (bold) view.setTypeface(android.graphics.Typeface.DEFAULT_BOLD);
+        return view;
+    }
+
+    private void stopActiveLanShare() {
+        if (activeLanShareServer != null) {
+            activeLanShareServer.stop();
+            activeLanShareServer = null;
+        }
     }
 
     private class CredentialEditor {
