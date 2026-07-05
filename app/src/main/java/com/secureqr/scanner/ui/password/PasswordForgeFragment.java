@@ -345,9 +345,13 @@ public class PasswordForgeFragment extends Fragment {
             activeLanShareServer = server;
 
             JSONObject qrPayload = new JSONObject()
-                    .put("type", "keyscan_lan_share")
-                    .put("url", server.getBaseUrl())
+                    .put("type", "keyscan_lan_pair")
+                    .put("version", 1)
                     .put("token", server.getToken())
+                    .put("website", website)
+                    .put("port", server.getPort())
+                    .put("pingPath", server.getPingPath())
+                    .put("credentialPath", server.getCredentialPath())
                     .put("expiresAt", server.getExpiresAt());
 
             LinearLayout content = new LinearLayout(requireContext());

@@ -1,7 +1,5 @@
 package com.secureqr.scanner.utils;
 
-import android.util.Base64;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -17,7 +15,9 @@ import java.nio.charset.StandardCharsets;
 import java.security.SecureRandom;
 import java.util.Collections;
 import java.util.Enumeration;
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 public class LanCredentialShareServer {
@@ -27,8 +27,13 @@ public class LanCredentialShareServer {
         void onError(Exception error);
     }
 
-    private static final int TOKEN_BYTES = 18;
+    private static final String PING_PATH = "/keyscan/ping";
+    private static final String CREDENTIAL_PATH = "/keyscan/credential";
+    private static final String LEGACY_CREDENTIAL_PATH = "/credential";
+    private static final int PREFERRED_PORT = 18456;
+    private static final int TOKEN_BYTES = 16;
     private static final int ACCEPT_TIMEOUT_MS = 1000;
+    private static final char[] HEX = "0123456789abcdef".toCharArray();
 
     private final String token;
     private final String credentialJson;
@@ -53,7 +58,11 @@ public class LanCredentialShareServer {
         if (bindAddress == null) {
             throw new IOException("No LAN IPv4 address found");
         }
-        serverSocket = new ServerSocket(0, 4, bindAddress);
+        try {
+            serverSocket = new ServerSocket(PREFERRED_PORT, 4, bindAddress);
+        } catch (IOException portInUse) {
+            serverSocket = new ServerSocket(0, 4, bindAddress);
+        }
         serverSocket.setSoTimeout(ACCEPT_TIMEOUT_MS);
         port = serverSocket.getLocalPort();
         thread = new Thread(this::serveLoop, "KeyScanLanShare");
@@ -68,12 +77,28 @@ public class LanCredentialShareServer {
         return expiresAt;
     }
 
+    public int getPort() {
+        return port;
+    }
+
+    public String getPingPath() {
+        return PING_PATH;
+    }
+
+    public String getCredentialPath() {
+        return CREDENTIAL_PATH;
+    }
+
     public String getBaseUrl() {
-        return "http://" + bindAddress.getHostAddress() + ":" + port + "/credential";
+        return "http://" + bindAddress.getHostAddress() + ":" + port;
+    }
+
+    public String getCredentialUrl() {
+        return getBaseUrl() + CREDENTIAL_PATH;
     }
 
     public String getShareUrl() {
-        return getBaseUrl() + "?token=" + token;
+        return getCredentialUrl() + "?token=" + token;
     }
 
     public void stop() {
@@ -120,6 +145,7 @@ public class LanCredentialShareServer {
                 writeResponse(output, 400, "Bad Request", "text/plain; charset=utf-8", "Bad Request");
                 return;
             }
+            Map<String, String> headers = readHeaders(reader);
             String method = parts[0].toUpperCase(Locale.US);
             String target = parts[1];
             if ("OPTIONS".equals(method)) {
@@ -137,7 +163,14 @@ public class LanCredentialShareServer {
                 path = target.substring(0, queryIndex);
                 query = target.substring(queryIndex + 1);
             }
-            if (!"/credential".equals(path)) {
+
+            String requestToken = requestToken(query, headers);
+            if (PING_PATH.equals(path)) {
+                handlePing(output, requestToken);
+                return;
+            }
+
+            if (!CREDENTIAL_PATH.equals(path) && !LEGACY_CREDENTIAL_PATH.equals(path)) {
                 writeResponse(output, 404, "Not Found", "text/plain; charset=utf-8", "Not Found");
                 return;
             }
@@ -145,7 +178,7 @@ public class LanCredentialShareServer {
                 writeResponse(output, 410, "Gone", "text/plain; charset=utf-8", "Expired");
                 return;
             }
-            if (!token.equals(queryParam(query, "token"))) {
+            if (!token.equals(requestToken)) {
                 writeResponse(output, 403, "Forbidden", "text/plain; charset=utf-8", "Forbidden");
                 return;
             }
@@ -165,6 +198,19 @@ public class LanCredentialShareServer {
         }
     }
 
+    private void handlePing(OutputStream output, String requestToken) throws IOException {
+        if (System.currentTimeMillis() >= expiresAt) {
+            writeResponse(output, 410, "Gone", "text/plain; charset=utf-8", "Expired");
+            return;
+        }
+        if (!token.equals(requestToken)) {
+            writeResponse(output, 403, "Forbidden", "text/plain; charset=utf-8", "Forbidden");
+            return;
+        }
+        String body = "{\"type\":\"keyscan_lan_ping\",\"version\":1,\"ok\":true,\"expiresAt\":" + expiresAt + "}";
+        writeResponse(output, 200, "OK", "application/json; charset=utf-8", body);
+    }
+
     private void writeResponse(OutputStream output, int code, String reason, String contentType, String body) throws IOException {
         byte[] bytes = body.getBytes(StandardCharsets.UTF_8);
         String headers = "HTTP/1.1 " + code + " " + reason + "\r\n"
@@ -173,11 +219,33 @@ public class LanCredentialShareServer {
                 + "Cache-Control: no-store\r\n"
                 + "Access-Control-Allow-Origin: *\r\n"
                 + "Access-Control-Allow-Methods: GET, OPTIONS\r\n"
-                + "Access-Control-Allow-Headers: Content-Type\r\n"
+                + "Access-Control-Allow-Headers: Content-Type, X-KeyScan-Token\r\n"
                 + "Connection: close\r\n\r\n";
         output.write(headers.getBytes(StandardCharsets.UTF_8));
         output.write(bytes);
         output.flush();
+    }
+
+    private Map<String, String> readHeaders(BufferedReader reader) throws IOException {
+        Map<String, String> headers = new HashMap<>();
+        String line;
+        while ((line = reader.readLine()) != null && !line.isEmpty()) {
+            int colon = line.indexOf(':');
+            if (colon <= 0) continue;
+            String name = line.substring(0, colon).trim().toLowerCase(Locale.US);
+            String value = line.substring(colon + 1).trim();
+            headers.put(name, value);
+        }
+        return headers;
+    }
+
+    private String requestToken(String query, Map<String, String> headers) {
+        String fromQuery = queryParam(query, "token");
+        if (!fromQuery.isEmpty()) {
+            return fromQuery;
+        }
+        String fromHeader = headers.get("x-keyscan-token");
+        return fromHeader == null ? "" : fromHeader;
     }
 
     private String queryParam(String query, String key) {
@@ -203,7 +271,13 @@ public class LanCredentialShareServer {
     private static String randomToken() {
         byte[] data = new byte[TOKEN_BYTES];
         new SecureRandom().nextBytes(data);
-        return Base64.encodeToString(data, Base64.URL_SAFE | Base64.NO_WRAP | Base64.NO_PADDING);
+        char[] chars = new char[data.length * 2];
+        for (int i = 0; i < data.length; i++) {
+            int value = data[i] & 0xFF;
+            chars[i * 2] = HEX[value >>> 4];
+            chars[i * 2 + 1] = HEX[value & 0x0F];
+        }
+        return new String(chars);
     }
 
     private static InetAddress findLanAddress() {
