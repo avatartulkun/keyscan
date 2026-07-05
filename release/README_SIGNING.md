@@ -16,8 +16,7 @@ Important:
 Build signed release APK:
 
 ```powershell
-$env:JAVA_HOME='C:\Program Files\Android\Android Studio\jbr'
-& 'E:\二维码\work\gradle-8.13\gradle-8.13\bin\gradle.bat' assembleRelease
+.\gradlew.bat assembleRelease
 ```
 
 Signed APK output:

@@ -44,18 +44,18 @@ KeyScan 是一款非商业开源的 Android 安全工具箱，围绕二维码扫
 
 使用 Android Studio 打开项目根目录，等待 Gradle 同步完成后运行 `app`。
 
+命令行构建前，请确保已安装 JDK 或 Android Studio，并已配置 `JAVA_HOME`，也可以直接在 Android Studio Terminal 中执行以下命令。
+
 命令行 debug 构建：
 
 ```powershell
-$env:JAVA_HOME='C:\Program Files\Android\Android Studio\jbr'
-& 'E:\二维码\work\gradle-8.13\gradle-8.13\bin\gradle.bat' assembleDebug
+.\gradlew.bat assembleDebug
 ```
 
 命令行 release 构建：
 
 ```powershell
-$env:JAVA_HOME='C:\Program Files\Android\Android Studio\jbr'
-& 'E:\二维码\work\gradle-8.13\gradle-8.13\bin\gradle.bat' assembleRelease
+.\gradlew.bat assembleRelease
 ```
 
 release 签名配置位于 `release/` 目录。签名密钥和密码配置属于敏感文件，已通过 `.gitignore` 排除，不应上传到公开仓库。
