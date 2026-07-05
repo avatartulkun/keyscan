@@ -228,10 +228,10 @@
     <string name="help_webdav_jianguoyun_space">Free plan: 1GB monthly upload traffic + 3GB monthly download traffic</string>
     <string name="help_webdav_jianguoyun_url">Sign up: https://www.jianguoyun.com</string>
     <string name="help_webdav_jianguoyun_steps">Setup steps:\n1. Sign up and sign in to Nutstore\n2. Click “Account Info” → “Security Options” in the top-right corner\n3. In “Third-party App Management”, click “Add App”\n4. Enter “KeyScan” and generate an app-specific password, then copy and save it\n5. Sign in to the Nutstore web app and create a folder named keyscan in the root directory, or use another folder name you prefer\n   In the KeyScan WebDAV address field, enter:\n   https://dav.jianguoyun.com/dav/keyscan\n   Note: the address must end with /keyscan, or the folder name you created\n6. In KeyScan WebDAV settings, enter:\n   Server URL: https://dav.jianguoyun.com/dav/keyscan\n   Account: your Nutstore account email\n   Password: the app-specific password you just generated, not your login password</string>
-    <string name="help_webdav_koofr_title">Koofr (overseas alternative)</string>
+    <string name="help_webdav_koofr_title">Koofr (accessible backup option)</string>
     <string name="help_webdav_koofr_space">Free plan: 10GB forever free</string>
-    <string name="help_webdav_koofr_url">Sign up: https://koofr.eu</string>
-    <string name="help_webdav_koofr_steps">Setup steps:\n1. Sign up and sign in to Koofr\n2. Click “Settings” → “Password” in the top-right corner\n3. Generate a new password under “App Passwords”, then copy and save it\n4. In KeyScan WebDAV settings, enter:\n   Server URL: https://app.koofr.net/dav/\n   Account: your Koofr account email\n   Password: the app-specific password you just generated</string>
+    <string name="help_webdav_koofr_url">Sign up (accessible in mainland China): https://koofr.eu/</string>
+    <string name="help_webdav_koofr_steps">Setup steps:\n1. Sign up and sign in to Koofr\n2. Click “Settings” → “Password” in the top-right corner\n3. Generate a new password under “App Passwords”, then copy and save it\n4. In KeyScan WebDAV settings, enter:\n   Server URL: https://app.koofr.net/dav/koofr\n   Account: your Koofr account email\n   Password: the app-specific password you just generated</string>
     <string name="help_webdav_recommended_title">Recommended setup</string>
     <string name="help_webdav_recommended_body">1. Set primary WebDAV to Nutstore\n2. Set backup WebDAV to Koofr\n3. After setup, tap “Sync now” to upload encrypted data</string>
     <string name="help_contact_footer">Contact email: %1$s</string>

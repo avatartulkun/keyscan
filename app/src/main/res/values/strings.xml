@@ -228,10 +228,10 @@
     <string name="help_webdav_jianguoyun_space">免费空间：每月 1GB 上传流量 + 3GB 下载流量</string>
     <string name="help_webdav_jianguoyun_url">注册地址：https://www.jianguoyun.com</string>
     <string name="help_webdav_jianguoyun_steps">配置步骤：\n1. 注册并登录坚果云\n2. 点击右上角“账户信息” → “安全选项”\n3. 在“第三方应用管理”中点击“添加应用”\n4. 输入“KeyScan”，生成一个应用专用密码（复制保存）\n5. 登录坚果云网页版，在根目录下新建一个文件夹，命名为 keyscan（或其他你喜欢的名称）\n   在 KeyScan 的 WebDAV 地址中填入：\n   https://dav.jianguoyun.com/dav/keyscan\n   注意：地址末尾一定要加上 /keyscan（或你创建的文件夹名）\n6. 在 KeyScan 的 WebDAV 设置中填入：\n   服务器地址：https://dav.jianguoyun.com/dav/keyscan\n   账号：您的坚果云账号（邮箱）\n   密码：刚才生成的应用专用密码（不是您的登录密码）</string>
-    <string name="help_webdav_koofr_title">Koofr（境外备选）</string>
+    <string name="help_webdav_koofr_title">Koofr（国内可访问备选）</string>
     <string name="help_webdav_koofr_space">免费空间：10GB 永久免费</string>
-    <string name="help_webdav_koofr_url">注册地址：https://koofr.eu</string>
-    <string name="help_webdav_koofr_steps">配置步骤：\n1. 注册并登录 Koofr\n2. 在网页右上角点击“设置” → “密码”\n3. 在“应用密码”中生成一个新密码（复制保存）\n4. 在 KeyScan 的 WebDAV 设置中填入：\n   服务器地址：https://app.koofr.net/dav/\n   账号：您的 Koofr 账号（邮箱）\n   密码：刚才生成的应用专用密码</string>
+    <string name="help_webdav_koofr_url">注册地址（国内可访问）：https://koofr.eu/</string>
+    <string name="help_webdav_koofr_steps">配置步骤：\n1. 注册并登录 Koofr\n2. 在网页右上角点击“设置” → “密码”\n3. 在“应用密码”中生成一个新密码（复制保存）\n4. 在 KeyScan 的 WebDAV 设置中填入：\n   服务器地址：https://app.koofr.net/dav/koofr\n   账号：您的 Koofr 账号（邮箱）\n   密码：刚才生成的应用专用密码</string>
     <string name="help_webdav_recommended_title">建议配置方式</string>
     <string name="help_webdav_recommended_body">1. 主 WebDAV 配置为坚果云\n2. 备用备份 WebDAV 配置为 Koofr\n3. 配置完成后点击“立即同步”即可上传加密数据</string>
     <string name="help_contact_footer">联系邮箱：%1$s</string>
