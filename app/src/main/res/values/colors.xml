@@ -1,0 +1,18 @@
+﻿<resources>
+    <color name="primary">#4A90D9</color>
+    <color name="primary_dark">#1A365D</color>
+    <color name="accent">#2EAF9A</color>
+    <color name="brand_cyan">#4A90D9</color>
+    <color name="brand_blue">#1A365D</color>
+    <color name="brand_green">#2EAF9A</color>
+    <color name="brand_orange">#C9A96E</color>
+    <color name="brand_pink">#C9A96E</color>
+    <color name="danger">#D93025</color>
+    <color name="surface_light">#FFFFFF</color>
+    <color name="card_background">#FFFFFF</color>
+    <color name="card_stroke">#E8EDF2</color>
+    <color name="text_main">#334155</color>
+    <color name="text_secondary">#64748B</color>
+    <color name="text_hint">#94A3B8</color>
+    <color name="icon_background">#00000000</color>
+</resources>

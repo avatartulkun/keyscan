@@ -1,0 +1,90 @@
+﻿<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/surface_light">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="18dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_title"
+            android:textColor="@color/text_main"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            style="@style/SettingsCard">
+            <TextView style="@style/SettingsCardTitle" android:text="@string/security_privacy" />
+            <TextView style="@style/SettingsLabel" android:text="@string/auto_lock_time" />
+            <Spinner android:id="@+id/sp_auto_lock" style="@style/SettingsSpinner" />
+            <TextView style="@style/SettingsLabel" android:text="@string/clipboard_auto_clear" />
+            <Spinner android:id="@+id/sp_clipboard_clear" style="@style/SettingsSpinner" />
+            <Switch android:id="@+id/sw_hide_sensitive" style="@style/SettingsSwitch" android:text="@string/hide_sensitive_content" />
+            <TextView
+                android:id="@+id/tv_password_forge_pin_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/password_forge_pin_unset"
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp" />
+            <Button
+                android:id="@+id/btn_set_password_forge_pin"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/change_unlock_password" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/SettingsCard">
+            <TextView style="@style/SettingsCardTitle" android:text="@string/scan_settings" />
+            <Switch android:id="@+id/sw_scan_vibrate" style="@style/SettingsSwitch" android:text="@string/scan_success_vibrate" />
+            <Switch android:id="@+id/sw_scan_sound" style="@style/SettingsSwitch" android:text="@string/scan_success_sound" />
+            <Switch android:id="@+id/sw_scan_auto_copy" style="@style/SettingsSwitch" android:text="@string/scan_auto_copy" />
+            <Switch android:id="@+id/sw_album_auto_save" style="@style/SettingsSwitch" android:text="@string/album_auto_save" />
+            <Switch android:id="@+id/sw_continuous_scan" style="@style/SettingsSwitch" android:text="@string/continuous_scan_mode" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/SettingsCard">
+            <TextView style="@style/SettingsCardTitle" android:text="@string/history_settings" />
+            <TextView style="@style/SettingsLabel" android:text="@string/history_limit" />
+            <Spinner android:id="@+id/sp_history_limit" style="@style/SettingsSpinner" />
+            <TextView style="@style/SettingsLabel" android:text="@string/auto_cleanup_time" />
+            <Spinner android:id="@+id/sp_history_cleanup" style="@style/SettingsSpinner" />
+            <Switch android:id="@+id/sw_qr_history" style="@style/SettingsSwitch" android:text="@string/qr_history_auto_save" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/SettingsCard">
+            <TextView style="@style/SettingsCardTitle" android:text="@string/sync_backup" />
+            <TextView style="@style/SettingsLabel" android:text="@string/auto_sync_frequency" />
+            <Spinner android:id="@+id/sp_auto_sync_freq" style="@style/SettingsSpinner" />
+            <Switch android:id="@+id/sw_wifi_sync" style="@style/SettingsSwitch" android:text="@string/wifi_only_sync" />
+            <Switch android:id="@+id/sw_sync_confirm" style="@style/SettingsSwitch" android:text="@string/confirm_before_sync" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/SettingsCard">
+            <TextView style="@style/SettingsCardTitle" android:text="@string/general" />
+            <TextView style="@style/SettingsLabel" android:text="@string/theme_mode" />
+            <Spinner android:id="@+id/sp_theme_mode" style="@style/SettingsSpinner" />
+            <TextView style="@style/SettingsLabel" android:text="@string/default_page" />
+            <Spinner android:id="@+id/sp_default_page" style="@style/SettingsSpinner" />
+            <Button
+                android:id="@+id/btn_language"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/language_setting" />
+            <Button
+                android:id="@+id/btn_about_keyscan"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/about" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

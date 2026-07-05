@@ -1,0 +1,17 @@
+.gradle/
+.idea/
+.agents/
+.codex/
+work/
+previews/
+build/
+app/build/
+local.properties
+*.iml
+*.apk
+*.aab
+*.idsig
+*.ap_
+release/*.jks
+release/*.keystore
+release/keystore.properties

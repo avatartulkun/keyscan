@@ -1,0 +1,194 @@
+﻿<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_home_page_pattern">
+
+    <ScrollView
+        android:id="@+id/home_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="128dp"
+                android:background="@drawable/bg_header_secure"
+                android:paddingStart="28dp"
+                android:paddingTop="34dp"
+                android:paddingEnd="18dp">
+
+                <ImageView
+                    android:id="@+id/iv_home_brand_key"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_key_line" />
+
+                <TextView
+                    android:id="@+id/tv_home_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_toEndOf="@id/iv_home_brand_key"
+                    android:layout_centerVertical="true"
+                    android:text="KeyScan"
+                    android:textColor="@color/text_main"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/btn_home_menu"
+                    android:layout_width="48dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/more"
+                    android:src="@drawable/ic_more_vertical" />
+            </RelativeLayout>
+
+            <GridLayout
+                android:id="@+id/home_grid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alignmentMode="alignMargins"
+                android:columnCount="3"
+                android:paddingStart="20dp"
+                android:paddingTop="34dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="84dp"
+                android:rowCount="3"
+                android:useDefaultMargins="false">
+
+                <LinearLayout
+                    android:id="@+id/tool_scan"
+                    style="@style/HomeToolItem">
+                    <ImageView
+                        style="@style/HomeToolIcon"
+                        android:src="@drawable/ic_scan" />
+                    <TextView
+                        style="@style/HomeToolText"
+                        android:text="@string/home_scan" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tool_generate"
+                    style="@style/HomeToolItem">
+                    <ImageView
+                        style="@style/HomeToolIcon"
+                        android:src="@drawable/ic_qr" />
+                    <TextView
+                        style="@style/HomeToolText"
+                        android:text="@string/home_generate" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tool_history"
+                    style="@style/HomeToolItem">
+                    <ImageView
+                        style="@style/HomeToolIcon"
+                        android:src="@drawable/ic_history" />
+                    <TextView
+                        style="@style/HomeToolText"
+                        android:text="@string/home_history" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tool_password_forge"
+                    style="@style/HomeToolItem"
+                    android:background="@drawable/bg_home_action_highlight"
+                    android:elevation="3dp">
+                    <ImageView
+                        style="@style/HomeToolIcon"
+                        android:src="@drawable/ic_book_key" />
+                    <TextView
+                        style="@style/HomeToolText"
+                        android:text="@string/home_password_forge" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tool_password_generator"
+                    style="@style/HomeToolItem">
+                    <ImageView
+                        style="@style/HomeToolIcon"
+                        android:src="@drawable/ic_key_gear" />
+                    <TextView
+                        style="@style/HomeToolText"
+                        android:text="@string/home_password_generator" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tool_otp_auth"
+                    style="@style/HomeToolItem"
+                    android:background="@drawable/bg_home_action_highlight"
+                    android:elevation="3dp">
+                    <ImageView
+                        style="@style/HomeToolIcon"
+                        android:src="@drawable/ic_shield" />
+                    <TextView
+                        style="@style/HomeToolText"
+                        android:text="@string/home_otp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tool_sync"
+                    style="@style/HomeToolItem">
+                    <ImageView
+                        style="@style/HomeToolIcon"
+                        android:src="@drawable/ic_cloud_sync" />
+                    <TextView
+                        style="@style/HomeToolText"
+                        android:text="@string/home_webdav" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tool_export"
+                    style="@style/HomeToolItem">
+                    <ImageView
+                        style="@style/HomeToolIcon"
+                        android:src="@drawable/ic_export" />
+                    <TextView
+                        style="@style/HomeToolText"
+                        android:text="@string/home_data_insurance" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tool_settings"
+                    style="@style/HomeToolItem">
+                    <ImageView
+                        style="@style/HomeToolIcon"
+                        android:src="@drawable/ic_settings" />
+                    <TextView
+                        style="@style/HomeToolText"
+                        android:text="@string/settings_title" />
+                </LinearLayout>
+            </GridLayout>
+
+            <TextView
+                android:id="@+id/tv_puzzle_hint"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center"
+                android:text="@string/puzzle_hint"
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/puzzle_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/surface_light"
+        android:visibility="gone" />
+
+</FrameLayout>
+
+
