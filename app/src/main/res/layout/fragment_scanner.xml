@@ -22,10 +22,21 @@
         android:paddingEnd="18dp"
         android:paddingBottom="16dp">
 
+        <Button
+            android:id="@+id/btn_scanner_home"
+            android:layout_width="64dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_scan_button"
+            android:contentDescription="@string/scanner_home_desc"
+            android:text="@string/scanner_home"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp" />
+
         <ImageButton
             android:id="@+id/btn_gallery"
             android:layout_width="48dp"
             android:layout_height="40dp"
+            android:layout_marginStart="10dp"
             android:background="@drawable/bg_scan_button"
             android:contentDescription="@string/scanner_album"
             android:src="@drawable/ic_qr"

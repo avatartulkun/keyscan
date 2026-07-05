@@ -106,6 +106,8 @@
     <string name="scanner_album">Album scan</string>
     <string name="scanner_flashlight">Flashlight</string>
     <string name="scanner_continuous">Continuous scan</string>
+    <string name="scanner_home">Home</string>
+    <string name="scanner_home_desc">Back to home</string>
     <string name="scanner_tip">Single scan by default. Continuous mode saves multiple results automatically</string>
     <string name="import_qr_image">Import QR image</string>
     <string name="scan_result">Scan Result</string>

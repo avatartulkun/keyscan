@@ -106,6 +106,8 @@
     <string name="scanner_album">相册识别</string>
     <string name="scanner_flashlight">闪光灯</string>
     <string name="scanner_continuous">连续扫描</string>
+    <string name="scanner_home">首页</string>
+    <string name="scanner_home_desc">返回首页</string>
     <string name="scanner_tip">默认单次扫描，开启连续扫描后会自动保存多个结果</string>
     <string name="import_qr_image">导入二维码图片</string>
     <string name="scan_result">扫描结果</string>
