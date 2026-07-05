@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.text.InputType;
 import android.view.Gravity;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
@@ -192,7 +193,7 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.Home
         questionSpinner.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, PinLockHelper.securityQuestions(this)));
         EditText answerInput = createPlainInput(getString(R.string.password_ledger_answer_hint));
 
-        content.addView(passwordInput);
+        content.addView(createPasswordInputRow(passwordInput));
         content.addView(hintInput);
         content.addView(questionSpinner, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, dp(54)));
         content.addView(answerInput);
@@ -251,7 +252,7 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.Home
         forgot.setGravity(Gravity.CENTER);
         forgot.setPadding(0, dp(12), 0, 0);
         forgot.setTextSize(14);
-        content.addView(input);
+        content.addView(createPasswordInputRow(input));
         if (!hintText.isEmpty()) {
             content.addView(hint, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
         }
@@ -333,7 +334,7 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.Home
         EditText passwordInput = createPasswordInput(getString(R.string.password_ledger_unlock_hint));
         EditText hintInput = createPlainInput(getString(R.string.password_input_hint));
         hintInput.setText(PinLockHelper.passwordHint(this));
-        content.addView(passwordInput);
+        content.addView(createPasswordInputRow(passwordInput));
         content.addView(hintInput);
         AlertDialog dialog = new AlertDialog.Builder(this)
                 .setTitle(R.string.password_ledger_reset_title)
@@ -361,6 +362,36 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.Home
         EditText input = createPlainInput(hint);
         input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
         return input;
+    }
+
+    private LinearLayout createPasswordInputRow(EditText input) {
+        LinearLayout row = new LinearLayout(this);
+        row.setOrientation(LinearLayout.HORIZONTAL);
+        row.setGravity(Gravity.CENTER_VERTICAL);
+        Button eye = new Button(this);
+        eye.setMinWidth(0);
+        eye.setPadding(0, 0, 0, 0);
+        final boolean[] visible = {false};
+        Runnable update = () -> {
+            input.setInputType(InputType.TYPE_CLASS_TEXT | (visible[0]
+                    ? InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+                    : InputType.TYPE_TEXT_VARIATION_PASSWORD));
+            input.setSelection(input.getText().length());
+            eye.setText(visible[0] ? "🙈" : "👁");
+            eye.setContentDescription(getString(visible[0]
+                    ? R.string.credential_hide_password_desc
+                    : R.string.credential_show_password_desc));
+        };
+        update.run();
+        eye.setOnClickListener(v -> {
+            visible[0] = !visible[0];
+            update.run();
+        });
+        row.addView(input, new LinearLayout.LayoutParams(0, dp(52), 1));
+        LinearLayout.LayoutParams eyeParams = new LinearLayout.LayoutParams(dp(48), dp(52));
+        eyeParams.leftMargin = dp(8);
+        row.addView(eye, eyeParams);
+        return row;
     }
 
     private EditText createPlainInput(String hint) {

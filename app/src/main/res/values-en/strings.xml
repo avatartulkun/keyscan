@@ -134,7 +134,7 @@
     <string name="backup_webdav_title">Backup WebDAV (disaster recovery)</string>
     <string name="webdav_address_input_hint">Enter WebDAV URL</string>
     <string name="account_input_hint">Enter account</string>
-    <string name="password_input_hint">Enter password</string>
+    <string name="password_input_hint">Password hint (optional, not your real password)</string>
     <string name="test_backup_connection">Test backup connection</string>
     <string name="sync_backup_webdav">Sync backup WebDAV</string>
     <string name="restore_backup_webdav">Restore from backup WebDAV</string>
