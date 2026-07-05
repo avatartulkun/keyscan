@@ -922,7 +922,7 @@ public class SettingsFragment extends Fragment {
                 .setTitle(remotePath.substring(1))
                 .setItems(new String[]{getString(R.string.restore_this_backup), getString(R.string.delete_this_backup)}, (dialog, which) -> {
                     if (which == 0) confirmRestoreBackup(new WebDavTarget(getString(R.string.history_backup), client, "all"), remotePath);
-                    else deleteBackup(client, remotePath);
+                    else confirmDeleteBackup(new WebDavTarget(getString(R.string.history_backup), client, "all"), remotePath);
                 })
                 .show();
     }
@@ -965,10 +965,21 @@ public class SettingsFragment extends Fragment {
         right.setOrientation(LinearLayout.VERTICAL);
         right.setGravity(android.view.Gravity.END);
         right.addView(createBackupText(formatFileSize(file.size), 12, false, R.color.text_secondary));
+
+        LinearLayout actions = new LinearLayout(requireContext());
+        actions.setOrientation(LinearLayout.HORIZONTAL);
+        actions.setGravity(android.view.Gravity.END);
         Button restore = new Button(requireContext());
         restore.setText(R.string.webdav_restore_button);
         restore.setOnClickListener(v -> confirmRestoreBackup(target, file.path));
-        right.addView(restore, new LinearLayout.LayoutParams(dp(72), dp(40)));
+        Button delete = new Button(requireContext());
+        delete.setText(R.string.webdav_delete_backup_button);
+        delete.setOnClickListener(v -> confirmDeleteBackup(target, file.path));
+        actions.addView(restore, new LinearLayout.LayoutParams(dp(72), dp(40)));
+        LinearLayout.LayoutParams deleteParams = new LinearLayout.LayoutParams(dp(72), dp(40));
+        deleteParams.leftMargin = dp(6);
+        actions.addView(delete, deleteParams);
+        right.addView(actions);
 
         row.addView(left, new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1));
         row.addView(right, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
@@ -1004,6 +1015,15 @@ public class SettingsFragment extends Fragment {
                 .show();
     }
 
+    private void confirmDeleteBackup(WebDavTarget target, String remotePath) {
+        new AlertDialog.Builder(requireContext())
+                .setTitle(R.string.webdav_delete_backup_title)
+                .setMessage(R.string.webdav_delete_backup_message)
+                .setNegativeButton(R.string.cancel, null)
+                .setPositiveButton(R.string.confirm, (dialog, which) -> deleteBackup(target, remotePath))
+                .show();
+    }
+
     private String formatBackupTime(WebDAVClient.BackupFile file) {
         String name = file.name;
         String stamp = "";
@@ -1031,10 +1051,15 @@ public class SettingsFragment extends Fragment {
         return String.format(Locale.getDefault(), "%.1f MB", kb / 1024.0);
     }
 
-    private void deleteBackup(WebDAVClient client, String remotePath) {
+    private void deleteBackup(WebDavTarget target, String remotePath) {
         executor.execute(() -> {
-            boolean ok = client.delete(remotePath);
-            runOnUi(() -> Toast.makeText(requireContext(), ok ? R.string.webdav_deleted_remote_backup : R.string.webdav_delete_failed, Toast.LENGTH_SHORT).show());
+            boolean ok = target.client.delete(remotePath);
+            runOnUi(() -> {
+                Toast.makeText(requireContext(), ok ? R.string.webdav_backup_deleted : R.string.webdav_backup_delete_failed, Toast.LENGTH_SHORT).show();
+                if (ok) {
+                    loadBackupHistoryForTarget(target, true);
+                }
+            });
         });
     }
 

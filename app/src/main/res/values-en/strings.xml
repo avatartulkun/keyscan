@@ -225,7 +225,7 @@
     <string name="help_webdav_jianguoyun_title">Nutstore (recommended in mainland China)</string>
     <string name="help_webdav_jianguoyun_space">Free plan: 1GB monthly upload traffic + 3GB monthly download traffic</string>
     <string name="help_webdav_jianguoyun_url">Sign up: https://www.jianguoyun.com</string>
-    <string name="help_webdav_jianguoyun_steps">Setup steps:\n1. Sign up and sign in to Nutstore\n2. Click “Account Info” → “Security Options” in the top-right corner\n3. In “Third-party App Management”, click “Add App”\n4. Enter “KeyScan” and generate an app-specific password, then copy and save it\n5. In KeyScan WebDAV settings, enter:\n   Server URL: https://dav.jianguoyun.com/dav/\n   Account: your Nutstore account email\n   Password: the app-specific password you just generated, not your login password</string>
+    <string name="help_webdav_jianguoyun_steps">Setup steps:\n1. Sign up and sign in to Nutstore\n2. Click “Account Info” → “Security Options” in the top-right corner\n3. In “Third-party App Management”, click “Add App”\n4. Enter “KeyScan” and generate an app-specific password, then copy and save it\n5. Sign in to the Nutstore web app and create a folder named keyscan in the root directory, or use another folder name you prefer\n   In the KeyScan WebDAV address field, enter:\n   https://dav.jianguoyun.com/dav/keyscan\n   Note: the address must end with /keyscan, or the folder name you created\n6. In KeyScan WebDAV settings, enter:\n   Server URL: https://dav.jianguoyun.com/dav/keyscan\n   Account: your Nutstore account email\n   Password: the app-specific password you just generated, not your login password</string>
     <string name="help_webdav_koofr_title">Koofr (overseas alternative)</string>
     <string name="help_webdav_koofr_space">Free plan: 10GB forever free</string>
     <string name="help_webdav_koofr_url">Sign up: https://koofr.eu</string>
@@ -391,6 +391,17 @@
     <string name="credential_account_empty_error">Account cannot be empty</string>
     <string name="credential_delete_title">Delete credential</string>
     <string name="credential_delete_message">Delete this item?</string>
+    <string name="credential_generate_button">Generate</string>
+    <string name="credential_scan_fill">Scan fill</string>
+    <string name="credential_generate_options">Options</string>
+    <string name="credential_apply_options">Apply</string>
+    <string name="credential_available_chars_too_few">Too few available characters. Reduce excluded characters.</string>
+    <string name="credential_password_filled">Filled into the password field</string>
+    <string name="credential_show_password_desc">Tap to show password</string>
+    <string name="credential_hide_password_desc">Tap to hide password</string>
+    <string name="credential_qr_help_title">Tip</string>
+    <string name="credential_qr_help_message">You can use a desktop QR generator to turn complex text, such as API keys or server passwords, into a QR code. Then use Scan fill on this phone to enter it in one tap and avoid typing mistakes.</string>
+    <string name="got_it">Got it</string>
     <string name="history_delete_title">Delete history</string>
     <string name="history_delete_message">Delete this item?</string>
     <string name="history_batch_delete_title">Batch delete</string>
@@ -436,6 +447,7 @@
     <string name="otp_copy_account">OTP account</string>
     <string name="otp_copy_secret">OTP secret</string>
     <string name="webdav_restore_button">Restore</string>
+    <string name="webdav_delete_backup_button">Delete</string>
     <string name="webdav_last_upload_prefix">Last upload:</string>
     <string name="webdav_cloud_scanning">Cloud backups: scanning %1$s...</string>
     <string name="webdav_cloud_no_files">Cloud backups: %1$s has no backup files yet. Please sync and upload first.</string>
@@ -443,6 +455,10 @@
     <string name="webdav_cloud_added">Cloud backups: added %1$s, success %2$d/%3$d</string>
     <string name="webdav_restore_backup_title">Restore backup</string>
     <string name="webdav_restore_backup_message">Restore this backup version? Current data will be overwritten.</string>
+    <string name="webdav_delete_backup_title">Delete backup</string>
+    <string name="webdav_delete_backup_message">Delete this backup file? This action cannot be undone.</string>
+    <string name="webdav_backup_deleted">Backup file deleted</string>
+    <string name="webdav_backup_delete_failed">Delete failed. Please check the network connection.</string>
     <string name="webdav_restore_data_title">Restore data</string>
     <string name="webdav_restore_data_downloading">Downloading and decrypting data...</string>
     <string name="webdav_restore_data_using_key">Decrypting with recovery key...</string>

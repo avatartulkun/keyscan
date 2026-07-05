@@ -154,7 +154,7 @@ public class PuzzleGameView extends View {
         float board = Math.min(getWidth() - dp(32), getHeight() - dp(32));
         float left = (getWidth() - board) / 2f;
         float top = (getHeight() - board) / 2f;
-        float gap = dp(6);
+        float gap = tileGap();
         float cell = (board - gap * (size - 1)) / size;
         textPaint.setTextSize(size == 3 ? dp(32) : dp(24));
         for (int i = 0; i < tiles.length; i++) {
@@ -222,7 +222,7 @@ public class PuzzleGameView extends View {
         float board = Math.min(getWidth() - dp(32), getHeight() - dp(32));
         float left = (getWidth() - board) / 2f;
         float top = (getHeight() - board) / 2f;
-        float gap = dp(6);
+        float gap = tileGap();
         float cell = (board - gap * (size - 1)) / size;
         int col = (int) ((x - left) / (cell + gap));
         int row = (int) ((y - top) / (cell + gap));
@@ -295,5 +295,9 @@ public class PuzzleGameView extends View {
 
     private float dp(float value) {
         return value * getResources().getDisplayMetrics().density;
+    }
+
+    private float tileGap() {
+        return dp(2);
     }
 }

@@ -1177,7 +1177,7 @@ extends Fragment {
             qr.setScaleType(ImageView.ScaleType.FIT_CENTER);
             qr.setAdjustViewBounds(true);
             qr.setContentDescription((CharSequence)label);
-            qr.setOnClickListener(v -> HomeFragment.this.showDonateQrPreview(label, filePrefix, bitmap));
+            qr.setOnClickListener(v -> this.toggleFace());
             qr.setOnLongClickListener(v -> {
                 HomeFragment.this.showDonateSaveDialog(label, filePrefix, bitmap);
                 return true;

@@ -76,8 +76,7 @@ public class AppearanceFragment extends Fragment {
             }
             @Override public void onNothingSelected(android.widget.AdapterView<?> parent) { }
         });
-        bindSpinner(view.findViewById(R.id.sp_default_page), "setting_default_page", getString(R.string.option_home),
-                Arrays.asList(getString(R.string.option_home), getString(R.string.option_scan_page), getString(R.string.option_password_ledger), getString(R.string.option_otp_authenticator)));
+        bindDefaultPageSpinner(view.findViewById(R.id.sp_default_page));
 
         view.findViewById(R.id.btn_set_password_forge_pin).setOnClickListener(v -> beginCredentialChange());
         view.findViewById(R.id.btn_language).setOnClickListener(v -> showLanguageDialog());
@@ -117,6 +116,38 @@ public class AppearanceFragment extends Fragment {
             }
             @Override public void onNothingSelected(android.widget.AdapterView<?> parent) { }
         });
+    }
+
+    private void bindDefaultPageSpinner(Spinner spinner) {
+        List<String> labels = Arrays.asList(
+                getString(R.string.option_home),
+                getString(R.string.option_scan_page),
+                getString(R.string.option_password_ledger),
+                getString(R.string.option_otp_authenticator));
+        List<String> values = Arrays.asList(
+                MainActivity.DEFAULT_PAGE_HOME,
+                MainActivity.DEFAULT_PAGE_SCAN,
+                MainActivity.DEFAULT_PAGE_PASSWORD_LEDGER,
+                MainActivity.DEFAULT_PAGE_OTP);
+        spinner.setAdapter(new ThemedSpinnerAdapter(requireContext(), labels));
+        String saved = prefs().getString(MainActivity.KEY_DEFAULT_PAGE, MainActivity.DEFAULT_PAGE_HOME);
+        int index = values.indexOf(saved);
+        if (index < 0) index = legacyDefaultPageIndex(saved);
+        spinner.setSelection(Math.max(0, index));
+        spinner.setOnItemSelectedListener(new android.widget.AdapterView.OnItemSelectedListener() {
+            @Override public void onItemSelected(android.widget.AdapterView<?> parent, View view, int position, long id) {
+                prefs().edit().putString(MainActivity.KEY_DEFAULT_PAGE, values.get(position)).apply();
+            }
+            @Override public void onNothingSelected(android.widget.AdapterView<?> parent) { }
+        });
+    }
+
+    private int legacyDefaultPageIndex(String saved) {
+        if (saved == null) return 0;
+        if (saved.equals(getString(R.string.option_scan_page)) || "扫码页".equals(saved) || "Scanner".equals(saved)) return 1;
+        if (saved.equals(getString(R.string.option_password_ledger)) || "密码账本".equals(saved) || "Password Ledger".equals(saved)) return 2;
+        if (saved.equals(getString(R.string.option_otp_authenticator)) || "OTP 认证器".equals(saved) || "OTP Authenticator".equals(saved)) return 3;
+        return 0;
     }
 
     private void bindSwitch(Switch view, String key, boolean defaultValue) {

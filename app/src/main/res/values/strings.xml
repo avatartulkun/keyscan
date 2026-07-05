@@ -225,7 +225,7 @@
     <string name="help_webdav_jianguoyun_title">坚果云（国内首选）</string>
     <string name="help_webdav_jianguoyun_space">免费空间：每月 1GB 上传流量 + 3GB 下载流量</string>
     <string name="help_webdav_jianguoyun_url">注册地址：https://www.jianguoyun.com</string>
-    <string name="help_webdav_jianguoyun_steps">配置步骤：\n1. 注册并登录坚果云\n2. 点击右上角“账户信息” → “安全选项”\n3. 在“第三方应用管理”中点击“添加应用”\n4. 输入“KeyScan”，生成一个应用专用密码（复制保存）\n5. 在 KeyScan 的 WebDAV 设置中填入：\n   服务器地址：https://dav.jianguoyun.com/dav/\n   账号：您的坚果云账号（邮箱）\n   密码：刚才生成的应用专用密码（不是您的登录密码）</string>
+    <string name="help_webdav_jianguoyun_steps">配置步骤：\n1. 注册并登录坚果云\n2. 点击右上角“账户信息” → “安全选项”\n3. 在“第三方应用管理”中点击“添加应用”\n4. 输入“KeyScan”，生成一个应用专用密码（复制保存）\n5. 登录坚果云网页版，在根目录下新建一个文件夹，命名为 keyscan（或其他你喜欢的名称）\n   在 KeyScan 的 WebDAV 地址中填入：\n   https://dav.jianguoyun.com/dav/keyscan\n   注意：地址末尾一定要加上 /keyscan（或你创建的文件夹名）\n6. 在 KeyScan 的 WebDAV 设置中填入：\n   服务器地址：https://dav.jianguoyun.com/dav/keyscan\n   账号：您的坚果云账号（邮箱）\n   密码：刚才生成的应用专用密码（不是您的登录密码）</string>
     <string name="help_webdav_koofr_title">Koofr（境外备选）</string>
     <string name="help_webdav_koofr_space">免费空间：10GB 永久免费</string>
     <string name="help_webdav_koofr_url">注册地址：https://koofr.eu</string>
@@ -391,6 +391,17 @@
     <string name="credential_account_empty_error">账号不能为空</string>
     <string name="credential_delete_title">删除凭证</string>
     <string name="credential_delete_message">确定删除该条目吗？</string>
+    <string name="credential_generate_button">生成</string>
+    <string name="credential_scan_fill">扫描填充</string>
+    <string name="credential_generate_options">生成选项</string>
+    <string name="credential_apply_options">应用</string>
+    <string name="credential_available_chars_too_few">可用字符太少，请减少排除字符</string>
+    <string name="credential_password_filled">已填充到密码字段</string>
+    <string name="credential_show_password_desc">点击显示密码</string>
+    <string name="credential_hide_password_desc">点击隐藏密码</string>
+    <string name="credential_qr_help_title">使用提示</string>
+    <string name="credential_qr_help_message">你可以使用电脑端的「草料二维码」工具，将复杂文本（如 API Key、服务器密码）生成二维码，再用本机的“扫描填充”功能一键录入，避免手动输入出错。</string>
+    <string name="got_it">知道了</string>
     <string name="history_delete_title">删除历史记录</string>
     <string name="history_delete_message">确定删除该条目吗？</string>
     <string name="history_batch_delete_title">批量删除</string>
@@ -436,6 +447,7 @@
     <string name="otp_copy_account">OTP 账号</string>
     <string name="otp_copy_secret">OTP 密钥</string>
     <string name="webdav_restore_button">恢复</string>
+    <string name="webdav_delete_backup_button">删除</string>
     <string name="webdav_last_upload_prefix">上次上传：</string>
     <string name="webdav_cloud_scanning">云端备份：正在扫描 %1$s...</string>
     <string name="webdav_cloud_no_files">云端备份：%1$s 暂无备份文件，请先同步上传数据。</string>
@@ -443,6 +455,10 @@
     <string name="webdav_cloud_added">云端备份：已新增 %1$s，成功账号 %2$d/%3$d</string>
     <string name="webdav_restore_backup_title">恢复备份</string>
     <string name="webdav_restore_backup_message">确定恢复到此备份版本吗？当前数据将被覆盖。</string>
+    <string name="webdav_delete_backup_title">删除备份</string>
+    <string name="webdav_delete_backup_message">确定要删除该备份文件吗？此操作不可恢复。</string>
+    <string name="webdav_backup_deleted">备份文件已删除</string>
+    <string name="webdav_backup_delete_failed">删除失败，请检查网络连接</string>
     <string name="webdav_restore_data_title">恢复数据</string>
     <string name="webdav_restore_data_downloading">正在下载并解密数据...</string>
     <string name="webdav_restore_data_using_key">正在使用恢复密钥解密...</string>

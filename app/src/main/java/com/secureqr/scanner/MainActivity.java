@@ -33,6 +33,11 @@ import com.secureqr.scanner.utils.LocaleHelper;
 
 public class MainActivity extends AppCompatActivity implements HomeFragment.HomeActions {
     private static final String PREFS = "secureqr_settings";
+    public static final String KEY_DEFAULT_PAGE = "setting_default_page";
+    public static final String DEFAULT_PAGE_HOME = "home";
+    public static final String DEFAULT_PAGE_SCAN = "scanner";
+    public static final String DEFAULT_PAGE_PASSWORD_LEDGER = "password_ledger";
+    public static final String DEFAULT_PAGE_OTP = "otp";
     private static final String KEY_LAST_BACKUP_REMINDER = "last_data_insurance_backup_reminder";
     private static final long BACKUP_REMINDER_INTERVAL_MS = 30L * 24L * 60L * 60L * 1000L;
 
@@ -48,20 +53,60 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.Home
         setContentView(R.layout.activity_main);
 
         if (savedInstanceState == null) {
-            showFragment(new HomeFragment());
+            openInitialPage();
         }
         maybeShowBackupReminder();
     }
 
     private void showFragment(Fragment fragment) {
+        showFragment(fragment, !(fragment instanceof HomeFragment));
+    }
+
+    private void showFragment(Fragment fragment, boolean addToBackStack) {
         boolean isHome = fragment instanceof HomeFragment;
         androidx.fragment.app.FragmentTransaction transaction = getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.fragment_container, fragment);
-        if (!isHome) {
+        if (addToBackStack && !isHome) {
             transaction.addToBackStack(null);
         }
         transaction.commit();
+    }
+
+    @OptIn(markerClass = ExperimentalGetImage.class)
+    private void openInitialPage() {
+        String page = normalizeDefaultPage(getSharedPreferences(PREFS, MODE_PRIVATE)
+                .getString(KEY_DEFAULT_PAGE, DEFAULT_PAGE_HOME));
+        if (DEFAULT_PAGE_SCAN.equals(page)) {
+            showFragment(new ScannerFragment(), false);
+        } else if (DEFAULT_PAGE_PASSWORD_LEDGER.equals(page)) {
+            showFragment(new HomeFragment(), false);
+            openPasswordForge(false);
+        } else if (DEFAULT_PAGE_OTP.equals(page)) {
+            showFragment(new OtpAuthFragment(), false);
+        } else {
+            showFragment(new HomeFragment(), false);
+        }
+    }
+
+    private String normalizeDefaultPage(String value) {
+        if (value == null || value.isEmpty()) return DEFAULT_PAGE_HOME;
+        if (DEFAULT_PAGE_HOME.equals(value)
+                || DEFAULT_PAGE_SCAN.equals(value)
+                || DEFAULT_PAGE_PASSWORD_LEDGER.equals(value)
+                || DEFAULT_PAGE_OTP.equals(value)) {
+            return value;
+        }
+        if (value.equals(getString(R.string.option_scan_page)) || "扫码页".equals(value) || "Scanner".equals(value)) {
+            return DEFAULT_PAGE_SCAN;
+        }
+        if (value.equals(getString(R.string.option_password_ledger)) || "密码账本".equals(value) || "Password Ledger".equals(value)) {
+            return DEFAULT_PAGE_PASSWORD_LEDGER;
+        }
+        if (value.equals(getString(R.string.option_otp_authenticator)) || "OTP 认证器".equals(value) || "OTP Authenticator".equals(value)) {
+            return DEFAULT_PAGE_OTP;
+        }
+        return DEFAULT_PAGE_HOME;
     }
 
     private void maybeShowBackupReminder() {
@@ -110,10 +155,14 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.Home
 
     @Override
     public void openPasswordForge() {
+        openPasswordForge(true);
+    }
+
+    private void openPasswordForge(boolean addToBackStack) {
         if (PinLockHelper.isConfigured(this)) {
-            showPasswordVerifyDialog();
+            showPasswordVerifyDialog(addToBackStack);
         } else {
-            showPasswordSetupDialog(true);
+            showPasswordSetupDialog(true, addToBackStack);
         }
     }
 
@@ -129,6 +178,10 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.Home
     }
 
     private void showPasswordSetupDialog(boolean enterAfterSave) {
+        showPasswordSetupDialog(enterAfterSave, true);
+    }
+
+    private void showPasswordSetupDialog(boolean enterAfterSave, boolean addToBackStack) {
         LinearLayout content = new LinearLayout(this);
         content.setOrientation(LinearLayout.VERTICAL);
         content.setPadding(dp(20), dp(8), dp(20), 0);
@@ -166,13 +219,17 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.Home
             dialog.dismiss();
             Toast.makeText(this, R.string.password_ledger_save_success, Toast.LENGTH_SHORT).show();
             if (enterAfterSave) {
-                showFragment(new PasswordForgeFragment());
+                showFragment(new PasswordForgeFragment(), addToBackStack);
             }
         }));
         dialog.show();
     }
 
     private void showPasswordVerifyDialog() {
+        showPasswordVerifyDialog(true);
+    }
+
+    private void showPasswordVerifyDialog(boolean addToBackStack) {
         long remaining = PinLockHelper.remainingLockMs(this);
         if (remaining > 0) {
             Toast.makeText(this, getString(R.string.password_ledger_unlock_error) + "：" + secondsText(remaining), Toast.LENGTH_LONG).show();
@@ -230,17 +287,21 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.Home
                 }
                 PinLockHelper.clearFailedAttempts(this);
                 dialog.dismiss();
-                showFragment(new PasswordForgeFragment());
+                showFragment(new PasswordForgeFragment(), addToBackStack);
             });
             forgot.setOnClickListener(v -> {
                 dialog.dismiss();
-                showForgotPasswordDialog();
+                showForgotPasswordDialog(addToBackStack);
             });
         });
         dialog.show();
     }
 
     private void showForgotPasswordDialog() {
+        showForgotPasswordDialog(true);
+    }
+
+    private void showForgotPasswordDialog(boolean addToBackStack) {
         EditText answerInput = createPlainInput(getString(R.string.password_ledger_answer_hint));
         AlertDialog dialog = new AlertDialog.Builder(this)
                 .setTitle(R.string.password_ledger_forgot_password)
@@ -256,12 +317,16 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.Home
                 return;
             }
             dialog.dismiss();
-            showResetPasswordDialog();
+            showResetPasswordDialog(addToBackStack);
         }));
         dialog.show();
     }
 
     private void showResetPasswordDialog() {
+        showResetPasswordDialog(true);
+    }
+
+    private void showResetPasswordDialog(boolean addToBackStack) {
         LinearLayout content = new LinearLayout(this);
         content.setOrientation(LinearLayout.VERTICAL);
         content.setPadding(dp(20), dp(8), dp(20), 0);
@@ -287,7 +352,7 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.Home
             PinLockHelper.clearFailedAttempts(this);
             dialog.dismiss();
             Toast.makeText(this, R.string.password_ledger_reset_success, Toast.LENGTH_SHORT).show();
-            showFragment(new PasswordForgeFragment());
+            showFragment(new PasswordForgeFragment(), addToBackStack);
         }));
         dialog.show();
     }

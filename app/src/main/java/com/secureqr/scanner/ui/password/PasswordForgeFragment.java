@@ -9,6 +9,7 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.text.InputType;
 import android.text.TextUtils;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -267,16 +268,19 @@ public class PasswordForgeFragment extends Fragment {
             siteInput = input(getString(R.string.credential_site_hint));
             accountInput = input(getString(R.string.credential_account_hint));
             passwordValue = input(getString(R.string.credential_password_hint));
+            passwordValue.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
             passwordValue.setBackgroundResource(R.drawable.bg_edit_text);
             passwordValue.setTextColor(ContextCompat.getColor(requireContext(), R.color.text_main));
+            passwordValue.setHintTextColor(ContextCompat.getColor(requireContext(), R.color.text_hint));
             passwordValue.setTextSize(18);
             passwordValue.setPadding(dp(12), 0, dp(12), 0);
 
-            eye = compactButton("显");
-            Button refresh = compactButton("生成");
-            Button scan = compactButton("扫描填充");
-            Button help = compactButton("帮助");
-            Button optionsButton = compactButton("生成选项");
+            eye = compactButton("👁");
+            Button refresh = compactButton("↻");
+            refresh.setContentDescription(getString(R.string.credential_generate_button));
+            Button scan = compactButton(getString(R.string.credential_scan_fill));
+            Button help = compactButton(getString(R.string.help_title));
+            Button optionsButton = compactButton(getString(R.string.credential_generate_options));
             Button minus = compactButton("-");
             Button plus = compactButton("+");
             lengthText = new TextView(requireContext());
@@ -372,17 +376,17 @@ public class PasswordForgeFragment extends Fragment {
             LinearLayout content = new LinearLayout(requireContext());
             content.setOrientation(LinearLayout.VERTICAL);
             content.setPadding(dp(20), dp(8), dp(20), 0);
-            CheckBox zeroO = checkBox("排除 0（零）和 O（大写欧）", options.excludeZeroO);
-            CheckBox oneI = checkBox("排除 1（一）和 I（大写爱）", options.excludeOneI);
-            CheckBox lowerL = checkBox("排除 l（小写爱）", options.excludeLowerL);
+            CheckBox zeroO = checkBox(getString(R.string.exclude_zero_o), options.excludeZeroO);
+            CheckBox oneI = checkBox(getString(R.string.exclude_one_i), options.excludeOneI);
+            CheckBox lowerL = checkBox(getString(R.string.exclude_lower_l), options.excludeLowerL);
             content.addView(zeroO);
             content.addView(oneI);
             content.addView(lowerL);
             AlertDialog dialog = new AlertDialog.Builder(requireContext())
-                    .setTitle("生成选项")
+                    .setTitle(R.string.credential_generate_options)
                     .setView(content)
-                    .setNegativeButton("取消", null)
-                    .setPositiveButton("应用", null)
+                    .setNegativeButton(R.string.cancel, null)
+                    .setPositiveButton(R.string.credential_apply_options, null)
                     .create();
             dialog.setOnShowListener(d -> dialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(v -> {
                 options.excludeZeroO = zeroO.isChecked();
@@ -398,11 +402,10 @@ public class PasswordForgeFragment extends Fragment {
             options.length = passwordLength;
             String generated = PasswordGeneratorEngine.generate(options);
             if (generated.isEmpty()) {
-                Toast.makeText(requireContext(), "可用字符太少，请减少排除字符", Toast.LENGTH_SHORT).show();
+                Toast.makeText(requireContext(), R.string.credential_available_chars_too_few, Toast.LENGTH_SHORT).show();
                 return;
             }
             currentPassword = generated;
-            visible = true;
             updatePasswordView();
             updateStrength();
         }
@@ -413,9 +416,11 @@ public class PasswordForgeFragment extends Fragment {
             passwordValue.setSelection(passwordValue.getText().length());
             bindingPassword = false;
             passwordValue.setTransformationMethod(visible ? HideReturnsTransformationMethod.getInstance() : PasswordTransformationMethod.getInstance());
-            eye.setText(visible ? "隐藏" : "显示");
-            eye.setContentDescription(visible ? "点击隐藏密码" : "点击显示密码");
-            lengthText.setText("长度：" + passwordLength + " 位");
+            passwordValue.setTextColor(ContextCompat.getColor(requireContext(), R.color.text_main));
+            passwordValue.setHintTextColor(ContextCompat.getColor(requireContext(), R.color.text_hint));
+            eye.setText(visible ? "🙈" : "👁");
+            eye.setContentDescription(getString(visible ? R.string.credential_hide_password_desc : R.string.credential_show_password_desc));
+            lengthText.setText(getString(R.string.length_units, passwordLength));
         }
 
         private void updateStrength() {
@@ -424,13 +429,13 @@ public class PasswordForgeFragment extends Fragment {
             String label;
             if (score < 55) {
                 color = Color.parseColor("#D93025");
-                label = "强度：弱";
+                label = getString(R.string.strength_weak);
             } else if (score < 85) {
                 color = Color.parseColor("#F9AB00");
-                label = "强度：中";
+                label = getString(R.string.strength_medium);
             } else {
                 color = Color.parseColor("#00A878");
-                label = "强度：强";
+                label = getString(R.string.strength_strong);
             }
             strengthProgress.setProgress(score);
             strengthProgress.setProgressTintList(ColorStateList.valueOf(color));
@@ -439,10 +444,10 @@ public class PasswordForgeFragment extends Fragment {
 
         private void applyScannedPassword(String value) {
             currentPassword = value == null ? "" : value;
-            visible = true;
+            visible = false;
             updatePasswordView();
             updateStrength();
-            Toast.makeText(requireContext(), "已填充到密码字段", Toast.LENGTH_SHORT).show();
+            Toast.makeText(requireContext(), R.string.credential_password_filled, Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -474,9 +479,9 @@ public class PasswordForgeFragment extends Fragment {
 
     private void showQrHelp() {
         new AlertDialog.Builder(requireContext())
-                .setTitle("使用提示")
-                .setMessage("你可以使用电脑端的「草料二维码」工具，将复杂文本（如 API Key、服务器密码）生成二维码，再用本机的‘扫描填充’功能一键录入，避免手动输入出错。")
-                .setPositiveButton("知道了", null)
+                .setTitle(R.string.credential_qr_help_title)
+                .setMessage(R.string.credential_qr_help_message)
+                .setPositiveButton(R.string.got_it, null)
                 .show();
     }
 
