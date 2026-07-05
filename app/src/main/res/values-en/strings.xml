@@ -62,6 +62,8 @@
     <string name="password_empty">No credentials yet. Tap + to add one</string>
     <string name="otp_title">OTP Authenticator</string>
     <string name="otp_search_hint">Search account or issuer</string>
+    <string name="otp_home">Home</string>
+    <string name="otp_home_desc">Back to home</string>
     <string name="random_password_title">Random Password Generator</string>
     <string name="show_password">Show</string>
     <string name="hide_password">Hide</string>

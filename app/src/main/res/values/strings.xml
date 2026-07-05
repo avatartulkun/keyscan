@@ -62,6 +62,8 @@
     <string name="password_empty">暂无凭证，点击右上角 + 添加</string>
     <string name="otp_title">OTP 认证器</string>
     <string name="otp_search_hint">搜索账户或发行商</string>
+    <string name="otp_home">首页</string>
+    <string name="otp_home_desc">返回首页</string>
     <string name="random_password_title">随机密码生成器</string>
     <string name="show_password">显示</string>
     <string name="hide_password">隐藏</string>
