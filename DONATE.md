@@ -4,14 +4,10 @@
 
 ## 微信
 
-![微信收款码](app/src/main/res/drawable-nodpi/donate_wechat_qr.png)
+<img src="app/src/main/res/drawable-nodpi/donate_wechat_qr.png" alt="微信收款码" width="360">
 
 ## 支付宝
 
-![支付宝收款码](app/src/main/res/drawable-nodpi/donate_alipay_qr.png)
+<img src="app/src/main/res/drawable-nodpi/donate_alipay_qr.png" alt="支付宝收款码" width="360">
 
-## English
-
-If KeyScan helps you, you can support the developer with a small donation. Thank you for helping keep the project moving.
-
-Contact: `tulkun@foxmail.com`
+联系方式：`tulkun@foxmail.com`
