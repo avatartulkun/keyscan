@@ -58,7 +58,7 @@ KeyScan 是一款非商业开源的 Android 安全工具箱，围绕二维码扫
 .\gradlew.bat assembleRelease
 ```
 
-release 签名配置位于 `release/` 目录。签名密钥和密码配置属于敏感文件，已通过 `.gitignore` 排除，不应上传到公开仓库。
+release 签名密钥和密码配置仅保存在本机 `release/` 目录中，属于敏感文件，已通过 `.gitignore` 排除，不应上传到公开仓库。GitHub 仓库中只保留签名说明文档。
 
 ## 安全与隐私
 
