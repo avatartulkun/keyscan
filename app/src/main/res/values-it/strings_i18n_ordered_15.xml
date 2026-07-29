@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_item_restore_hint">%1$s\n%2$s · %3$s · Tocca per ripristinare</string>
+    <string name="backup_restore_auth_prompt">Ripristina backup locale protetto</string>
+    <string name="backup_newer_version">Questo backup è stato creato da una versione più recente di KeyScan.</string>
+    <string name="backup_read_failed">Impossibile leggere il backup KeyScan v5</string>
+    <string name="backup_restore_verified_message">Backup verificato. Conferma di volerlo ripristinare.\n\nVersione dati: %1$d\nPassword: %2$d\nTOTP: %3$d\nCassaforte protetta: %4$d\nAllegati: %5$d (non ripristinati da questa versione)</string>
+    <string name="backup_attachments_not_restored">\nIl backup contiene %1$d allegati. Questa versione non ripristina gli allegati.</string>
+    <string name="backup_restore_legacy_summary">Backup verificato. Conferma di volerlo ripristinare.\n\nOra del backup: %1$s\nVersione dati: %2$d\nRecord di scansione: %3$d\nPassword: %4$d\nTOTP: %5$d\nElementi della cassaforte protetta: %6$d\nAllegati: %7$d\n\nRiapri KeyScan al termine del ripristino.</string>
+    <string name="backup_delete_selected_message">Eliminare i %1$d backup selezionati?</string>
+    <string name="ocr_field_name">Nome</string>
+    <string name="ocr_field_card_type">Tipo di carta</string>
+    <string name="ocr_field_cvv">Codice di sicurezza CVV</string>
+    <string name="ocr_field_pin_optional">PIN (facoltativo)</string>
+</resources>

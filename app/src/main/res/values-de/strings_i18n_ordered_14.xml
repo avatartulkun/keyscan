@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="data_protection_key_confirm">Neuen Datenschutzschlüssel bestätigen</string>
+    <string name="data_protection_key_change_title">Datenschutzschlüssel ändern</string>
+    <string name="current_password_incorrect">Das aktuelle Passwort ist falsch</string>
+    <string name="data_protection_key_short_explanation">Der Datenschutzschlüssel schützt Sicherungsdaten. Er ist nicht dein WebDAV-Anmeldepasswort.</string>
+    <string name="data_protection_key_required_short">Datenschutzschlüssel eingeben</string>
+    <string name="local_backup_failed_detail">Lokale Sicherung fehlgeschlagen: %1$s</string>
+    <string name="local_backup_location_unavailable">Lokale Sicherung fehlgeschlagen: Der ausgewählte Ordner oder die Datei ist nicht verfügbar</string>
+    <string name="backup_history_no_folder">Sicherungsverlauf · Kein Ordner ausgewählt</string>
+    <string name="backup_history_permission_expired">Sicherungsverlauf · Ordnerberechtigung abgelaufen</string>
+    <string name="backup_folder_unreadable_help">Der Standardordner kann nicht gelesen werden. Wähle ihn erneut aus oder wähle über „Vom Gerät wiederherstellen“ eine Datei aus.</string>
+    <string name="backup_history_count">Sicherungsverlauf · %1$d Dateien</string>
+    <string name="time_unknown">Zeit unbekannt</string>
+</resources>

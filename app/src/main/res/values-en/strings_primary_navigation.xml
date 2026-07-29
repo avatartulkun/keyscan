@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="primary_core_swipe_hint">Swipe up or down to switch cards</string>
+    <string name="primary_tools">Tools</string><string name="primary_home">Home</string>
+    <string name="primary_data">Data management</string><string name="primary_security_freedom">Secure · free</string>
+    <string name="primary_add">Add</string>
+    <string name="primary_password_summary">%1$d accounts</string>
+    <string name="primary_vault_summary">%1$d items · Encrypted locally</string>
+    <string name="primary_otp_summary">%1$d TOTP codes · Stored securely</string>
+    <string name="primary_quick_add_title">Add or import</string>
+    <string name="primary_quick_add_create_group">Create</string>
+    <string name="primary_quick_add_import_group">Import</string>
+    <string name="primary_quick_add_secure_item">New secure item</string>
+    <string name="import_password_book">Import password book</string>
+    <string name="primary_backup_summary">Create or restore an encrypted backup</string>
+    <string name="primary_history_summary">View scan, import, and edit history</string>
+    <string name="smart_scan_otp_summary">Scan an authenticator QR code and save it to TOTP</string>
+    <string name="smart_scan_otp_title">TOTP scan</string>
+    <string name="primary_otp_manual_import">TOTP manual import</string>
+    <string name="primary_otp_batch_import">TOTP batch import</string>
+    <string name="primary_tool_scan_summary">Scan QR codes or barcodes and recognize their content</string>
+    <string name="primary_tool_share_summary">Create a QR code or link to share account information</string>
+    <string name="primary_tool_password_summary">Generate strong random passwords</string>
+</resources>

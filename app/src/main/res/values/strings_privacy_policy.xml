@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="privacy_policy_title">KeyScan 用户协议与隐私政策</string>
+    <string name="privacy_policy_header_summary">本地优先 · 支持纯离线使用 · 数据由您自主掌控</string>
+    <string name="privacy_policy_decline">不同意并退出</string>
+    <string name="privacy_policy_accept">同意并继续</string>
+    <string name="privacy_policy_close">关闭</string>
+    <string name="privacy_policy_entry">隐私与协议</string>
+    <string name="privacy_policy_load_error">协议内容加载失败，请重新打开本页面。</string>
+</resources>

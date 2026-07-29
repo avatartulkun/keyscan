@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ocr_field_security_password_optional">Mot de passe de sécurité (facultatif)</string>
+    <string name="ocr_bank_result_title">Résultat de reconnaissance de la carte bancaire</string>
+    <string name="ocr_file_result_title">Résultat de l’analyse du document</string>
+    <string name="ocr_document_result_title">Résultat de reconnaissance du document d’identité</string>
+    <string name="ocr_save_bank_auth_prompt">Enregistrer la carte bancaire dans le coffre-fort sécurisé</string>
+    <string name="ocr_vault_bank_location">Dossiers financiers · Carte bancaire</string>
+    <string name="ocr_vault_identity_location">Documents d’identité · %1$s</string>
+    <string name="ocr_save_success_title">Enregistrement réussi</string>
+    <string name="ocr_save_success_message">Enregistré dans le coffre-fort sécurisé.\n\nEmplacement : %1$s\nPièce jointe : la photo originale a été chiffrée et enregistrée sans filigrane.</string>
+    <string name="ocr_return_scanner">Revenir à l’analyse intelligente</string>
+    <string name="ocr_view_record">Afficher l’enregistrement</string>
+    <string name="ocr_open_vault">Coffre-fort sécurisé</string>
+</resources>

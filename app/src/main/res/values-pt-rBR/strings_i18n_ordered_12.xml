@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="share_nearby_keyscan_device">Dispositivo KeyScan próximo</string>
+    <string name="share_invite_title">Compartilhamento por LAN recebido</string>
+    <string name="share_invite_message">%1$s quer compartilhar %2$d itens com você, totalizando %3$s.</string>
+    <string name="share_decline">Recusar</string>
+    <string name="share_accept">Aceitar</string>
+    <string name="clipboard_own_content_skipped">O conteúdo recém-copiado pelo KeyScan foi ignorado</string>
+    <string name="clipboard_read_failed">Não foi possível ler a área de transferência</string>
+    <string name="backup_folder_permission_failed">Não foi possível manter o acesso à pasta. Escolha novamente uma pasta com permissão de gravação.</string>
+    <string name="backup_folder_write_failed">O acesso de gravação à pasta não está disponível. Escolha a pasta novamente.</string>
+    <string name="input_history_delete_title">Excluir histórico de entrada</string>
+</resources>

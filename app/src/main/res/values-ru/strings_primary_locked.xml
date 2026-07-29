@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources><string name="primary_password_locked_summary">Разблокируйте, чтобы увидеть число аккаунтов</string><string name="primary_vault_locked_summary">Локальное шифрование</string><string name="primary_otp_locked_summary">Безопасное хранение</string></resources>

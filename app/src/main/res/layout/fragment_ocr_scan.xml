@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/preview_ocr_camera"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.secureqr.scanner.ui.scanner.OcrScanOverlayView
+        android:id="@+id/ocr_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="112dp"
+        android:background="#88000000"
+        android:gravity="bottom|center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:paddingBottom="16dp">
+
+        <ImageButton
+            android:id="@+id/btn_ocr_back"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/back"
+            android:src="@drawable/ic_arrow_back_24"
+            android:tint="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/tv_ocr_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btn_ocr_flash"
+            android:layout_width="48dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_scan_button"
+            android:contentDescription="@string/scanner_flash_description"
+            android:src="@drawable/ic_scan"
+            android:tint="#FFFFFF" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_ocr_local"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="126dp"
+        android:layout_marginEnd="24dp"
+        android:background="#66000000"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/scanner_local_processing_notice"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_ocr_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="108dp"
+        android:background="#66000000"
+        android:gravity="center"
+        android:padding="12dp"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btn_ocr_capture"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="@string/scanner_capture"
+        android:textColor="@color/primary"
+        android:textStyle="bold" />
+</FrameLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lan_risk_suffix">  リスク警告</string>
+    <string name="lan_read_file_failed">ファイル情報を読み取れませんでした：%1$s</string>
+    <string name="lan_no_usable_file">使用可能なファイルが選択されていません</string>
+    <string name="lan_status_files_selected">ファイル選択済み</string>
+    <string name="lan_select_files_first">最初にファイルを選択してください</string>
+    <string name="lan_link_share_intro">QRコードまたはリンクで共有</string>
+    <string name="lan_link_share_subtitle">別のサブネット上のデバイス、ブラウザーを使用する場合、または自動検出できない場合に使用します。</string>
+    <string name="lan_single_receiver">受信デバイス1台</string>
+    <string name="lan_multiple_receivers">複数の受信デバイス</string>
+    <string name="lan_max_receivers">受信デバイスの上限</string>
+    <string name="lan_require_password">アクセスパスワードを必須にする</string>
+    <string name="lan_access_password">アクセスパスワード</string>
+    <string name="lan_regenerate">再生成</string>
+    <string name="lan_confirm_each_device">デバイスごとに確認</string>
+    <string name="lan_link_share_title">リンク共有</string>
+    <string name="generate">生成</string>
+    <string name="lan_connect_wifi_first">ローカルファイル転送を開始する前にWi-Fiへ接続してください。</string>
+    <string name="lan_status_sending">送信中</string>
+    <string name="lan_status_timed_out">タイムアウト</string>
+    <string name="lan_transfer_timed_out">ローカルファイル転送がタイムアウトしました。</string>
+    <string name="lan_status_failed">転送失敗</string>
+    <string name="lan_transfer_failed">ローカルファイル転送に失敗しました</string>
+    <string name="lan_select_receiver_first">最初に受信デバイスを選択してください</string>
+    <string name="nearby_device">近くのデバイス</string>
+    <string name="lan_receive_hint">KeyScanでQRコードをスキャンするか、同じWi-Fi上のブラウザーでアクセスリンクを開いてください。</string>
+    <string name="lan_qr_description">ローカルファイル転送用QRコード</string>
+    <string name="lan_password_value">アクセスパスワード：%1$s</string>
+    <string name="lan_password_disabled">アクセスパスワード：無効</string>
+    <string name="lan_copy_link">リンクをコピー</string>
+    <string name="lan_system_share">システムで共有</string>
+    <string name="lan_copy_password">パスワードをコピー</string>
+    <string name="lan_pause_new_receivers">新しい受信デバイスを一時停止</string>
+    <string name="lan_end_share">共有を終了</string>
+    <string name="lan_file_transfer_title">ローカルファイル転送</string>
+    <string name="lan_active_devices">接続中のデバイス：%1$d / %2$d\nQRコードとリンクは5分後に期限切れになります</string>
+    <string name="lan_password_already_disabled">アクセスパスワードはすでに無効です</string>
+    <string name="lan_pause_v1_notice">V1では、新しい受信デバイスを一時停止しても現在のセッションは継続します。この機能は今後のバージョンで拡張できます。</string>
+    <string name="lan_status_ended">終了</string>
+    <string name="lan_regular_qr_notice">通常のQRコードではローカルファイル転送は開始されません。</string>
+    <string name="lan_invalid_qr">無効なQRコード形式</string>
+</resources>

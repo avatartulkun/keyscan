@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="quick_access_enable">Schwebenden Schnellzugriff aktivieren</string>
+    <string name="quick_access_enable_summary">Zeigt auf wichtigen Funktionsseiten eine verschiebbare Schnellzugriffsschaltfläche an und merkt sich ihre Position</string>
+    <string name="quick_access_open">Schnellzugriff öffnen</string>
+    <string name="quick_access_close">Schnellzugriff schließen</string>
+    <string name="quick_access_icon_style">Stil des schwebenden Symbols</string>
+    <string name="quick_access_style_sparkle">Funkeln</string>
+    <string name="quick_access_style_ks">KS</string>
+    <string name="quick_access_style_key">Schlüssel</string>
+</resources>

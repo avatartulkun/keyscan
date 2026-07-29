@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?><resources>
+<string name="webdav_qr_title">일회용 WebDAV 설정 QR 코드</string>
+<string name="webdav_qr_security_notice">이 QR 코드에는 WebDAV 로그인 정보가 포함됩니다. 신뢰할 수 있는 기기에서만 스캔하세요. 만료되면 수신 기기에서 거부됩니다.</string>
+<string name="webdav_qr_refresh_after_expiry">만료 후 새로 고침</string>
+<string name="webdav_qr_expired">만료됨. 수동으로 새로 고침하세요</string>
+<string name="webdav_qr_not_expired">QR 코드가 아직 만료되지 않았습니다</string>
+<string name="webdav_qr_generate_failed">QR 코드를 생성할 수 없습니다</string>
+<string name="webdav_qr_invalid">KeyScan WebDAV 설정 QR 코드가 아닙니다</string>
+<string name="webdav_qr_import_expired">QR 코드가 만료되었습니다. 이전 기기에서 수동으로 새로 고침하세요</string>
+<string name="webdav_qr_import_success">WebDAV 설정을 입력했습니다. 저장 전에 연결을 테스트하세요</string>
+<string name="webdav_qr_import_failed">QR 코드를 가져올 수 없습니다</string>
+</resources>

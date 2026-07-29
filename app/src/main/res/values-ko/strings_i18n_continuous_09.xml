@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="export_otp">TOTP 인증기</string>
+    <string name="export_vault_text">보안 금고(텍스트)</string>
+    <string name="export_supported_note">현재 비밀번호 보관함, TOTP 및 보안 금고 텍스트를 내보낼 수 있습니다. 첨부 파일은 포함되지 않으므로 완전한 복구에는 보안 백업을 사용하세요.</string>
+    <string name="export_password_format">비밀번호 보관함 형식</string>
+    <string name="export_otp_format">TOTP 인증기 형식</string>
+    <string name="export_vault_format">보안 금고 형식</string>
+    <string name="export_vault_json_note">텍스트만 포함된 범용 JSON을 내보냅니다.</string>
+    <string name="export_security_warning">내보낸 파일에 평문 비밀번호와 TOTP 비밀 키가 포함될 수 있습니다. 안전하게 보관하고 이전 후 필요 없는 파일은 삭제하세요.</string>
+    <string name="export_select_one">데이터 유형을 하나 이상 선택하세요</string>
+    <string name="export_confirm_title">내보내기 확인</string>
+    <string name="export_confirm_message">내보낸 파일에 평문 비밀번호, TOTP 비밀 키 및 보안 금고 텍스트가 포함될 수 있습니다. 안전하게 보관하고 신뢰할 수 있는 위치로만 내보내세요.</string>
+    <string name="export_auth_prompt">보안 데이터 내보내기</string>
+    <string name="export_reading">내보낼 데이터를 읽는 중…</string>
+    <string name="export_no_data">내보낼 데이터가 없습니다</string>
+    <string name="export_choose_location">저장 위치 선택</string>
+    <string name="export_failed_short">내보내기 실패</string>
+    <string name="export_completed">내보내기 완료</string>
+    <string name="import_preview_title">가져오기 미리보기</string>
+    <string name="import_conflict_handling">가져오기 충돌 처리</string>
+    <string name="import_confirm_action">가져오기 확인</string>
+    <string name="import_source_value">가져오기 원본: %1$s</string>
+    <string name="import_not_selected">선택 안 함</string>
+    <string name="import_format_value">형식: %1$s</string>
+    <string name="import_statistics">통계</string>
+    <string name="import_password_count">비밀번호: %1$d</string>
+    <string name="import_otp_count">TOTP: %1$d</string>
+    <string name="import_vault_count">보안 금고: %1$d</string>
+    <string name="import_otp_preview">TOTP 미리보기</string>
+    <string name="import_unnamed_service">이름 없는 서비스</string>
+    <string name="import_account_missing">계정이 제공되지 않음</string>
+    <string name="import_preview_limit">처음 %1$d개 항목만 표시합니다</string>
+    <string name="import_password_preview">비밀번호 미리보기</string>
+    <string name="import_unnamed_credential">이름 없는 자격 증명</string>
+    <string name="import_website_missing">웹사이트가 제공되지 않음</string>
+    <string name="import_session_expired">가져오기 세션이 만료되었습니다</string>
+    <string name="import_session_expired_help">민감한 데이터를 보호하려면 가져올 파일을 다시 선택하세요.</string>
+    <string name="import_return">가져오기로 돌아가기</string>
+    <string name="import_preview_secret_hidden">미리보기에는 비밀번호와 인증 코드가 표시되지 않습니다.</string>
+    <string name="import_conflict_mode">충돌 전략: %1$s</string>
+    <string name="import_password_auth">비밀번호 보관함 가져오기</string>
+</resources>

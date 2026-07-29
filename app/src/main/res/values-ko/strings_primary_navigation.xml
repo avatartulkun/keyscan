@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources><string name="primary_tools">도구</string><string name="primary_home">홈</string><string name="primary_data">데이터 관리</string><string name="primary_security_freedom">안전 · 자유</string><string name="primary_add">추가</string><string name="primary_password_summary">계정 %1$d개</string><string name="primary_vault_summary">자료 %1$d개 · 기기 내 암호화</string><string name="primary_otp_summary">TOTP %1$d개 · 안전하게 저장</string></resources>

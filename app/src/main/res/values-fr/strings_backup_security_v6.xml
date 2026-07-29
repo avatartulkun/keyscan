@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources><string name="backup_legacy_security_unsupported">Cette ancienne sauvegarde n’est pas protégée à la fois par le PIN et la clé de protection des données. Sa restauration est bloquée. Créez une nouvelle sauvegarde avec la version actuelle de KeyScan.</string></resources>

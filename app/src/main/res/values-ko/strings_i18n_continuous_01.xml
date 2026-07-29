@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ocr_guide_bank">은행 카드 앞면을 프레임 안에 넣고 가장자리가 선명하게 보이도록 하세요</string>
+    <string name="ocr_guide_file">계약서 또는 문서 페이지 전체를 큰 프레임 안에 넣고 네 모서리가 모두 보이도록 하세요</string>
+    <string name="ocr_guide_passport">여권 사진 페이지를 프레임 안에 넣고 빛 반사를 피하세요</string>
+    <string name="ocr_guide_driver_license">운전면허증을 프레임 안에 넣고 글자가 선명하게 보이도록 하세요</string>
+    <string name="ocr_guide_id_front">먼저 신분증 앞면을 촬영하세요</string>
+    <string name="ocr_guide_document">신분증을 프레임 안에 넣으세요</string>
+    <string name="ocr_bank_default_name">은행 카드</string>
+    <string name="ocr_bank_named">%1$s 은행 카드</string>
+    <string name="ocr_document_named">%1$s의 %2$s</string>
+    <string name="ocr_photo_missing">사진 파일이 없습니다</string>
+    <string name="ocr_photo_unreadable">사진을 읽을 수 없습니다</string>
+    <string name="ocr_frame_not_ready">카메라 프레임이 아직 준비되지 않았습니다</string>
+    <string name="ocr_photo_write_failed">사진을 저장할 수 없습니다</string>
+    <string name="ocr_bank_photo_description">스캔 프레임 안의 은행 카드 사진</string>
+    <string name="ocr_analyzing">사진을 촬영했습니다. 인식 중…</string>
+    <string name="ocr_glare_warning">빛 반사가 있을 수 있습니다. 결과를 확인하거나 다시 촬영하세요.</string>
+    <string name="ocr_dark_warning">이미지가 너무 어두울 수 있습니다. 결과를 확인하거나 다시 촬영하세요.</string>
+    <string name="ocr_blur_warning">이미지가 흐릴 수 있습니다. 결과를 확인하거나 다시 촬영하세요.</string>
+    <string name="ocr_clarity_normal">가장자리가 선명합니다. 인식 결과를 확인하세요.</string>
+    <string name="ocr_expiry_hint">예: 09/34</string>
+    <string name="security_database_protection">데이터베이스 보호</string>
+    <string name="security_database_summary">동적 데이터베이스 보호 키로 scanner.db 열기</string>
+    <string name="security_access_control">접근 제어</string>
+    <string name="security_level_line">보안 수준: %1$s</string>
+    <string name="security_pill_vault">보안 금고</string>
+    <string name="security_pill_key">보호 키</string>
+    <string name="security_pill_database">데이터베이스</string>
+    <string name="security_pill_backup">백업</string>
+    <string name="status_connected">연결됨</string>
+    <string name="security_auto_lock_settings">자동 잠금 설정</string>
+    <string name="security_clipboard_settings">클립보드 보호 설정</string>
+    <string name="security_auto_lock_choose">자동 잠금 시간 선택</string>
+    <string name="security_cleanup_time">다음 시간 후 지우기</string>
+    <string name="option_15_minutes">15분</string>
+    <string name="option_30_minutes">30분</string>
+    <string name="security_auto_lock_explanation">선택한 시간 동안 사용하지 않으면 KeyScan이 자동으로 잠깁니다.</string>
+    <string name="security_clipboard_explanation">비밀번호를 복사하면 선택한 시간이 지난 후 KeyScan이 클립보드를 지웁니다.</string>
+    <string name="security_pin_current_hint">현재 4~6자리 PIN 입력</string>
+    <string name="security_pin_new_hint">새 4~6자리 PIN 설정</string>
+    <string name="security_pin_input_hint">4~6자리 PIN 입력</string>
+</resources>

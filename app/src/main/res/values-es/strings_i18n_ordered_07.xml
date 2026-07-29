@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?><resources>
+<string name="webdav_qr_title">Código QR de configuración WebDAV de un solo uso</string>
+<string name="webdav_qr_security_notice">Este código QR contiene datos de acceso a WebDAV. Permite que solo un dispositivo de confianza lo escanee. El dispositivo receptor lo rechazará cuando caduque.</string>
+<string name="webdav_qr_refresh_after_expiry">Actualizar después de caducar</string>
+<string name="webdav_qr_expired">Caducado. Actualiza manualmente</string>
+<string name="webdav_qr_not_expired">El código QR aún no ha caducado</string>
+<string name="webdav_qr_generate_failed">No se pudo generar el código QR</string>
+<string name="webdav_qr_invalid">No es un código QR de configuración WebDAV de KeyScan</string>
+<string name="webdav_qr_import_expired">El código QR ha caducado. Actualízalo manualmente en el dispositivo anterior</string>
+<string name="webdav_qr_import_success">Configuración WebDAV rellenada. Prueba la conexión antes de guardar</string>
+<string name="webdav_qr_import_failed">No se pudo importar el código QR</string>
+</resources>

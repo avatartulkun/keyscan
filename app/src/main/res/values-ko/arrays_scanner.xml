@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources><string-array name="scanner_document_type_labels"><item>주민등록증</item><item>여권</item><item>운전면허증</item><item>기타 신분증</item></string-array></resources>

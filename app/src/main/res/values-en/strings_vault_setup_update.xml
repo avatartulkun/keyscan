@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vault_setup_manual_auto_hint">Enter a key manually or generate one automatically. The default generated length is 16.</string>
+    <string name="vault_setup_copy_key">Copy key</string>
+    <string name="vault_setup_copy_warning">Save it promptly. The key will be cleared from the clipboard after 30 seconds.</string>
+    <string name="vault_setup_key_not_preserved">The current key has not been downloaded or copied for safekeeping</string>
+    <string name="vault_setup_key_preserved">Current key saving confirmed</string>
+    <string name="vault_setup_preserve_required">Download or copy the current data protection key and store it safely first.</string>
+</resources>

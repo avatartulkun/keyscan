@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?><resources>
+<string name="online_backup_restore_title">Online-Sicherung und Wiederherstellung</string><string name="local_backup_restore_title">Lokale Sicherung und Wiederherstellung</string>
+<string name="backup_file_prefix_title">Benutzerdefiniertes Präfix der Sicherungsdatei</string><string name="backup_file_prefix_hint">Standard: filebackup</string>
+<string name="vault_setup_input_password_short">Schlüssel eingeben</string><string name="vault_setup_confirm_password_short">Schlüssel bestätigen</string>
+<string name="primary_export_summary">Passwörter, TOTP- oder Tresordaten auswählen und exportieren</string>
+</resources>

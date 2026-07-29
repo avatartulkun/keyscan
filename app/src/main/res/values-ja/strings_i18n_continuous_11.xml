@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vault_time_hours_ago">%1$d時間前</string>
+    <string name="vault_time_yesterday">昨日</string>
+    <string name="vault_time_days_ago">%1$d日前</string>
+    <string name="import_result_title">インポート完了</string>
+    <string name="import_result_success">インポート済み：%1$d</string>
+    <string name="import_result_skipped">スキップした重複：%1$d</string>
+    <string name="import_result_failed">失敗：%1$d</string>
+    <string name="import_result_done">完了</string>
+    <string name="import_conflict_message">重複する項目の処理方法を選択してください。</string>
+    <string name="import_conflict_skip">スキップ</string>
+    <string name="import_conflict_overwrite">上書き</string>
+    <string name="import_conflict_keep_both">両方を保持</string>
+    <string name="import_item_details">%1$s · %2$s</string>
+    <string name="global_sync_to_webdav">WebDAVに同期</string>
+    <string name="global_sync_key_required">最初にセキュリティセンターでデータ保護キーを設定してください。このキーはバックアップデータを保護するもので、WebDAVのログインパスワードではありません。</string>
+    <string name="global_sync_synced_description">WebDAVは同期済みです</string>
+    <string name="global_sync_pending_description">更新があります。タップしてWebDAVに同期してください</string>
+    <string name="global_sync_title">グローバル同期</string>
+    <string name="global_sync_progress">暗号化してWebDAVにアップロードしています…</string>
+    <string name="global_sync_failed">同期に失敗しました：%1$s</string>
+    <string name="global_sync_completed">グローバル同期が完了しました</string>
+    <string name="global_sync_partial">同期完了：成功%1$d件、失敗%2$d件</string>
+    <string name="history_export_failed">エクスポートに失敗しました：%1$s</string>
+    <string name="history_export_directory_failed">エクスポートフォルダーを作成できませんでした</string>
+    <string name="yes">はい</string>
+    <string name="no">いいえ</string>
+    <string name="history_column_source">取得元</string>
+    <string name="history_column_type">種類</string>
+    <string name="history_column_title">メモ/タイトル</string>
+    <string name="history_column_content">内容</string>
+    <string name="history_column_starred">お気に入り</string>
+    <string name="history_column_time">時刻</string>
+    <string name="history_share_export">エクスポートしたファイルを共有</string>
+    <string name="lan_status_network_changed">ネットワークが変更されたため停止しました</string>
+    <string name="lan_network_changed_message">ネットワークが変更されたため、このローカルファイル転送を停止しました。</string>
+    <string name="nearby_device_error">近くのデバイスでエラーが発生しました</string>
+    <string name="lan_status_not_started">未開始</string>
+    <string name="section_expanded">展開済み</string>
+    <string name="section_collapsed">折りたたみ済み</string>
+    <string name="lan_no_file_selected_summary">ファイルが選択されていません。</string>
+</resources>

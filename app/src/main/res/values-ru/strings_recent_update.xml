@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="auto_backup_when_changed">Автоматически создавать резервную копию при изменении данных</string>
+    <string name="local_auto_backup">Автоматическое локальное резервное копирование (по умолчанию отключено)</string>
+    <string name="security_change_backup_title">Данные безопасности изменены</string>
+    <string name="security_change_backup_message">После изменения PIN-кода или ключа защиты данных старые резервные копии могут быть несовместимы с этим хранилищем. Создать новую резервную копию сейчас?</string>
+    <string name="security_change_backup_now">Создать копию сейчас</string>
+    <string name="security_change_backup_later">Создать копию позже</string>
+    <string name="security_change_backup_started">Новая резервная копия создана</string>
+    <string name="security_change_backup_failed">Не удалось создать резервную копию</string>
+    <string name="privacy_agreement_module_title">Конфиденциальность и соглашения</string>
+    <string name="about_keyscan_slogan">Ваши пароли под вашим контролем — свобода без входа в аккаунт</string>
+    <string name="about_version_format">Версия: %1$s</string>
+    <string name="about_version_unknown">Версия: --</string>
+    <string name="security_lock_clear_title">Блокировка и очистка</string>
+    <string name="clipboard_clear_after_import_summary">Автоматически очищать импортированные данные из буфера обмена после сохранения</string>
+    <string name="about_entry_summary">Информация о приложении, соглашения, обратная связь и версия</string>
+    <string name="about_feedback_summary">Отправить сообщение о проблеме, предложение или отзыв</string>
+    <string name="about_check_updates">Проверить обновления</string>
+    <string name="about_check_updates_summary">Открыть страницу выпусков проекта и посмотреть новые версии</string>
+    <string name="about_open_source">Адрес исходного кода</string>
+    <string name="about_copyright">© 2026 KeyScan · tulkun</string>
+    <string name="about_rights_reserved">Все права защищены.</string>
+    <string name="about_open_link_failed">Не удалось открыть ссылку</string>
+    <string name="about_privacy_policy">Пользовательское соглашение и политика конфиденциальности KeyScan</string>
+</resources>

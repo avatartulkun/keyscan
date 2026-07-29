@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources><string name="primary_password_locked_summary">ロック解除後にアカウント数を表示</string><string name="primary_vault_locked_summary">端末内で暗号化</string><string name="primary_otp_locked_summary">安全に保存</string></resources>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="image_preview_failed">画像をプレビューできませんでした</string>
+    <string name="image_preview_back">戻る</string>
+    <string name="image_preview_share">共有</string>
+    <string name="image_preview_export">エクスポート</string>
+    <string name="image_preview_delete">削除</string>
+    <string name="image_preview_share_chooser">画像を共有</string>
+    <string name="image_preview_share_failed">画像を共有できませんでした</string>
+    <string name="image_preview_download_title">画像をダウンロード</string>
+    <string name="image_preview_download_original">元の画像をダウンロード</string>
+    <string name="image_preview_download_watermark">透かしをカスタマイズしてダウンロード</string>
+    <string name="image_preview_watermark_hint">透かしのテキスト</string>
+    <string name="image_preview_color_blue">青</string>
+    <string name="image_preview_color_red">赤</string>
+    <string name="image_preview_color_black">黒</string>
+    <string name="image_preview_color_gray">グレー</string>
+    <string name="image_preview_color_green">緑</string>
+    <string name="image_preview_color_white">白</string>
+    <string name="image_preview_opacity">不透明度：%1$d%%</string>
+    <string name="image_preview_size">サイズ：%1$d%%</string>
+    <string name="image_preview_opacity_prefix">不透明度：</string>
+    <string name="image_preview_size_prefix">サイズ：</string>
+    <string name="image_preview_watermark_title">カスタム透かし</string>
+    <string name="image_preview_generate_download">生成してダウンロード</string>
+    <string name="image_preview_watermark_generate_failed">透かしを生成できませんでした：%1$s</string>
+    <string name="image_preview_delete_failed">添付ファイルを削除できませんでした</string>
+    <string name="image_preview_deleted">添付ファイルを削除しました</string>
+    <string name="image_preview_download_failed">ダウンロードに失敗しました：%1$s</string>
+    <string name="vault_list_search_results">検索結果</string>
+    <string name="vault_list_show_less">表示を減らす</string>
+    <string name="vault_list_show_more">さらに表示</string>
+    <string name="vault_match_name">一致：名前</string>
+    <string name="vault_match_type">一致：種類</string>
+    <string name="vault_match_notes">一致：メモ</string>
+    <string name="vault_match_label">一致：ラベル</string>
+    <string name="vault_match_provider">一致：プロバイダー</string>
+    <string name="vault_match_attachment">一致：添付ファイル名</string>
+    <string name="vault_updated_meta">%1$s · 更新日 %2$s</string>
+    <string name="vault_time_unknown">不明</string>
+    <string name="vault_time_just_now">たった今</string>
+    <string name="vault_time_minutes_ago">%1$d分前</string>
+</resources>

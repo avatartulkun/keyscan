@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_action_edit">Modifier</string>
+    <string name="password_registration_autofill_summary">Saisie automatique pour l’inscription sur les sites Web</string>
+    <string name="database_migration_failed">Échec de la mise à niveau de la base de données. Vos données n’ont pas été supprimées.</string>
+    <string name="database_corrupted">La base de données sécurisée est endommagée. Essayez de restaurer une sauvegarde.</string>
+    <string name="database_access_failed">Impossible d’accéder à la base de données sécurisée. Vérifiez l’accès au stockage ou redémarrez l’appareil, puis réessayez.</string>
+    <string name="database_open_failed">Impossible d’ouvrir la base de données sécurisée. Vérifiez que vos identifiants de sécurité sont corrects.</string>
+    <string name="otp_invalid_uri">URI TOTP non valide</string>
+    <string name="otp_secret_required_error">Le secret est requis</string>
+    <string name="clipboard_label_ssh_private_key">Clé privée SSH</string>
+    <string name="clipboard_label_ssh_public_key">Clé publique SSH</string>
+    <string name="clipboard_label_otp_secret">Secret TOTP</string>
+    <string name="clipboard_label_wifi_credentials">Identifiants Wi-Fi</string>
+    <string name="clipboard_label_connection_credentials">Identifiants de connexion au service</string>
+    <string name="clipboard_label_api_token">Clé API/Jeton</string>
+    <string name="clipboard_label_recovery_code">Code de récupération</string>
+    <string name="clipboard_label_password_text">Texte du mot de passe</string>
+    <string name="clipboard_label_license_key">Clé de licence logicielle</string>
+    <string name="clipboard_label_possible_secret">Secret possible</string>
+    <string name="clipboard_import_auth_reason">Importer le contenu du presse-papiers dans KeyScan</string>
+    <string name="clipboard_check_auth_reason">Rechercher du contenu sensible dans le presse-papiers</string>
+    <string name="password_add_record">Nouvel enregistrement de mot de passe</string>
+    <string name="delete_password_group_with_records">Ce groupe contient %1$d enregistrements. Sa suppression les déplace vers le groupe par défaut sans supprimer les enregistrements de mots de passe.</string>
+</resources>

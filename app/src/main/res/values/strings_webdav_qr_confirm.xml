@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="webdav_qr_save_confirm_title">保存 WebDAV 配置</string>
+    <string name="webdav_qr_save_confirm_message">已识别配置二维码。是否将此配置填入 %1$s？</string>
+    <string name="webdav_qr_save_confirm_action">保存到此配置</string>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="password_history_records_count"><item quantity="one">%1$d registro  &gt;</item><item quantity="other">%1$d registros  &gt;</item></plurals>
+    <plurals name="password_items_count"><item quantity="one">%1$d item</item><item quantity="other">%1$d itens</item></plurals>
+    <plurals name="trash_retention_days"><item quantity="one">O conteúdo será mantido por %1$d dia e depois excluído permanentemente</item><item quantity="other">O conteúdo será mantido por %1$d dias e depois excluído permanentemente</item></plurals>
+    <plurals name="trash_restore_selected_count"><item quantity="one">Restaurar selecionado (%1$d)</item><item quantity="other">Restaurar selecionados (%1$d)</item></plurals>
+    <plurals name="trash_delete_selected_count"><item quantity="one">Excluir permanentemente (%1$d)</item><item quantity="other">Excluir permanentemente (%1$d)</item></plurals>
+    <plurals name="trash_restore_confirm_items"><item quantity="one">Restaurar %1$d item selecionado?</item><item quantity="other">Restaurar %1$d itens selecionados?</item></plurals>
+    <plurals name="trash_delete_confirm_items"><item quantity="one">%1$d item selecionado. Não será possível recuperá-lo.</item><item quantity="other">%1$d itens selecionados. Não será possível recuperá-los.</item></plurals>
+    <plurals name="trash_restore_result"><item quantity="one">%1$d item restaurado</item><item quantity="other">%1$d itens restaurados</item></plurals>
+    <plurals name="trash_restore_partial_result"><item quantity="one">%1$d item restaurado, %2$d falha%3$s</item><item quantity="other">%1$d itens restaurados, %2$d falhas%3$s</item></plurals>
+</resources>

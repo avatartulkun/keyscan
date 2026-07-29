@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="auto_backup_when_changed">データの変更時に自動でバックアップ</string>
+    <string name="local_auto_backup">ローカル自動バックアップ（初期設定ではオフ）</string>
+    <string name="security_change_backup_title">セキュリティ情報が変更されました</string>
+    <string name="security_change_backup_message">PIN またはデータ保護キーを変更すると、以前のバックアップを現在の保管庫で使用できない場合があります。今すぐ新しいバックアップを作成しますか？</string>
+    <string name="security_change_backup_now">今すぐバックアップ</string>
+    <string name="security_change_backup_later">後でバックアップ</string>
+    <string name="security_change_backup_started">新しいバックアップが完了しました</string>
+    <string name="security_change_backup_failed">バックアップに失敗しました</string>
+    <string name="privacy_agreement_module_title">プライバシーと規約</string>
+    <string name="about_keyscan_slogan">パスワードは自分で管理、ログイン不要の自由</string>
+    <string name="about_version_format">バージョン：%1$s</string>
+    <string name="about_version_unknown">バージョン：--</string>
+    <string name="security_lock_clear_title">ロックと消去</string>
+    <string name="clipboard_clear_after_import_summary">インポートした内容を保存後にクリップボードから自動消去します</string>
+    <string name="about_entry_summary">アプリ情報、規約、フィードバック、バージョンを確認</string>
+    <string name="about_feedback_summary">問題、提案、フィードバックを送信</string>
+    <string name="about_check_updates">アップデートを確認</string>
+    <string name="about_check_updates_summary">プロジェクトのリリースページで新しいバージョンを確認</string>
+    <string name="about_open_source">オープンソースURL</string>
+    <string name="about_copyright">© 2026 KeyScan · tulkun</string>
+    <string name="about_rights_reserved">無断転載を禁じます。</string>
+    <string name="about_open_link_failed">リンクを開けません</string>
+    <string name="about_privacy_policy">KeyScan 利用規約とプライバシーポリシー</string>
+</resources>

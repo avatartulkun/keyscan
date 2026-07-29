@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?><resources>
+<string name="share_text_hint">輸入要分享的文字</string><string name="share_link_hint">輸入網址，例如：https://example.com</string><string name="share_copy_text">複製文字</string><string name="share_copy_link">複製連結</string><string name="share_content_required">請先輸入要分享的內容</string><string name="share_clip_label">KeyScan 分享內容</string>
+</resources>

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?><resources>
+<string name="share_text_hint">Geben Sie den zu teilenden Text ein</string><string name="share_link_hint">Geben Sie eine URL ein, zum Beispiel: https://example.com</string><string name="share_copy_text">Text kopieren</string><string name="share_copy_link">Link kopieren</string><string name="share_content_required">Geben Sie zuerst einen Inhalt zum Teilen ein</string><string name="share_clip_label">Von KeyScan geteilter Inhalt</string>
+</resources>

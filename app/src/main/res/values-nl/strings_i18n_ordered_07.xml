@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?><resources>
+<string name="webdav_qr_title">Eenmalige WebDAV-configuratie-QR-code</string>
+<string name="webdav_qr_security_notice">Deze QR-code bevat WebDAV-inloggegevens. Laat hem alleen door een vertrouwd apparaat scannen. Na afloop weigert het ontvangende apparaat hem.</string>
+<string name="webdav_qr_refresh_after_expiry">Na afloop vernieuwen</string>
+<string name="webdav_qr_expired">Verlopen. Vernieuw handmatig</string>
+<string name="webdav_qr_not_expired">De QR-code is nog niet verlopen</string>
+<string name="webdav_qr_generate_failed">Kan QR-code niet genereren</string>
+<string name="webdav_qr_invalid">Dit is geen KeyScan WebDAV-configuratie-QR-code</string>
+<string name="webdav_qr_import_expired">De QR-code is verlopen. Vernieuw hem handmatig op het oude apparaat</string>
+<string name="webdav_qr_import_success">WebDAV-configuratie ingevuld. Test de verbinding vóór het opslaan</string>
+<string name="webdav_qr_import_failed">Kan QR-code niet importeren</string>
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ocr_field_security_password_optional">Beveiligingswachtwoord (optioneel)</string>
+    <string name="ocr_bank_result_title">Herkenningsresultaat bankpas</string>
+    <string name="ocr_file_result_title">Resultaat documentscan</string>
+    <string name="ocr_document_result_title">Herkenningsresultaat identiteitsdocument</string>
+    <string name="ocr_save_bank_auth_prompt">Bankpas opslaan in beveiligde kluis</string>
+    <string name="ocr_vault_bank_location">Financiële gegevens · Bankpas</string>
+    <string name="ocr_vault_identity_location">Identiteitsdocumenten · %1$s</string>
+    <string name="ocr_save_success_title">Opgeslagen</string>
+    <string name="ocr_save_success_message">Opgeslagen in de beveiligde kluis.\n\nLocatie: %1$s\nBijlage: de originele foto is versleuteld en zonder watermerk opgeslagen.</string>
+    <string name="ocr_return_scanner">Terug naar Slim scannen</string>
+    <string name="ocr_view_record">Record bekijken</string>
+    <string name="ocr_open_vault">Beveiligde kluis</string>
+</resources>

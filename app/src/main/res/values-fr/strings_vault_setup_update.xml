@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vault_setup_manual_auto_hint">Saisissez une clé ou générez-la automatiquement. La longueur par défaut est de 16 caractères.</string>
+    <string name="vault_setup_copy_key">Copier la clé</string>
+    <string name="vault_setup_copy_warning">Enregistrez-la rapidement. La clé sera effacée du presse-papiers après 30 secondes.</string>
+    <string name="vault_setup_key_not_preserved">La clé actuelle n’a pas encore été téléchargée ou copiée</string>
+    <string name="vault_setup_key_preserved">Enregistrement de la clé actuelle confirmé</string>
+    <string name="vault_setup_preserve_required">Téléchargez ou copiez d’abord la clé de protection des données actuelle et conservez-la en lieu sûr.</string>
+</resources>

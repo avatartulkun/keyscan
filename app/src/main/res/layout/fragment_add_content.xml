@@ -1,0 +1,88 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/settings_page_background"
+    android:fillViewport="true"
+    android:overScrollMode="never">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="18dp"
+        android:paddingTop="22dp"
+        android:paddingEnd="18dp"
+        android:paddingBottom="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/primary_quick_add_title"
+            android:textColor="@color/text_main"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/add_content_subtitle"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/add_action_scan"
+            style="@style/AddContentAction"
+            android:layout_marginTop="24dp">
+            <ImageView style="@style/AddContentIcon" android:background="@drawable/bg_add_icon_blue" android:src="@drawable/ic_scan" android:tint="@android:color/white" />
+            <TextView style="@style/AddContentLabel" android:text="@string/home_scan" />
+            <TextView style="@style/AddContentArrow" />
+        </LinearLayout>
+
+        <TextView style="@style/AddContentGroupLabel" android:text="@string/primary_quick_add_create_group" />
+
+        <LinearLayout android:id="@+id/add_action_password" style="@style/AddContentAction">
+            <ImageView style="@style/AddContentIcon" android:background="@drawable/bg_add_icon_purple" android:src="@drawable/ic_book_key" android:tint="@android:color/white" />
+            <TextView style="@style/AddContentLabel" android:text="@string/password_add_record" />
+            <TextView style="@style/AddContentArrow" />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/add_action_vault" style="@style/AddContentAction">
+            <ImageView style="@style/AddContentIcon" android:background="@drawable/bg_add_icon_green" android:src="@drawable/ic_shield" android:tint="@android:color/white" />
+            <TextView style="@style/AddContentLabel" android:text="@string/primary_quick_add_secure_item" />
+            <TextView style="@style/AddContentArrow" />
+        </LinearLayout>
+
+        <TextView style="@style/AddContentGroupLabel" android:text="@string/primary_quick_add_import_group" />
+
+        <LinearLayout android:id="@+id/add_action_password_import" style="@style/AddContentAction">
+            <ImageView style="@style/AddContentIcon" android:background="@drawable/bg_add_icon_orange" android:src="@drawable/ic_download_24" android:tint="@android:color/white" />
+            <TextView style="@style/AddContentLabel" android:text="@string/import_password_book" />
+            <TextView style="@style/AddContentArrow" />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/add_action_otp_manual" style="@style/AddContentAction">
+            <ImageView style="@style/AddContentIcon" android:background="@drawable/bg_add_icon_teal" android:src="@drawable/ic_key_line" android:tint="@android:color/white" />
+            <TextView style="@style/AddContentLabel" android:text="@string/primary_otp_manual_import" />
+            <TextView style="@style/AddContentArrow" />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/add_action_otp_batch" style="@style/AddContentAction">
+            <ImageView style="@style/AddContentIcon" android:background="@drawable/bg_add_icon_blue" android:src="@drawable/ic_vault_file_lock" android:tint="@android:color/white" />
+            <TextView style="@style/AddContentLabel" android:text="@string/primary_otp_batch_import" />
+            <TextView style="@style/AddContentArrow" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_add_content_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/bg_quick_add_row"
+            android:text="@string/cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/text_main"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</ScrollView>

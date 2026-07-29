@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="share_unified_content_title">Inhoud delen</string>
+    <string name="share_content_summary">Zet gedeelde inhoud om in een QR-code</string>
+    <string name="share_content_input">Te delen inhoud invoeren</string>
+    <string name="share_content_hint">Ondersteunt links, tekst en andere inhoud</string>
+    <string name="share_add_note_title">Notitie toevoegen</string>
+    <string name="share_save_note_hint">Notitie toevoegen (optioneel)</string>
+    <string name="share_save_history_notice">Bij opslaan wordt dit item ook aan de geschiedenis toegevoegd</string>
+    <string name="share_saved_album_and_history">Opgeslagen in de galerij en toegevoegd aan de geschiedenis</string>
+    <string name="biometric_change_pin_auth">Voer uw ontgrendel-PIN in om biometrische instellingen te wijzigen</string>
+</resources>

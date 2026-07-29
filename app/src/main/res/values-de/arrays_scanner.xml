@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources><string-array name="scanner_document_type_labels"><item>Personalausweis</item><item>Reisepass</item><item>Führerschein</item><item>Anderer Identitätsnachweis</item></string-array></resources>

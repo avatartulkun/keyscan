@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources><string name="primary_tools">實用工具</string><string name="primary_home">首頁</string><string name="primary_data">資料管理</string><string name="primary_security_freedom">安全・自由</string><string name="primary_add">新增</string><string name="primary_password_summary">%1$d 個帳號</string><string name="primary_vault_summary">%1$d 項資料 · 本機加密保護</string><string name="primary_otp_summary">%1$d 個 TOTP · 驗證碼安全儲存</string></resources>

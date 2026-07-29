@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="quick_access_enable">启用一键直达悬浮按钮</string>
+    <string name="quick_access_enable_summary">在主要功能页面显示可拖动的一键直达按钮，位置会自动保存</string>
+    <string name="quick_access_open">展开一键直达</string>
+    <string name="quick_access_close">收起一键直达</string>
+    <string name="quick_access_icon_style">悬浮图标样式</string>
+    <string name="quick_access_style_sparkle">星光</string>
+    <string name="quick_access_style_ks">KS</string>
+    <string name="quick_access_style_key">钥匙</string>
+</resources>

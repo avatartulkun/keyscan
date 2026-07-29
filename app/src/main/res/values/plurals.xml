@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="password_history_records_count"><item quantity="other">%1$d 条记录  &gt;</item></plurals>
+    <plurals name="password_items_count"><item quantity="other">%1$d 条</item></plurals>
+    <plurals name="trash_retention_days"><item quantity="other">已删除内容保留 %1$d 天，之后自动永久删除</item></plurals>
+    <plurals name="trash_restore_selected_count"><item quantity="other">恢复所选（%1$d）</item></plurals>
+    <plurals name="trash_delete_selected_count"><item quantity="other">彻底删除（%1$d）</item></plurals>
+    <plurals name="trash_restore_confirm_items"><item quantity="other">确定恢复已选的 %1$d 项内容吗？</item></plurals>
+    <plurals name="trash_delete_confirm_items"><item quantity="other">已选 %1$d 项，删除后无法恢复。</item></plurals>
+    <plurals name="trash_restore_result"><item quantity="other">已恢复 %1$d 项</item></plurals>
+    <plurals name="trash_restore_partial_result"><item quantity="other">已恢复 %1$d 项，失败 %2$d 项%3$s</item></plurals>
+</resources>

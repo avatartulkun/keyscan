@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about_entry_summary">查看软件信息、协议、反馈与版本</string>
+    <string name="about_feedback_summary">提交问题、建议和意见</string>
+    <string name="about_check_updates">检查更新</string>
+    <string name="about_check_updates_summary">前往项目发布页面查看新版本</string>
+    <string name="about_open_source">开源地址</string>
+    <string name="about_copyright">© 2026 KeyScan · tulkun</string>
+    <string name="about_rights_reserved">版权所有，保留所有权利</string>
+    <string name="about_open_link_failed">无法打开链接</string>
+    <string name="about_privacy_policy">KeyScan 用户协议与隐私政策</string>
+</resources>

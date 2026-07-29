@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources><string name="primary_security_biometric_enabled">生物识别已开启</string><string name="primary_security_biometric_disabled">生物识别未开启</string><string name="primary_security_data_encrypted">数据已加密</string><string name="primary_security_data_not_encrypted">数据加密未启用</string><string name="primary_security_duplicate_found">发现 %1$d 个重复密码</string><string name="primary_security_duplicate_none">未发现重复密码</string><string name="primary_security_duplicate_locked">解锁后检查重复密码</string></resources>

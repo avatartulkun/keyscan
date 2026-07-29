@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="network_access_blocked">Заблокировано управлением сетевым доступом</string>
+    <string name="connection_timeout">Время ожидания подключения истекло</string>
+    <string name="dns_resolution_failed">Не удалось выполнить DNS-запрос</string>
+    <string name="tls_certificate_error">Ошибка сертификата TLS</string>
+    <string name="port_not_open">Порт не открыт</string>
+    <string name="host_unreachable">Хост недоступен</string>
+    <string name="nearby_invite_service_failed">Ошибка службы приглашений по локальной сети</string>
+    <string name="nearby_service_start_failed">Не удалось запустить службу устройств поблизости</string>
+    <string name="nearby_cannot_send_to_self">Нельзя отправить на это же устройство</string>
+    <string name="nearby_invalid_address">Недействительный адрес устройства поблизости</string>
+    <string name="nearby_identity_not_initialized">Идентификатор устройства не инициализирован</string>
+    <string name="nearby_invite_service_not_started">Служба приглашений не запущена</string>
+    <string name="nearby_sending_invite">Отправка приглашения</string>
+    <string name="nearby_sent_waiting_confirmation">Отправлено; ожидание подтверждения</string>
+    <string name="nearby_send_failed">Ошибка отправки</string>
+    <string name="nearby_invite_send_failed">Не удалось отправить приглашение</string>
+    <string name="nearby_accepted">Принято</string>
+    <string name="nearby_declined">Отклонено</string>
+    <string name="nearby_broadcast_failed_code">Ошибка трансляции устройства поблизости: %1$d</string>
+    <string name="nearby_broadcast_failed">Ошибка трансляции устройства поблизости</string>
+    <string name="nearby_discovery_failed_code">Ошибка поиска устройств поблизости: %1$d</string>
+    <string name="nearby_discovery_failed">Ошибка поиска устройств поблизости</string>
+    <string name="nearby_status_callback_failed">Не удалось вернуть состояние</string>
+    <string name="lan_web_waiting_for_devices">Ожидание устройства</string>
+    <string name="lan_web_wrong_password">Неверный пароль. Повторите попытку.</string>
+    <string name="lan_web_page_title">Локальный общий доступ к файлам KeyScan</string>
+    <string name="lan_web_trusted_network_notice">Передавайте файлы через браузер только в доверенной домашней или частной сети.</string>
+    <string name="lan_web_file_summary">Файлы: %1$d, общий размер: %2$d байт</string>
+    <string name="lan_web_verify">Проверить</string>
+    <string name="lan_web_file_list">Список файлов</string>
+    <string name="lan_web_current_status">Текущее состояние: %1$s</string>
+    <string name="lan_web_accessing_devices">Подключённые устройства: %1$d / %2$d</string>
+    <string name="lan_web_risk_warning">Предупреждение о риске</string>
+    <string name="lan_web_download_file">Скачать файл</string>
+    </resources>

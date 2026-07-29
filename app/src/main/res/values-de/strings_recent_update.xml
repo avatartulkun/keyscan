@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="auto_backup_when_changed">Bei Datenänderungen automatisch sichern</string>
+    <string name="local_auto_backup">Automatische lokale Sicherung (standardmäßig deaktiviert)</string>
+    <string name="security_change_backup_title">Sicherheitsinformationen geändert</string>
+    <string name="security_change_backup_message">Nach einer Änderung der PIN oder des Datenschutzschlüssels sind ältere Sicherungen möglicherweise nicht mehr mit diesem Tresor kompatibel. Jetzt eine neue Sicherung erstellen?</string>
+    <string name="security_change_backup_now">Jetzt sichern</string>
+    <string name="security_change_backup_later">Später sichern</string>
+    <string name="security_change_backup_started">Neue Sicherung abgeschlossen</string>
+    <string name="security_change_backup_failed">Sicherung fehlgeschlagen</string>
+    <string name="privacy_agreement_module_title">Datenschutz und Vereinbarungen</string>
+    <string name="about_keyscan_slogan">Deine Passwörter, deine Kontrolle – Freiheit ohne Anmeldung</string>
+    <string name="about_version_format">Version: %1$s</string>
+    <string name="about_version_unknown">Version: --</string>
+    <string name="security_lock_clear_title">Sperren und Löschen</string>
+    <string name="clipboard_clear_after_import_summary">Importierte Inhalte nach dem Speichern automatisch aus der Zwischenablage löschen</string>
+    <string name="about_entry_summary">App-Informationen, Vereinbarungen, Feedback und Version anzeigen</string>
+    <string name="about_feedback_summary">Probleme, Vorschläge und Feedback senden</string>
+    <string name="about_check_updates">Nach Updates suchen</string>
+    <string name="about_check_updates_summary">Neue Versionen auf der Veröffentlichungsseite des Projekts ansehen</string>
+    <string name="about_open_source">Open-Source-Adresse</string>
+    <string name="about_copyright">© 2026 KeyScan · tulkun</string>
+    <string name="about_rights_reserved">Alle Rechte vorbehalten.</string>
+    <string name="about_open_link_failed">Link konnte nicht geöffnet werden</string>
+    <string name="about_privacy_policy">KeyScan-Nutzungsvereinbarung und Datenschutzrichtlinie</string>
+</resources>

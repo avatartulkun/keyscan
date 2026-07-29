@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_item_restore_hint">%1$s\n%2$s · %3$s · Zum Wiederherstellen tippen</string>
+    <string name="backup_restore_auth_prompt">Lokale sichere Sicherung wiederherstellen</string>
+    <string name="backup_newer_version">Diese Sicherung wurde mit einer neueren Version von KeyScan erstellt.</string>
+    <string name="backup_read_failed">Die KeyScan-v5-Sicherung konnte nicht gelesen werden</string>
+    <string name="backup_restore_verified_message">Sicherung überprüft. Bestätige, dass du sie wiederherstellen möchtest.\n\nDatenversion: %1$d\nPasswörter: %2$d\nTOTP: %3$d\nSicherer Tresor: %4$d\nAnhänge: %5$d (werden von dieser Version nicht wiederhergestellt)</string>
+    <string name="backup_attachments_not_restored">\nDie Sicherung enthält %1$d Anhänge. Diese Version stellt Anhänge nicht wieder her.</string>
+    <string name="backup_restore_legacy_summary">Sicherung überprüft. Bestätige, dass du sie wiederherstellen möchtest.\n\nSicherungszeit: %1$s\nDatenversion: %2$d\nScan-Einträge: %3$d\nPasswörter: %4$d\nTOTP: %5$d\nElemente im sicheren Tresor: %6$d\nAnhänge: %7$d\n\nÖffne KeyScan nach Abschluss der Wiederherstellung erneut.</string>
+    <string name="backup_delete_selected_message">Die %1$d ausgewählten Sicherungen löschen?</string>
+    <string name="ocr_field_name">Name</string>
+    <string name="ocr_field_card_type">Kartentyp</string>
+    <string name="ocr_field_cvv">CVV-Sicherheitscode</string>
+    <string name="ocr_field_pin_optional">PIN (optional)</string>
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="input_history_delete_message">要刪除此輸入記錄項目嗎？</string>
+    <string name="keyscan_unlock_first">請先解鎖 KeyScan</string>
+    <string name="lan_import_waiting_confirmation">正在等待匯入確認</string>
+    <string name="lan_import_confirm_title">確認匯入</string>
+    <string name="lan_import_confirm_message">偵測到區域網路匯入資料：\n密碼：%1$d\nTOTP：%2$d\n記錄：%3$d\n請確認以繼續。</string>
+    <string name="action_import">匯入</string>
+    <string name="data_protection_key_explanation">資料保護金鑰可保護你的 KeyScan 資料，還原備份時必須使用。\n\n這不是你的 WebDAV 登入密碼。\n\n請妥善保管。KeyScan 無法從伺服器復原此金鑰。</string>
+    <string name="data_protection_key">資料保護金鑰</string>
+    <string name="data_protection_key_setup_title">設定資料保護金鑰</string>
+    <string name="data_protection_key_required">請輸入資料保護金鑰以繼續。</string>
+    <string name="data_protection_key_current">目前的資料保護金鑰</string>
+    <string name="data_protection_key_new">新的資料保護金鑰</string>
+</resources>

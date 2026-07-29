@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nearby_cannot_send_to_self">이 기기 자체에는 보낼 수 없습니다</string>
+    <string name="nearby_invalid_address">잘못된 주변 기기 주소</string>
+    <string name="nearby_identity_not_initialized">기기 식별 정보가 초기화되지 않았습니다</string>
+    <string name="nearby_invite_service_not_started">초대 서비스가 시작되지 않았습니다</string>
+    <string name="nearby_sending_invite">초대 보내는 중</string>
+    <string name="nearby_sent_waiting_confirmation">보냈습니다. 확인 대기 중</string>
+    <string name="nearby_send_failed">보내기 실패</string>
+    <string name="nearby_invite_send_failed">초대를 보낼 수 없습니다</string>
+    <string name="nearby_accepted">수락됨</string>
+    <string name="nearby_declined">거절됨</string>
+    <string name="nearby_broadcast_failed_code">주변 기기 브로드캐스트 실패: %1$d</string>
+    <string name="nearby_broadcast_failed">주변 기기 브로드캐스트 실패</string>
+    <string name="nearby_discovery_failed_code">주변 기기 검색 실패: %1$d</string>
+    <string name="nearby_discovery_failed">주변 기기 검색 실패</string>
+    <string name="nearby_status_callback_failed">상태를 반환할 수 없습니다</string>
+    <string name="lan_web_waiting_for_devices">기기 대기 중</string>
+    <string name="lan_web_wrong_password">비밀번호가 올바르지 않습니다. 다시 시도하세요.</string>
+    <string name="lan_web_page_title">KeyScan 로컬 파일 공유</string>
+    <string name="lan_web_trusted_network_notice">브라우저 파일 전송은 신뢰할 수 있는 가정 또는 개인 네트워크에서만 사용하세요.</string>
+    <string name="lan_web_file_summary">파일: %1$d개, 전체 크기: %2$d바이트</string>
+    <string name="lan_web_verify">확인</string>
+    <string name="lan_web_file_list">파일 목록</string>
+    <string name="lan_web_current_status">현재 상태: %1$s</string>
+    <string name="lan_web_accessing_devices">연결된 기기: %1$d / %2$d</string>
+    <string name="lan_web_risk_warning">위험 경고</string>
+    <string name="lan_web_download_file">파일 다운로드</string>
+    </resources>

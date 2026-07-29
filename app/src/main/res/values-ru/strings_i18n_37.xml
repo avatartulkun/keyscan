@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vault_create_category_title">Новый объект · %1$s</string>
+    <string name="vault_favorite_added">Добавлено в избранное</string>
+    <string name="vault_favorite_removed">Удалено из избранного</string>
+    <string name="vault_search_type_hint">Поиск объектов типа «%1$s»</string>
+    <string name="vault_updated_format">%1$s · Обновлено %2$s</string>
+    <string name="vault_created_format">%1$s · Создано %2$s</string>
+    <string name="vault_section_info">Сведения об объекте</string>
+    <string name="vault_section_note">Примечания</string>
+    <string name="vault_section_attachments">Вложения</string>
+    <string name="vault_attachment_hint">Вложения зашифрованы в локальном хранилище. При открытии изображений можно добавить водяной знак.</string>
+    <string name="vault_attachment_empty">Нет вложений</string>
+    <string name="vault_attachment_delete_message">Удалить вложение «%1$s»?</string>
+    <string name="vault_storage_notice">Этот объект безопасно хранится в локальном зашифрованном хранилище KeyScan</string>
+    <string name="vault_attachment_open_failed">Не удалось открыть вложение</string>
+    <string name="vault_attachment_saved">Вложение безопасно сохранено</string>
+    <string name="vault_attachment_save_failed">Не удалось сохранить вложение</string>
+    <string name="vault_attachment_downloaded">Вложение загружено</string>
+    <string name="vault_attachment_download_failed">Ошибка загрузки вложения: %1$s</string>
+    <string name="vault_delete_message">Удалить «%1$s» и все вложения?</string>
+    <string name="vault_copied_sensitive">Скопировано; буфер обмена будет очищен через 30 секунд</string>
+    <string name="vault_copied">Скопировано</string>
+    <string name="vault_unknown_time">Время неизвестно</string>
+    <string name="vault_file_generic">Файл</string>
+    <string name="vault_file_image">Изображение</string>
+    <string name="vault_file_pdf">Документ PDF</string>
+    <string name="vault_file_text">Текстовый файл</string>
+    <string name="vault_file_encrypted">Зашифрованное вложение</string>
+    <string name="vault_edit_title">Изменить: %1$s</string>
+    <string name="vault_new_title">Создать: %1$s</string>
+    <string name="vault_attachment_none">Вложение не выбрано</string>
+    <string name="vault_attachment_saved_count">Сохранено вложений: %1$d</string>
+    <string name="vault_attachment_selected_count">Выбрано вложений: %1$d; при сохранении они будут зашифрованы</string>
+    <string name="vault_photo_confirm_title">Подтвердите фотографию вложения</string>
+    <string name="vault_action_retake">Переснять</string>
+    <string name="vault_action_use_photo">Использовать фотографию</string>
+    <string name="vault_name_required">Введите имя</string>
+    <string name="vault_auth_save">Сохранение защищённого объекта</string>
+    <string name="vault_saved">Сохранено</string>
+    <string name="vault_other_international_id">Другое международное удостоверение личности</string>
+    <string name="vault_type_sheet_subtitle">Выберите существующий тип объекта; чтобы изменить порядок, нажмите и удерживайте, затем перетащите</string>
+    <string name="vault_new_category">Новый объект · %1$s</string>
+    <string name="vault_existing_empty">Существующих объектов нет</string>
+</resources>

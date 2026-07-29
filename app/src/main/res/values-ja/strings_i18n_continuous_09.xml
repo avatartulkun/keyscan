@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="import_source_value">インポート元：%1$s</string>
+    <string name="import_not_selected">未選択</string>
+    <string name="import_format_value">形式：%1$s</string>
+    <string name="import_statistics">統計</string>
+    <string name="import_password_count">パスワード：%1$d</string>
+    <string name="import_otp_count">TOTP：%1$d</string>
+    <string name="import_vault_count">保管庫：%1$d</string>
+    <string name="import_otp_preview">TOTPプレビュー</string>
+    <string name="import_unnamed_service">名前のないサービス</string>
+    <string name="import_account_missing">アカウントが指定されていません</string>
+    <string name="import_preview_limit">最初の%1$d件のみ表示しています</string>
+    <string name="import_password_preview">パスワードのプレビュー</string>
+    <string name="import_unnamed_credential">名前のない認証情報</string>
+    <string name="import_website_missing">ウェブサイトが指定されていません</string>
+    <string name="import_session_expired">インポートセッションの期限が切れました</string>
+    <string name="import_session_expired_help">機密データを保護するため、インポートファイルをもう一度選択してください。</string>
+    <string name="import_return">インポートに戻る</string>
+    <string name="import_preview_secret_hidden">パスワードと確認コードはプレビューに表示されません。</string>
+    <string name="import_conflict_mode">競合時の処理：%1$s</string>
+    <string name="import_password_auth">パスワード保管庫をインポート</string>
+    <string name="import_otp_auth">TOTP認証をインポート</string>
+    <string name="autofill_unlock_required_title">KeyScanのロックを解除</string>
+    <string name="autofill_unlock_required_message">自動入力でパスワード保管庫を読み取るには、本人確認が必要です。</string>
+    <string name="autofill_generate_password_message">ルールを選択して確認してください。生成されたパスワードは現在の登録ページにのみ入力され、保存前には引き続きシステムによる確認が行われます。</string>
+    <string name="autofill_rule_recommended">推奨セキュリティ（英字 + 数字 + 記号）</string>
+    <string name="autofill_rule_compatible">ウェブサイト互換（英字 + 数字）</string>
+    <string name="autofill_rule_pin">数字のパスワード</string>
+    <string name="autofill_password_length">長さ：%1$d</string>
+    <string name="autofill_use_password">このパスワードを使用</string>
+    <string name="history_source_generated">生成</string>
+    <string name="history_source_scanned">スキャン</string>
+    <string name="history_today">今日</string>
+    <string name="history_yesterday">昨日</string>
+    <string name="history_export_records">記録をエクスポート</string>
+    <string name="history_export_success">エクスポートに成功しました</string>
+    <string name="history_export_create_dir_failed">エクスポートフォルダーを作成できませんでした</string>
+    <string name="history_yes">はい</string>
+    <string name="history_no">いいえ</string>
+    <string name="history_export_share">エクスポートしたファイルを共有</string>
+    <string name="image_preview_title">画像プレビュー</string>
+</resources>

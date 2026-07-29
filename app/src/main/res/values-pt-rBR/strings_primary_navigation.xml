@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources><string name="primary_tools">Ferramentas</string><string name="primary_home">Início</string><string name="primary_data">Gerenciamento de dados</string><string name="primary_security_freedom">Seguro · livre</string><string name="primary_add">Adicionar</string><string name="primary_password_summary">%1$d contas</string><string name="primary_vault_summary">%1$d itens · Criptografia local</string><string name="primary_otp_summary">%1$d códigos TOTP · Armazenamento seguro</string></resources>

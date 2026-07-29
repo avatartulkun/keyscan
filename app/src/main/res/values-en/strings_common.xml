@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_action_save">Save</string>
+    <string name="common_action_cancel">Cancel</string>
+    <string name="common_action_confirm">Confirm</string>
+    <string name="common_action_delete">Delete</string>
+    <string name="common_action_close">Close</string>
+    <string name="common_action_copy">Copy</string>
+    <string name="common_status_success">Success</string>
+    <string name="common_status_failed">Failed</string>
+    <string name="common_status_loading">Loading</string>
+    <string name="common_action_retry">Retry</string>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="quick_access_enable">フローティングクイックアクセスを有効化</string>
+    <string name="quick_access_enable_summary">主要機能ページに移動可能なクイックアクセスボタンを表示し、位置を保存します</string>
+    <string name="quick_access_open">クイックアクセスを開く</string>
+    <string name="quick_access_close">クイックアクセスを閉じる</string>
+    <string name="quick_access_icon_style">フローティングアイコンのスタイル</string>
+    <string name="quick_access_style_sparkle">きらめき</string>
+    <string name="quick_access_style_ks">KS</string>
+    <string name="quick_access_style_key">鍵</string>
+</resources>

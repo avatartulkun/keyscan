@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="share_nearby_keyscan_device">주변 KeyScan 기기</string>
+    <string name="share_invite_title">LAN 공유 수신</string>
+    <string name="share_invite_message">%1$s 님이 총 %3$s인 항목 %2$d개를 공유하려고 합니다.</string>
+    <string name="share_decline">거절</string>
+    <string name="share_accept">수락</string>
+    <string name="clipboard_own_content_skipped">KeyScan에서 방금 복사한 내용을 건너뛰었습니다</string>
+    <string name="clipboard_read_failed">클립보드를 읽을 수 없습니다</string>
+    <string name="backup_folder_permission_failed">폴더 접근 권한을 유지할 수 없습니다. 쓰기 가능한 폴더를 다시 선택하세요.</string>
+    <string name="backup_folder_write_failed">폴더에 대한 쓰기 권한이 없습니다. 폴더를 다시 선택하세요.</string>
+    <string name="input_history_delete_title">입력 기록 삭제</string>
+</resources>

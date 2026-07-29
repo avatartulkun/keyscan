@@ -1,0 +1,37 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="@color/surface_light" />
+        </shape>
+    </item>
+    <item android:left="24dp" android:top="150dp">
+        <vector android:width="52dp" android:height="52dp" android:viewportWidth="24" android:viewportHeight="24">
+            <path android:fillColor="@android:color/transparent" android:strokeColor="@color/primary" android:strokeAlpha="0.025" android:strokeWidth="0.8" android:strokeLineCap="round" android:strokeLineJoin="round" android:pathData="M9,11a3,3 0,1 0,-1.9 2.8L11,17h2v2h2M6.8,11m-0.6,0a0.6,0.6 0,1 0,1.2 0a0.6,0.6 0,1 0,-1.2 0" />
+        </vector>
+    </item>
+    <item android:left="150dp" android:top="198dp">
+        <vector android:width="46dp" android:height="46dp" android:viewportWidth="24" android:viewportHeight="24">
+            <path android:fillColor="@android:color/transparent" android:strokeColor="@color/primary" android:strokeAlpha="0.022" android:strokeWidth="0.8" android:strokeLineCap="round" android:strokeLineJoin="round" android:pathData="M9,11a3,3 0,1 0,-1.9 2.8L11,17h2v2h2M6.8,11m-0.6,0a0.6,0.6 0,1 0,1.2 0a0.6,0.6 0,1 0,-1.2 0" />
+        </vector>
+    </item>
+    <item android:left="282dp" android:top="248dp">
+        <vector android:width="50dp" android:height="50dp" android:viewportWidth="24" android:viewportHeight="24">
+            <path android:fillColor="@android:color/transparent" android:strokeColor="@color/primary" android:strokeAlpha="0.024" android:strokeWidth="0.8" android:strokeLineCap="round" android:strokeLineJoin="round" android:pathData="M9,11a3,3 0,1 0,-1.9 2.8L11,17h2v2h2M6.8,11m-0.6,0a0.6,0.6 0,1 0,1.2 0a0.6,0.6 0,1 0,-1.2 0" />
+        </vector>
+    </item>
+    <item android:left="64dp" android:top="390dp">
+        <vector android:width="48dp" android:height="48dp" android:viewportWidth="24" android:viewportHeight="24">
+            <path android:fillColor="@android:color/transparent" android:strokeColor="@color/primary" android:strokeAlpha="0.022" android:strokeWidth="0.8" android:strokeLineCap="round" android:strokeLineJoin="round" android:pathData="M9,11a3,3 0,1 0,-1.9 2.8L11,17h2v2h2M6.8,11m-0.6,0a0.6,0.6 0,1 0,1.2 0a0.6,0.6 0,1 0,-1.2 0" />
+        </vector>
+    </item>
+    <item android:left="204dp" android:top="470dp">
+        <vector android:width="54dp" android:height="54dp" android:viewportWidth="24" android:viewportHeight="24">
+            <path android:fillColor="@android:color/transparent" android:strokeColor="@color/primary" android:strokeAlpha="0.025" android:strokeWidth="0.8" android:strokeLineCap="round" android:strokeLineJoin="round" android:pathData="M9,11a3,3 0,1 0,-1.9 2.8L11,17h2v2h2M6.8,11m-0.6,0a0.6,0.6 0,1 0,1.2 0a0.6,0.6 0,1 0,-1.2 0" />
+        </vector>
+    </item>
+    <item android:left="315dp" android:top="620dp">
+        <vector android:width="44dp" android:height="44dp" android:viewportWidth="24" android:viewportHeight="24">
+            <path android:fillColor="@android:color/transparent" android:strokeColor="@color/primary" android:strokeAlpha="0.02" android:strokeWidth="0.8" android:strokeLineCap="round" android:strokeLineJoin="round" android:pathData="M9,11a3,3 0,1 0,-1.9 2.8L11,17h2v2h2M6.8,11m-0.6,0a0.6,0.6 0,1 0,1.2 0a0.6,0.6 0,1 0,-1.2 0" />
+        </vector>
+    </item>
+</layer-list>

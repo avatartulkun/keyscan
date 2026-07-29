@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources><string name="primary_tools">ツール</string><string name="primary_home">ホーム</string><string name="primary_data">データ管理</string><string name="primary_security_freedom">安全・自由</string><string name="primary_add">追加</string><string name="primary_password_summary">アカウント %1$d 件</string><string name="primary_vault_summary">資料 %1$d 件・端末内で暗号化</string><string name="primary_otp_summary">TOTP %1$d 件・安全に保存</string></resources>

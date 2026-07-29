@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?><resources>
+<string name="share_text_hint">Voer de te delen tekst in</string><string name="share_link_hint">Voer een URL in, bijvoorbeeld: https://example.com</string><string name="share_copy_text">Tekst kopiëren</string><string name="share_copy_link">Link kopiëren</string><string name="share_content_required">Voer eerst iets in om te delen</string><string name="share_clip_label">Door KeyScan gedeelde inhoud</string>
+</resources>

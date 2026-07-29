@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="ocr_cache_create_failed">Не удалось создать кэш сканирования</string>
+    <string name="ocr_file_bank_front">bank_card_front.jpg</string>
+    <string name="ocr_file_scanned_document">scanned_document.jpg</string>
+    <string name="ocr_file_id_front">id_front.jpg</string>
+    <string name="ocr_file_passport_photo">passport_photo_page.jpg</string>
+    <string name="ocr_file_driver_license">driver_license.jpg</string>
+    <string name="ocr_file_document">document.jpg</string>
+    <string name="ocr_file_id_back">id_back.jpg</string>
+    <string name="ocr_file_document_back">document_back.jpg</string>
+    <string name="vault_section_connection">Подключение</string>
+    <string name="vault_section_authentication">Аутентификация</string>
+    <string name="vault_section_service">Сведения о службе</string>
+    <string name="vault_section_keys">Сведения о ключах</string>
+    <string name="vault_section_validity">Срок действия</string>
+    <string name="vault_section_license">Сведения о лицензии</string>
+    <string name="vault_section_sensitive">Конфиденциальная информация</string>
+    <string name="vault_section_certificate_files">Файлы сертификатов</string>
+    <string name="vault_section_document">Сведения о документе</string>
+    <string name="vault_section_card">Сведения о карте</string>
+    <string name="vault_section_server_config">Конфигурация сервера</string>
+    <string name="vault_field_label">Метка (необязательно)</string>
+    <string name="vault_field_password">Пароль</string>
+    <string name="vault_field_api_address">Адрес API</string>
+    <string name="vault_field_docs_url">URL документации (необязательно)</string>
+    <string name="vault_hint_date">ГГГГ-ММ-ДД</string>
+</resources>

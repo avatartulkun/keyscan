@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="share_unified_content_title">內容分享</string>
+    <string name="share_content_summary">將分享內容產生為 QR Code</string>
+    <string name="share_content_input">輸入分享內容</string>
+    <string name="share_content_hint">支援連結、文字等內容</string>
+    <string name="share_add_note_title">新增備註</string>
+    <string name="share_save_note_hint">新增備註（選填）</string>
+    <string name="share_save_history_notice">儲存後也會同步記錄到歷史記錄</string>
+    <string name="share_saved_album_and_history">已儲存到相簿，並記錄到歷史記錄</string>
+    <string name="biometric_change_pin_auth">輸入解鎖 PIN 以變更生物辨識設定</string>
+</resources>

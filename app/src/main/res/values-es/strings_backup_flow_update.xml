@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?><resources>
+<string name="online_backup_restore_title">Copia y restauración en línea</string><string name="local_backup_restore_title">Copia y restauración local</string>
+<string name="backup_file_prefix_title">Prefijo personalizado del archivo de copia</string><string name="backup_file_prefix_hint">Predeterminado: filebackup</string>
+<string name="vault_setup_input_password_short">Introducir clave</string><string name="vault_setup_confirm_password_short">Confirmar clave</string>
+<string name="primary_export_summary">Selecciona y exporta contraseñas, TOTP o datos de la bóveda</string>
+</resources>

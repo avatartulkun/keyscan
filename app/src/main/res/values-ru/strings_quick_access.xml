@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="quick_access_enable">Включить плавающий быстрый доступ</string>
+    <string name="quick_access_enable_summary">Показывает перемещаемую кнопку быстрого доступа на основных страницах и запоминает её положение</string>
+    <string name="quick_access_open">Открыть быстрый доступ</string>
+    <string name="quick_access_close">Закрыть быстрый доступ</string>
+    <string name="quick_access_icon_style">Стиль плавающего значка</string>
+    <string name="quick_access_style_sparkle">Искра</string>
+    <string name="quick_access_style_ks">KS</string>
+    <string name="quick_access_style_key">Ключ</string>
+</resources>

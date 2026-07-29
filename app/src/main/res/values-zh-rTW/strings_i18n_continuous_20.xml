@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lan_web_verify">驗證</string>
+    <string name="lan_web_file_list">檔案清單</string>
+    <string name="lan_web_current_status">目前狀態：%1$s</string>
+    <string name="lan_web_accessing_devices">已連線裝置：%1$d / %2$d</string>
+    <string name="lan_web_risk_warning">風險警告</string>
+    <string name="lan_web_download_file">下載檔案</string>
+    </resources>

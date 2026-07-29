@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources><string-array name="trash_retention_labels"><item>7天</item><item>30天（默认）</item><item>90天</item><item>永久保留</item></string-array></resources>

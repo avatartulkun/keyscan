@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="data_protection_key_confirm">Confirmar nueva clave de protección de datos</string>
+    <string name="data_protection_key_change_title">Cambiar clave de protección de datos</string>
+    <string name="current_password_incorrect">La contraseña actual es incorrecta</string>
+    <string name="data_protection_key_short_explanation">La clave de protección de datos protege los datos de las copias de seguridad. No es tu contraseña de inicio de sesión de WebDAV.</string>
+    <string name="data_protection_key_required_short">Introduce la clave de protección de datos</string>
+    <string name="local_backup_failed_detail">Error en la copia de seguridad local: %1$s</string>
+    <string name="local_backup_location_unavailable">Error en la copia de seguridad local: la carpeta o el archivo seleccionado no está disponible</string>
+    <string name="backup_history_no_folder">Historial de copias · Ninguna carpeta seleccionada</string>
+    <string name="backup_history_permission_expired">Historial de copias · El permiso de la carpeta caducó</string>
+    <string name="backup_folder_unreadable_help">No se puede leer la carpeta predeterminada. Vuelve a elegirla o selecciona un archivo mediante «Restaurar desde el dispositivo».</string>
+    <string name="backup_history_count">Historial de copias · %1$d archivos</string>
+    <string name="time_unknown">Hora desconocida</string>
+</resources>

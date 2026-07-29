@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lan_sync_title">Synchronisation LAN</string>
+    <string name="status_not_enabled">Non activé</string>
+    <string name="status_enabled">Activé</string>
+    <string name="global_sync_disabled">La synchronisation automatique est désactivée</string>
+    <string name="webdav_qr_generate_action">Générer un code QR de configuration valable 30 secondes</string>
+    <string name="webdav_qr_auth_prompt">Générer le code QR de configuration WebDAV</string>
+    <string name="webdav_qr_choose_config">Choisir la configuration WebDAV</string>
+    <string name="webdav_qr_scan_action">Scanner le code QR de configuration</string>
+    <string name="webdav_qr_fields_required">Saisissez d’abord l’URL, le compte et le mot de passe WebDAV</string>
+    <string name="webdav_qr_validity_seconds">Valable pendant %1$d secondes</string>
+</resources>

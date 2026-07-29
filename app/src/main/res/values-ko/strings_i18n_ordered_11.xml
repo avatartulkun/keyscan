@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="share_folder_unreadable">선택한 폴더를 읽을 수 없습니다</string>
+    <string name="share_folder_empty">선택한 폴더에 공유할 파일이 없습니다</string>
+    <string name="share_folder_selected">폴더를 선택했습니다</string>
+    <string name="share_folder_files_loaded">파일 %1$d개를 불러왔습니다(압축되지 않음)</string>
+    <string name="share_folder_fallback">폴더</string>
+    <string name="share_file_fallback">파일</string>
+    <string name="share_receiver_required">수신 기기를 하나 이상 선택하세요</string>
+    <string name="share_nearby_device">주변 기기</string>
+    <string name="share_selected_devices_title">선택한 기기와 공유</string>
+    <string name="share_selected_devices_message">수신 기기: %1$s\n파일: %2$d%3$s</string>
+    <string name="share_includes_text">\n붙여넣은 텍스트 포함</string>
+    <string name="share_requests_sent">기기 %1$d대에 공유 요청을 보냈습니다</string>
+</resources>

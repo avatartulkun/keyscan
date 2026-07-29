@@ -1,0 +1,10 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+        <activity
+            android:name=".debug.DatabaseAuditActivity"
+            android:exported="true"
+            android:label="KeyScan DB Audit"
+            android:theme="@style/Theme.CipherQR" />
+    </application>
+</manifest>

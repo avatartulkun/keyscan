@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_item_restore_hint">%1$s\n%2$s · %3$s · 點選以還原</string>
+    <string name="backup_restore_auth_prompt">還原本機安全備份</string>
+    <string name="backup_newer_version">此備份由較新版本的 KeyScan 建立。</string>
+    <string name="backup_read_failed">無法讀取 KeyScan v5 備份</string>
+    <string name="backup_restore_verified_message">備份已驗證。請確認是否要還原。\n\n資料版本：%1$d\n密碼：%2$d\nTOTP：%3$d\n安全保險箱：%4$d\n附件：%5$d（此版本不會還原）</string>
+    <string name="backup_attachments_not_restored">\n備份包含 %1$d 個附件。此版本不會還原附件。</string>
+    <string name="backup_restore_legacy_summary">備份已驗證。請確認是否要還原。\n\n備份時間：%1$s\n資料版本：%2$d\n掃描記錄：%3$d\n密碼：%4$d\nTOTP：%5$d\n安全保險箱項目：%6$d\n附件：%7$d\n\n還原完成後請重新開啟 KeyScan。</string>
+    <string name="backup_delete_selected_message">要刪除所選的 %1$d 個備份嗎？</string>
+    <string name="ocr_field_name">姓名</string>
+    <string name="ocr_field_card_type">卡片類型</string>
+    <string name="ocr_field_cvv">CVV 安全碼</string>
+    <string name="ocr_field_pin_optional">PIN（選填）</string>
+</resources>

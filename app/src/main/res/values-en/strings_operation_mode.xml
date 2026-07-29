@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="operation_mode_title">Operation protection</string>
+    <string name="operation_unlock_default">Mode after unlocking</string>
+    <string name="operation_view_mode">View only (recommended)</string>
+    <string name="operation_edit_mode">Edit mode</string>
+    <string name="operation_view_summary">View, add, import and back up; editing and deletion require Edit mode.</string>
+    <string name="operation_edit_summary">Edit and delete existing data immediately after unlocking.</string>
+    <string name="operation_feedback_vibrate">Vibrate lightly when mode changes</string>
+    <string name="operation_feedback_message">Show mode status messages</string>
+    <string name="operation_scope_summary">View mode does not affect adding data or online/local backups. Restores, overwrite imports, edits and deletion require Edit mode.</string>
+    <string name="operation_view_mode_title">View-only mode is active</string>
+    <string name="operation_view_mode_message">Editing and deletion are paused to prevent accidental changes. Enable Edit mode to continue.</string>
+    <string name="operation_enable_edit">Enable Edit mode</string>
+    <string name="operation_mode_settings">Mode settings</string>
+    <string name="operation_view_enabled">View-only mode enabled</string>
+    <string name="operation_edit_enabled">Edit mode enabled</string>
+    <string name="operation_edit_retry">Edit mode enabled. Please make the change again.</string>
+    <string name="operation_app_locked">KeyScan locked</string>
+    <string name="operation_unlock_prompt">Unlock KeyScan</string>
+    <string name="operation_locked_hint">Content protected. Tap to authenticate.</string>
+    <string name="operation_lock_view_desc">View only. Tap to edit; double-tap to lock.</string>
+    <string name="operation_lock_edit_desc">Edit mode. Tap for view only; double-tap to lock.</string>
+</resources>

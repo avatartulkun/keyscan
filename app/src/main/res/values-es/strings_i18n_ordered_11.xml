@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="share_folder_unreadable">No se pudo leer la carpeta seleccionada</string>
+    <string name="share_folder_empty">La carpeta seleccionada no contiene archivos para compartir</string>
+    <string name="share_folder_selected">Carpeta seleccionada</string>
+    <string name="share_folder_files_loaded">Se cargaron %1$d archivos (sin comprimir)</string>
+    <string name="share_folder_fallback">Carpeta</string>
+    <string name="share_file_fallback">Archivo</string>
+    <string name="share_receiver_required">Selecciona al menos un dispositivo receptor</string>
+    <string name="share_nearby_device">Dispositivo cercano</string>
+    <string name="share_selected_devices_title">Compartir con los dispositivos seleccionados</string>
+    <string name="share_selected_devices_message">Dispositivos receptores: %1$s\nArchivos: %2$d%3$s</string>
+    <string name="share_includes_text">\nIncluye texto pegado</string>
+    <string name="share_requests_sent">Solicitudes de uso compartido enviadas a %1$d dispositivos</string>
+</resources>

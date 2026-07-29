@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="quick_access_enable">플로팅 빠른 실행 사용</string>
+    <string name="quick_access_enable_summary">주요 기능 화면에 이동 가능한 빠른 실행 버튼을 표시하고 위치를 저장합니다</string>
+    <string name="quick_access_open">빠른 실행 열기</string>
+    <string name="quick_access_close">빠른 실행 닫기</string>
+    <string name="quick_access_icon_style">플로팅 아이콘 스타일</string>
+    <string name="quick_access_style_sparkle">반짝임</string>
+    <string name="quick_access_style_ks">KS</string>
+    <string name="quick_access_style_key">열쇠</string>
+</resources>

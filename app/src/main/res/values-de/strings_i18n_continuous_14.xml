@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="ocr_cache_create_failed">Der Scan-Zwischenspeicher konnte nicht erstellt werden</string>
+    <string name="ocr_file_bank_front">bankkarte_vorderseite.jpg</string>
+    <string name="ocr_file_scanned_document">gescanntes_dokument.jpg</string>
+    <string name="ocr_file_id_front">ausweis_vorderseite.jpg</string>
+    <string name="ocr_file_passport_photo">reisepass_fotoseite.jpg</string>
+    <string name="ocr_file_driver_license">fuehrerschein.jpg</string>
+    <string name="ocr_file_document">dokument.jpg</string>
+    <string name="ocr_file_id_back">ausweis_rueckseite.jpg</string>
+    <string name="ocr_file_document_back">dokument_rueckseite.jpg</string>
+    <string name="vault_field_label">Bezeichnung (optional)</string>
+    <string name="vault_field_password">Passwort</string>
+    <string name="vault_field_api_address">API-Adresse</string>
+    <string name="vault_field_docs_url">Dokumentations-URL (optional)</string>
+</resources>

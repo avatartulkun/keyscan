@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="export_otp">TOTP 驗證器</string>
+    <string name="export_vault_text">安全保險箱（文字）</string>
+    <string name="export_supported_note">目前可匯出密碼保險箱、TOTP 與安全保險箱文字。不包含附件；若要完整復原，請使用安全備份。</string>
+    <string name="export_password_format">密碼保險箱格式</string>
+    <string name="export_otp_format">TOTP 驗證器格式</string>
+    <string name="export_vault_format">安全保險箱格式</string>
+    <string name="export_vault_json_note">匯出僅包含文字的一般 JSON。</string>
+    <string name="export_security_warning">匯出的檔案可能包含明文密碼與 TOTP 密鑰。請安全保存，並在移轉後刪除不再需要的檔案。</string>
+    <string name="export_select_one">請至少選擇一種資料</string>
+    <string name="export_confirm_title">確認匯出</string>
+    <string name="export_confirm_message">匯出的檔案可能包含明文密碼、TOTP 密鑰與安全保險箱文字。請安全保存，且僅匯出至受信任的位置。</string>
+    <string name="export_auth_prompt">匯出安全資料</string>
+    <string name="export_reading">正在讀取匯出資料…</string>
+    <string name="export_no_data">沒有可匯出的資料</string>
+    <string name="export_choose_location">選擇儲存位置</string>
+    <string name="export_failed_short">匯出失敗</string>
+    <string name="export_completed">匯出完成</string>
+    <string name="import_preview_title">匯入預覽</string>
+    <string name="import_conflict_handling">匯入衝突處理</string>
+    <string name="import_confirm_action">確認匯入</string>
+    <string name="import_source_value">匯入來源：%1$s</string>
+    <string name="import_not_selected">未選擇</string>
+    <string name="import_format_value">格式：%1$s</string>
+    <string name="import_statistics">統計資料</string>
+    <string name="import_password_count">密碼：%1$d</string>
+    <string name="import_otp_count">TOTP：%1$d</string>
+    <string name="import_vault_count">保險箱：%1$d</string>
+    <string name="import_otp_preview">TOTP 預覽</string>
+    <string name="import_unnamed_service">未命名服務</string>
+    <string name="import_account_missing">未提供帳戶</string>
+    <string name="import_preview_limit">僅顯示前 %1$d 個項目</string>
+    <string name="import_password_preview">密碼預覽</string>
+    <string name="import_unnamed_credential">未命名憑證</string>
+    <string name="import_website_missing">未提供網站</string>
+    <string name="import_session_expired">匯入工作階段已過期</string>
+    <string name="import_session_expired_help">為保護敏感資料，請重新選擇匯入檔案。</string>
+    <string name="import_return">返回匯入</string>
+    <string name="import_preview_secret_hidden">預覽中不會顯示密碼與驗證碼。</string>
+    <string name="import_conflict_mode">衝突策略：%1$s</string>
+    <string name="import_password_auth">匯入密碼保險箱</string>
+</resources>

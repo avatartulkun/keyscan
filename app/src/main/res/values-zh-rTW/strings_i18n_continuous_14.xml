@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nearby_rename_device">重新命名此裝置</string>
+    <string name="settings_security_icon_text">安</string>
+    <string name="settings_webdav_config_title">WebDAV 同步設定</string>
+    <string name="settings_network_sync_backup_title">網路同步與備份</string>
+    <string name="settings_lan_sync_title">區域網路同步</string>
+    <string name="settings_network_access_title">網路存取控制</string>
+    <string name="settings_network_backup_title">網路備份</string>
+    <string name="webdav_address">WebDAV 位址</string>
+    <string name="username">使用者名稱</string>
+    <string name="webdav_password">WebDAV 密碼</string>
+    <string name="test_connection">測試連線</string>
+    <string name="save_configuration">儲存設定</string>
+    <string name="backup_latest_none">最新備份：無</string>
+    <string name="backup_none">沒有備份</string>
+    <string name="backup_latest">最新備份</string>
+    <string name="show_content">顯示內容</string>
+    <string name="hide_content">隱藏內容</string>
+    <string name="view_webdav_password">檢視 WebDAV 密碼</string>
+    <string name="test_connection_first">請先成功測試連線</string>
+    <string name="pin_locked_retry">PIN 錯誤次數過多。請在 %1$d 秒後再試一次。</string>
+    <string name="authentication_required">需要驗證</string>
+    <string name="retry_in_seconds">請在 %1$d 秒後再試一次</string>
+    <string name="autofill_authentication_description">驗證後存取您的密碼保險箱</string>
+    <string name="network_access_intro">網路存取保護\nKeyScan 只能存取已授權的網路位址。</string>
+    <string name="network_webdav_auto_allow_title">自動授權 WebDAV</string>
+    <string name="not_configured">未設定</string>
+    <string name="network_webdav_auto_allow_status">來源：目前的 WebDAV 設定\n狀態：已允許</string>
+    <string name="network_lan_access_disabled">暫時區域網路存取：關閉\n請在區域網路同步中啟用。</string>
+    <string name="network_lan_access_enabled">暫時區域網路存取：開啟\n允許的子網路：%1$s</string>
+    <string name="network_custom_allowlist">自訂允許清單</string>
+    <string name="network_no_manual_allowlist">沒有手動允許清單項目</string>
+    <string name="network_add_allowlist_address">+ 新增允許清單位址</string>
+    <string name="network_run_security_test">執行安全測試</string>
+    <string name="lan_sync_wifi_required">請連線至 Wi-Fi 以使用區域網路同步。</string>
+    <string name="lan_sync_enable_title">啟用區域網路同步</string>
+    <string name="lan_sync_enable_message">目前的 Wi-Fi 子網路：\n%1$s\n\nKeyScan 將暫時允許與此網路上的裝置進行 QR 傳輸。網路變更時會自動關閉。</string>
+    <string name="lan_sync_network_detail">目前網路\nWi-Fi：%1$s\n\n目前位址\n%2$s\n\n目前子網路\n%3$s</string>
+    <string name="not_connected">未連線</string>
+    <string name="lan_scan_send">掃描以傳送</string>
+</resources>

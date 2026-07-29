@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?><resources>
+<string name="language_picker_follow_system">システムに従う</string><string name="language_picker_system_default">システムのデフォルトを使用</string><string name="language_picker_system_summary">Android のシステム言語に従います</string><string name="language_picker_available">利用可能な言語</string><string name="language_portuguese">ポルトガル語（ブラジル）</string>
+</resources>

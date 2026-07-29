@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="privacy_agreement_module_title">隐私与协议</string>
+    <string name="about_keyscan_slogan">密码有你掌握，自由无需登陆</string>
+    <string name="about_version_format">版本：%1$s</string>
+    <string name="about_version_unknown">版本：--</string>
+</resources>

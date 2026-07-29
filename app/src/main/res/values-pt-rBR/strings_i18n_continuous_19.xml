@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="ocr_cache_create_failed">Não foi possível criar o cache de leitura</string>
+<string name="ocr_file_bank_front">frente_cartao_bancario.jpg</string>
+<string name="ocr_file_scanned_document">documento_digitalizado.jpg</string>
+<string name="ocr_file_id_front">frente_documento_identidade.jpg</string>
+<string name="ocr_file_passport_photo">pagina_foto_passaporte.jpg</string>
+<string name="ocr_file_driver_license">carteira_motorista.jpg</string>
+<string name="ocr_file_document">documento.jpg</string>
+<string name="ocr_file_id_back">verso_documento_identidade.jpg</string>
+<string name="ocr_file_document_back">verso_documento.jpg</string>
+<string name="vault_field_label">Rótulo (opcional)</string>
+<string name="vault_field_password">Senha</string>
+<string name="vault_field_api_address">Endereço da API</string>
+<string name="vault_field_docs_url">URL da documentação (opcional)</string>
+<string name="vault_hint_card_expiry">Exemplo: 09/34</string>
+<string name="vault_camera_temp_failed">Não foi possível criar a pasta temporária da câmera</string>
+<string name="vault_type_summary_software_license">Salvar informações da licença de software</string>
+<string name="vault_type_summary_ssh_key">Salvar arquivos de chave do servidor</string>
+<string name="vault_type_summary_api_key">Salvar chaves e segredos de API</string>
+<string name="vault_type_summary_access_token">Salvar tokens de acesso</string>
+<string name="vault_type_summary_certificate">Salvar arquivos de certificado digital</string>
+<string name="vault_type_summary_passport">Salvar dados e anexos do passaporte</string>
+<string name="vault_type_summary_national_id">Salvar dados do documento de identidade nacional</string>
+<string name="vault_type_summary_driver_license">Salvar dados da carteira de motorista</string>
+<string name="vault_type_summary_social_security">Salvar números de seguridade social</string>
+<string name="vault_type_summary_bank_card">Salvar dados do cartão bancário</string>
+<string name="vault_type_summary_crypto_wallet">Salvar dados da carteira de criptomoedas</string>
+</resources>

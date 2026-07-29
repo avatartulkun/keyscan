@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?><resources>
+<string name="share_text_hint">공유할 텍스트 입력</string><string name="share_link_hint">URL 입력(예: https://example.com)</string><string name="share_copy_text">텍스트 복사</string><string name="share_copy_link">링크 복사</string><string name="share_content_required">먼저 공유할 내용을 입력하세요</string><string name="share_clip_label">KeyScan 공유 콘텐츠</string>
+</resources>

@@ -1,0 +1,3 @@
+<resources>
+    <string name="export_auth_biometric_then_pin">请验证指纹后输入 PIN 以继续导出</string>
+</resources>

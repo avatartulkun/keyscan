@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources><string name="backup_legacy_security_unsupported">Esta copia antigua no está protegida por el PIN y la clave de protección de datos, por lo que no se puede restaurar. Cree una copia nueva con la versión actual de KeyScan.</string></resources>

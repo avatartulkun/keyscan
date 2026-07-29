@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="note_field_software_name">軟體名稱</string>
+    <string name="note_field_license_key">授權金鑰</string>
+    <string name="note_field_activation_code">啟用碼</string>
+    <string name="note_field_serial_number">序號</string>
+    <string name="note_field_registered_email">登記電子郵件</string>
+    <string name="note_field_order_number">訂單編號</string>
+    <string name="note_field_version">版本</string>
+    <string name="note_field_download_url">下載網址</string>
+    <string name="note_field_host">主機位址</string>
+    <string name="note_field_port">連接埠</string>
+    <string name="note_field_username">使用者名稱</string>
+    <string name="note_field_password">密碼</string>
+    <string name="note_field_private_key">私密金鑰</string>
+    <string name="note_field_public_key">公開金鑰</string>
+    <string name="note_field_private_key_password">私密金鑰密碼</string>
+    <string name="note_field_fingerprint">金鑰指紋</string>
+    <string name="note_field_jump_host">跳板主機</string>
+    <string name="note_field_name">名稱</string>
+    <string name="note_field_identity_type">證件類型</string>
+    <string name="note_field_identity_number">證件號碼</string>
+    <string name="note_field_birth_date">出生日期</string>
+    <string name="note_field_issuer">核發機關</string>
+    <string name="note_field_address">地址</string>
+    <string name="note_field_content">內容</string>
+    <string name="note_field_cvv">CVV</string>
+    <string name="note_field_bank_name">銀行名稱</string>
+    <string name="note_field_purchase_date">購買日期</string>
+    <string name="note_field_expiration_date">到期日</string>
+    <string name="note_field_server_name">伺服器名稱</string>
+    <string name="note_field_ip_domain">IP/網域</string>
+    <string name="note_field_id_number">證件號碼</string>
+    <string name="note_field_issue_date">核發日期</string>
+    <string name="note_field_custom_1">欄位 1</string>
+    <string name="note_field_custom_2">欄位 2</string>
+    <string name="note_field_custom_3">欄位 3</string>
+    <string name="note_field_website">網站</string>
+    <string name="note_field_app_package">應用程式套件</string>
+    <string name="note_field_account">帳戶</string>
+    <string name="import_data">匯入資料</string>
+    <string name="export_data">匯出資料</string>
+</resources>

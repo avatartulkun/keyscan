@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vault_setup_manual_auto_hint">Schlüssel manuell eingeben oder automatisch erzeugen. Standardlänge: 16 Zeichen.</string>
+    <string name="vault_setup_copy_key">Schlüssel kopieren</string>
+    <string name="vault_setup_copy_warning">Bitte zeitnah speichern. Der Schlüssel wird nach 30 Sekunden aus der Zwischenablage gelöscht.</string>
+    <string name="vault_setup_key_not_preserved">Der aktuelle Schlüssel wurde noch nicht heruntergeladen oder kopiert</string>
+    <string name="vault_setup_key_preserved">Speicherung des aktuellen Schlüssels bestätigt</string>
+    <string name="vault_setup_preserve_required">Laden Sie den aktuellen Datenschutzschlüssel zuerst herunter oder kopieren Sie ihn und bewahren Sie ihn sicher auf.</string>
+</resources>

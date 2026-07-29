@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="share_folder_unreadable">De geselecteerde map kon niet worden gelezen</string>
+    <string name="share_folder_empty">De geselecteerde map bevat geen bestanden om te delen</string>
+    <string name="share_folder_selected">Map geselecteerd</string>
+    <string name="share_folder_files_loaded">%1$d bestanden geladen (niet gecomprimeerd)</string>
+    <string name="share_folder_fallback">Map</string>
+    <string name="share_file_fallback">Bestand</string>
+    <string name="share_receiver_required">Selecteer ten minste één ontvangend apparaat</string>
+    <string name="share_nearby_device">Apparaat in de buurt</string>
+    <string name="share_selected_devices_title">Delen met geselecteerde apparaten</string>
+    <string name="share_selected_devices_message">Ontvangende apparaten: %1$s\nBestanden: %2$d%3$s</string>
+    <string name="share_includes_text">\nBevat geplakte tekst</string>
+    <string name="share_requests_sent">Deelverzoeken verzonden naar %1$d apparaten</string>
+</resources>

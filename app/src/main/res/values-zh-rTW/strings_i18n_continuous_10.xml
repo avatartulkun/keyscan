@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="import_otp_auth">匯入 TOTP 驗證器</string>
+    <string name="autofill_unlock_required_title">解鎖 KeyScan</string>
+    <string name="autofill_unlock_required_message">自動填入在讀取密碼保險箱前需要驗證身分。</string>
+    <string name="autofill_generate_password_message">選擇規則並確認。產生的密碼只會填入目前的註冊頁面；系統仍會在儲存前詢問。</string>
+    <string name="autofill_rule_recommended">建議安全性（字母 + 數字 + 符號）</string>
+    <string name="autofill_rule_compatible">網站相容（字母 + 數字）</string>
+    <string name="autofill_rule_pin">數字密碼</string>
+    <string name="autofill_password_length">長度：%1$d</string>
+    <string name="autofill_use_password">使用此密碼</string>
+    <string name="history_source_generated">已產生</string>
+    <string name="history_source_scanned">已掃描</string>
+    <string name="history_today">今天</string>
+    <string name="history_yesterday">昨天</string>
+    <string name="history_export_records">匯出記錄</string>
+    <string name="history_export_success">匯出成功</string>
+    <string name="history_export_create_dir_failed">無法建立匯出資料夾</string>
+    <string name="history_yes">是</string>
+    <string name="history_no">否</string>
+    <string name="history_export_share">分享匯出的檔案</string>
+    <string name="image_preview_title">影像預覽</string>
+    <string name="image_preview_failed">無法預覽影像</string>
+    <string name="image_preview_back">返回</string>
+    <string name="image_preview_share">分享</string>
+    <string name="image_preview_export">匯出</string>
+    <string name="image_preview_delete">刪除</string>
+    <string name="image_preview_share_chooser">分享影像</string>
+    <string name="image_preview_share_failed">無法分享影像</string>
+    <string name="image_preview_download_title">下載影像</string>
+    <string name="image_preview_download_original">下載原始影像</string>
+    <string name="image_preview_download_watermark">自訂浮水印並下載</string>
+    <string name="image_preview_watermark_hint">浮水印文字</string>
+    <string name="image_preview_color_blue">藍色</string>
+    <string name="image_preview_color_red">紅色</string>
+    <string name="image_preview_color_black">黑色</string>
+    <string name="image_preview_color_gray">灰色</string>
+    <string name="image_preview_color_green">綠色</string>
+    <string name="image_preview_color_white">白色</string>
+    <string name="image_preview_opacity">不透明度：%1$d%%</string>
+    <string name="image_preview_size">大小：%1$d%%</string>
+    <string name="image_preview_opacity_prefix">不透明度：</string>
+</resources>

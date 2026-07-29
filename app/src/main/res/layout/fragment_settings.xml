@@ -1,0 +1,943 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/surface_light">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="18dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btn_webdav_home"
+                android:layout_width="44dp"
+                android:layout_height="40dp"
+                android:contentDescription="@string/home_shortcut_desc"
+                android:background="@android:color/transparent"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_home_24"
+                android:elevation="0dp"
+                android:gravity="center"
+                android:minWidth="0dp"
+                android:padding="8dp"
+                android:text=""
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:text="@string/webdav_title"
+                android:textColor="@color/text_main"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/card_backup_encryption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_card"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <LinearLayout
+                android:id="@+id/row_backup_encryption_title"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/backup_encryption_section_title"
+                    android:textColor="@color/text_main"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_backup_encryption_method"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/backup_encryption_summary_ledger"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_backup_encryption_arrow"
+                    android:layout_width="28dp"
+                    android:layout_height="36dp"
+                    android:gravity="center"
+                    android:text="▶"
+                    android:textColor="@color/text_main"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/content_backup_encryption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_change_backup_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="8dp"
+                    android:minWidth="0dp"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:text="@string/backup_encryption_change_password"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/backup_encryption_note"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="12sp" />
+
+                <RadioGroup
+                    android:id="@+id/rg_backup_encryption_mode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <RadioButton
+                        android:id="@+id/rb_backup_encryption_ledger"
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:text="@string/backup_encryption_use_ledger"
+                        android:textColor="@color/text_main" />
+
+                    <RadioButton
+                        android:id="@+id/rb_backup_encryption_custom"
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:text="@string/backup_encryption_use_custom"
+                        android:textColor="@color/text_main" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/backup_password_hint"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_backup_encryption_password"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_edit_text"
+                        android:hint=""
+                        android:inputType="textPassword"
+                        android:textColor="@color/text_main"
+                        android:textColorHint="@color/text_hint" />
+
+                    <Button
+                        android:id="@+id/btn_toggle_backup_encryption_password"
+                        android:layout_width="56dp"
+                        android:layout_height="42dp"
+                        android:layout_marginStart="6dp"
+                        android:contentDescription="@string/click_show_password"
+                        android:minWidth="0dp"
+                        android:padding="0dp"
+                        android:text="@string/show_short" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/card_webdav_config"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_card"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <LinearLayout
+                android:id="@+id/row_webdav_config_title"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/webdav_config_title"
+                    android:textColor="@color/text_main"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_webdav_config_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/webdav_unconfigured"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_webdav_config_arrow"
+                    android:layout_width="28dp"
+                    android:layout_height="36dp"
+                    android:gravity="center"
+                    android:text="▶"
+                    android:textColor="@color/text_main"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/content_webdav_config"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/webdav_url_hint"
+                    android:textColor="@color/text_main"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/et_webdav_url"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/bg_edit_text"
+                    android:hint=""
+                    android:inputType="textUri"
+                    android:textColor="@color/text_main"
+                    android:textColorHint="@color/text_hint" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/username_hint"
+                    android:textColor="@color/text_main"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/et_webdav_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/bg_edit_text"
+                    android:hint=""
+                    android:inputType="text"
+                    android:textColor="@color/text_main"
+                    android:textColorHint="@color/text_hint" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/webdav_password_label"
+                    android:textColor="@color/text_main"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="4dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_webdav_pass"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_edit_text"
+                        android:hint=""
+                        android:inputType="textPassword"
+                        android:textColor="@color/text_main"
+                        android:textColorHint="@color/text_hint" />
+
+                    <Button
+                        android:id="@+id/btn_toggle_webdav_pass"
+                        android:layout_width="56dp"
+                        android:layout_height="42dp"
+                        android:layout_marginStart="6dp"
+                        android:contentDescription="@string/click_show_password"
+                        android:minWidth="0dp"
+                        android:padding="0dp"
+                        android:text="@string/show_short" />
+                </LinearLayout>
+
+                <Spinner
+                    android:id="@+id/sp_main_sync_content"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_test_main_webdav"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp"
+                        android:layout_weight="1"
+                        android:text="@string/test_main_connection" />
+
+                    <Button
+                        android:id="@+id/btn_save_webdav_settings"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:text="@string/webdav_save_account" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:text="@string/backup_webdav_title"
+                    android:textColor="@color/text_main"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/webdav_url_hint"
+                    android:textColor="@color/text_main"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/et_webdav_backup_url"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/bg_edit_text"
+                    android:hint=""
+                    android:inputType="textUri"
+                    android:textColor="@color/text_main"
+                    android:textColorHint="@color/text_hint" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/username_hint"
+                    android:textColor="@color/text_main"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/et_webdav_backup_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/bg_edit_text"
+                    android:hint=""
+                    android:inputType="text"
+                    android:textColor="@color/text_main"
+                    android:textColorHint="@color/text_hint" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/webdav_password_label"
+                    android:textColor="@color/text_main"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="4dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_webdav_backup_pass"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_edit_text"
+                        android:hint=""
+                        android:inputType="textPassword"
+                        android:textColor="@color/text_main"
+                        android:textColorHint="@color/text_hint" />
+
+                    <Button
+                        android:id="@+id/btn_toggle_backup_webdav_pass"
+                        android:layout_width="56dp"
+                        android:layout_height="42dp"
+                        android:layout_marginStart="6dp"
+                        android:contentDescription="@string/click_show_password"
+                        android:minWidth="0dp"
+                        android:padding="0dp"
+                        android:text="@string/show_short" />
+                </LinearLayout>
+
+                <Spinner
+                    android:id="@+id/sp_backup_sync_content"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_test_backup_webdav"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp"
+                        android:layout_weight="1"
+                        android:text="@string/test_backup_connection" />
+
+                    <Button
+                        android:id="@+id/btn_save_backup_webdav_settings"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:text="@string/webdav_save_account" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/card_network_access"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_card"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <LinearLayout
+                android:id="@+id/row_network_access_title"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/network_access_control_title"
+                    android:textColor="@color/text_main"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_network_access_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/network_access_protection_enabled"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_network_access_arrow"
+                    android:layout_width="28dp"
+                    android:layout_height="36dp"
+                    android:gravity="center"
+                    android:text="▸"
+                    android:textColor="@color/text_main"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/content_network_access"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/card_lan_share"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_card"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <LinearLayout
+                android:id="@+id/row_lan_share_title"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/lan_sync_title"
+                    android:textColor="@color/text_main"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_lan_share_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/status_not_enabled"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_lan_share_arrow"
+                    android:layout_width="28dp"
+                    android:layout_height="36dp"
+                    android:gravity="center"
+                    android:text="▶"
+                    android:textColor="@color/text_main"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/content_lan_share"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/card_sync_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_card"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <LinearLayout
+                android:id="@+id/row_sync_settings_title"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/global_sync_settings"
+                    android:textColor="@color/text_main"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_sync_settings_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/global_sync_disabled"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_sync_settings_arrow"
+                    android:layout_width="28dp"
+                    android:layout_height="36dp"
+                    android:gravity="center"
+                    android:text="▶"
+                    android:textColor="@color/text_main"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/content_sync_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/cb_auto_sync"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/auto_sync_when_open"
+                    android:textColor="@color/text_main" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/sync_target_label"
+                    android:textColor="@color/text_main"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/rg_sync_target"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp">
+
+                    <RadioButton
+                        android:id="@+id/rb_sync_target_both"
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:text="@string/sync_target_both"
+                        android:textColor="@color/text_main" />
+
+                    <RadioButton
+                        android:id="@+id/rb_sync_target_main_only"
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:text="@string/sync_target_main_only"
+                        android:textColor="@color/text_main" />
+
+                    <RadioButton
+                        android:id="@+id/rb_sync_target_backup_only"
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:text="@string/sync_target_backup_only"
+                        android:textColor="@color/text_main" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/sync_target_help"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/webdav_encryption_method"
+                        android:textColor="@color/text_main"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/sp_webdav_algorithm"
+                        android:layout_width="140dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/bg_edit_text" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_webdav_algorithm_help"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/webdav_encryption_method_help"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/card_backup_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_card"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <LinearLayout
+                android:id="@+id/row_backup_data_title"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/network_backup_title"
+                    android:textColor="@color/text_main"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_backup_data_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/network_backup_none"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_backup_data_arrow"
+                    android:layout_width="28dp"
+                    android:layout_height="36dp"
+                    android:gravity="center"
+                    android:text="▶"
+                    android:textColor="@color/text_main"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/content_backup_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/network_backup_info"
+                    android:textColor="@color/text_main"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_last_sync"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/last_upload_never"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_backup_history"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/network_backup_none"
+                    android:textColor="@color/text_main"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/ll_cloud_backups"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_sync"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp"
+                        android:layout_weight="1"
+                        android:text="@string/network_backup_sync_both" />
+
+                    <Button
+                        android:id="@+id/btn_choose_backup_target"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:text="@string/network_backup_restore_button" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_backup_history"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/cloud_backup" />
+
+                <Button
+                    android:id="@+id/btn_sync_main_webdav"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_restore_main_webdav"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_sync_backup_webdav"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_restore_backup_webdav"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_convert_main_legacy_backup"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/convert_legacy_backup"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/card_local_backup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_card"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <LinearLayout
+                android:id="@+id/row_local_backup_title"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/local_backup_title"
+                    android:textColor="@color/text_main"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_local_backup_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/local_backup_none"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_local_backup_arrow"
+                    android:layout_width="28dp"
+                    android:layout_height="36dp"
+                    android:gravity="center"
+                    android:text="▶"
+                    android:textColor="@color/text_main"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/content_local_backup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/local_backup_location"
+                    android:textColor="@color/text_main"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_local_backup_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/local_backup_not_selected"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btn_local_backup_select_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/local_backup_select_location" />
+
+                <TextView
+                    android:id="@+id/tv_local_backup_latest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/local_backup_none"
+                    android:textColor="@color/text_main"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_local_backup_now"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp"
+                        android:layout_weight="1"
+                        android:text="@string/local_backup_now" />
+
+                    <Button
+                        android:id="@+id/btn_local_backup_restore"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:text="@string/local_backup_restore" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

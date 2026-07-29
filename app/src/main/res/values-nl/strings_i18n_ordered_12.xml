@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="share_nearby_keyscan_device">KeyScan-apparaat in de buurt</string>
+    <string name="share_invite_title">LAN-deelverzoek ontvangen</string>
+    <string name="share_invite_message">%1$s wil %2$d items met je delen, in totaal %3$s.</string>
+    <string name="share_decline">Weigeren</string>
+    <string name="share_accept">Accepteren</string>
+    <string name="clipboard_own_content_skipped">Inhoud die zojuist door KeyScan is gekopieerd, is overgeslagen</string>
+    <string name="clipboard_read_failed">Het klembord kon niet worden gelezen</string>
+    <string name="backup_folder_permission_failed">Toegang tot de map kon niet worden behouden. Kies opnieuw een beschrijfbare map.</string>
+    <string name="backup_folder_write_failed">Schrijftoegang tot de map is niet beschikbaar. Kies de map opnieuw.</string>
+    <string name="input_history_delete_title">Invoergeschiedenis verwijderen</string>
+</resources>

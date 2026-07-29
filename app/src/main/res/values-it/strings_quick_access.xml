@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="quick_access_enable">Attiva accesso rapido mobile</string>
+    <string name="quick_access_enable_summary">Mostra un pulsante di accesso rapido trascinabile nelle pagine principali e ne ricorda la posizione</string>
+    <string name="quick_access_open">Apri accesso rapido</string>
+    <string name="quick_access_close">Chiudi accesso rapido</string>
+    <string name="quick_access_icon_style">Stile icona mobile</string>
+    <string name="quick_access_style_sparkle">Scintilla</string>
+    <string name="quick_access_style_ks">KS</string>
+    <string name="quick_access_style_key">Chiave</string>
+</resources>

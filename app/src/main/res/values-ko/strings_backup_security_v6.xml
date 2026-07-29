@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources><string name="backup_legacy_security_unsupported">이 이전 백업은 PIN과 데이터 보호 키로 함께 보호되지 않아 복원할 수 없습니다. 현재 KeyScan 버전에서 새 백업을 만드세요.</string></resources>

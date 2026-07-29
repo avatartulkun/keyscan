@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="autofill_target_installed">狀態：已安裝</string>
+    <string name="autofill_target_not_installed">狀態：未安裝</string>
+    <string name="autofill_common_reasons">常見原因：</string>
+    <string name="autofill_reason_hints">1. 銀行應用程式未提供自動填入提示</string>
+    <string name="autofill_reason_secure_keyboard">2. 輸入欄位使用安全鍵盤或受保護的控制項</string>
+    <string name="autofill_reason_webview">3. WebView 或自訂容器隱藏了頁面結構</string>
+    <string name="autofill_reason_service">4. 系統自動填入服務已關閉，或受銀行應用程式限制</string>
+    <string name="autofill_reason_scenario">5. 此頁面不是使用者名稱或密碼輸入畫面</string>
+    <string name="autofill_diagnostics_result">診斷結果</string>
+    <string name="vault_target_file_failed">無法開啟目的地檔案</string>
+    <string name="vault_action_edit_record">編輯記錄</string>
+    <string name="vault_section_notes">備註</string>
+    <string name="vault_created_subtitle">%1$s · 建立於 %2$s</string>
+    <string name="vault_action_favorite">收藏</string>
+    <string name="vault_favorited">已加入收藏</string>
+    <string name="vault_unfavorited">已從收藏移除</string>
+    <string name="vault_expand">展開</string>
+    <string name="vault_collapse">收合</string>
+    <string name="vault_copy_content">複製內容</string>
+    <string name="vault_copy_label">複製標籤</string>
+    <string name="vault_view_sensitive">檢視敏感內容</string>
+    <string name="vault_view_sensitive_auth">檢視安全保險箱的敏感資料</string>
+    <string name="vault_copy_sensitive">複製敏感內容</string>
+    <string name="vault_copy_sensitive_auth">複製安全保險箱的敏感資料</string>
+    <string name="vault_copy_notes">複製備註</string>
+    <string name="vault_attachment_encrypted_hint">附件已在本機保險箱中加密。開啟影像時可以加入浮水印。</string>
+    <string name="vault_attachment_open_export">檢視或匯出附件</string>
+    <string name="vault_attachment_open_auth">檢視安全保險箱附件</string>
+    <string name="vault_local_encrypted_notice">此記錄已安全儲存在 KeyScan 的加密本機保險箱中</string>
+    <string name="vault_attachment_open">開啟附件</string>
+    <string name="vault_attachment_download">下載至裝置</string>
+    <string name="vault_attachment_view_export_chooser">檢視或匯出附件</string>
+    <string name="vault_watermark_text">KeyScan 安全保險箱 · 僅供驗證</string>
+    <string name="vault_watermark_failed">無法加入浮水印，將使用原始影像</string>
+    <string name="vault_file_type_file">檔案</string>
+    <string name="vault_file_type_image">影像</string>
+    <string name="vault_file_type_pdf">PDF 文件</string>
+    <string name="vault_file_type_text">文字檔案</string>
+    <string name="vault_file_type_encrypted">加密附件</string>
+    <string name="vault_delete_record_message">要刪除「%1$s」及其附件嗎？</string>
+</resources>

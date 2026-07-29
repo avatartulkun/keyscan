@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="share_unified_content_title">콘텐츠 공유</string>
+    <string name="share_content_summary">공유할 내용을 QR 코드로 만듭니다</string>
+    <string name="share_content_input">공유 내용 입력</string>
+    <string name="share_content_hint">링크, 텍스트 등 다양한 콘텐츠 지원</string>
+    <string name="share_add_note_title">메모 추가</string>
+    <string name="share_save_note_hint">메모 추가(선택 사항)</string>
+    <string name="share_save_history_notice">저장하면 기록에도 함께 추가됩니다</string>
+    <string name="share_saved_album_and_history">갤러리에 저장하고 기록에도 추가했습니다</string>
+    <string name="biometric_change_pin_auth">생체 인식 설정을 변경하려면 잠금 해제 PIN을 입력하세요</string>
+</resources>

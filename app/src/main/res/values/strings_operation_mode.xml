@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="operation_mode_title">操作保护</string>
+    <string name="operation_unlock_default">解锁后进入模式</string>
+    <string name="operation_view_mode">仅查看模式（推荐）</string>
+    <string name="operation_edit_mode">编辑模式</string>
+    <string name="operation_view_summary">允许查看、新增、导入和备份；修改与删除需要先开启编辑模式。</string>
+    <string name="operation_edit_summary">解锁后可直接修改和删除已有数据。</string>
+    <string name="operation_feedback_vibrate">模式切换时轻微振动</string>
+    <string name="operation_feedback_message">显示模式状态提示</string>
+    <string name="operation_scope_summary">仅查看模式不影响新增数据、在线备份和本地备份。恢复备份、覆盖导入、修改和删除需要编辑模式。</string>
+    <string name="operation_view_mode_title">当前为仅查看模式</string>
+    <string name="operation_view_mode_message">为防止误操作，修改和删除功能已暂停。开启编辑模式后可继续操作。</string>
+    <string name="operation_enable_edit">开启编辑模式</string>
+    <string name="operation_mode_settings">模式设置</string>
+    <string name="operation_view_enabled">已进入仅查看模式</string>
+    <string name="operation_edit_enabled">编辑模式已开启</string>
+    <string name="operation_edit_retry">编辑模式已开启，请重新修改</string>
+    <string name="operation_app_locked">KeyScan 已锁定</string>
+    <string name="operation_unlock_prompt">解锁 KeyScan</string>
+    <string name="operation_locked_hint">内容已保护，点击重新验证</string>
+    <string name="operation_lock_view_desc">仅查看模式，点击开启编辑，双击锁定</string>
+    <string name="operation_lock_edit_desc">编辑模式，点击进入仅查看，双击锁定</string>
+</resources>

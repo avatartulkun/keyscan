@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="password_history_records_count"><item quantity="other">%1$d 筆記錄  &gt;</item></plurals><plurals name="password_items_count"><item quantity="other">%1$d 筆</item></plurals><plurals name="trash_retention_days"><item quantity="other">已刪除內容保留 %1$d 天，之後將自動永久刪除</item></plurals><plurals name="trash_restore_selected_count"><item quantity="other">還原所選項目（%1$d）</item></plurals><plurals name="trash_delete_selected_count"><item quantity="other">永久刪除（%1$d）</item></plurals><plurals name="trash_restore_confirm_items"><item quantity="other">確定要還原所選的 %1$d 個項目嗎？</item></plurals><plurals name="trash_delete_confirm_items"><item quantity="other">已選取 %1$d 個項目，刪除後將無法還原。</item></plurals><plurals name="trash_restore_result"><item quantity="other">已還原 %1$d 個項目</item></plurals><plurals name="trash_restore_partial_result"><item quantity="other">已還原 %1$d 個項目，%2$d 個項目失敗%3$s</item></plurals>
+</resources>

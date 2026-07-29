@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_action_save">儲存</string><string name="common_action_cancel">取消</string><string name="common_action_confirm">確認</string><string name="common_action_delete">刪除</string><string name="common_action_close">關閉</string><string name="common_action_copy">複製</string><string name="common_status_success">成功</string><string name="common_status_failed">失敗</string><string name="common_status_loading">載入中</string><string name="common_action_retry">重試</string>
+</resources>

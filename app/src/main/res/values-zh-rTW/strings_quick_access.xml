@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="quick_access_enable">啟用一鍵直達懸浮按鈕</string>
+    <string name="quick_access_enable_summary">在主要功能頁面顯示可拖動的一鍵直達按鈕，並自動記住位置</string>
+    <string name="quick_access_open">展開一鍵直達</string>
+    <string name="quick_access_close">收起一鍵直達</string>
+    <string name="quick_access_icon_style">懸浮圖示樣式</string>
+    <string name="quick_access_style_sparkle">星光</string>
+    <string name="quick_access_style_ks">KS</string>
+    <string name="quick_access_style_key">鑰匙</string>
+</resources>

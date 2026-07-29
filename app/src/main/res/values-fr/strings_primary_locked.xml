@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources><string name="primary_password_locked_summary">Déverrouillez pour afficher le nombre de comptes</string><string name="primary_vault_locked_summary">Chiffrement local</string><string name="primary_otp_locked_summary">Stockage sécurisé</string></resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="share_unified_content_title">Share content</string>
+    <string name="share_content_summary">Turn shared content into a QR code</string>
+    <string name="share_content_input">Enter sharing content</string>
+    <string name="share_content_hint">Supports links, text, and more</string>
+    <string name="share_add_note_title">Add note</string>
+    <string name="share_save_note_hint">Add a note (optional)</string>
+    <string name="share_save_history_notice">Saving will also add this item to History</string>
+    <string name="share_saved_album_and_history">Saved to the gallery and added to History</string>
+    <string name="biometric_change_pin_auth">Enter your unlock PIN to change biometric settings</string>
+</resources>

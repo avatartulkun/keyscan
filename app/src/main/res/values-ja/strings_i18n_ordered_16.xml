@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ocr_field_security_password_optional">セキュリティパスワード（任意）</string>
+    <string name="ocr_bank_result_title">銀行カードの認識結果</string>
+    <string name="ocr_file_result_title">文書スキャン結果</string>
+    <string name="ocr_document_result_title">本人確認書類の認識結果</string>
+    <string name="ocr_save_bank_auth_prompt">銀行カードをセキュア保管庫に保存</string>
+    <string name="ocr_vault_bank_location">金融記録 · 銀行カード</string>
+    <string name="ocr_vault_identity_location">本人確認書類 · %1$s</string>
+    <string name="ocr_save_success_title">保存しました</string>
+    <string name="ocr_save_success_message">セキュア保管庫に保存しました。\n\n保存先：%1$s\n添付ファイル：元の写真は暗号化され、透かしなしで保存されました。</string>
+    <string name="ocr_return_scanner">スマートスキャンに戻る</string>
+    <string name="ocr_view_record">記録を表示</string>
+    <string name="ocr_open_vault">セキュア保管庫</string>
+</resources>

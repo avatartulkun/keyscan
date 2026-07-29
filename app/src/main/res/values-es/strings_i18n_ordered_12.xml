@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="share_nearby_keyscan_device">Dispositivo KeyScan cercano</string>
+    <string name="share_invite_title">Uso compartido por LAN recibido</string>
+    <string name="share_invite_message">%1$s quiere compartir contigo %2$d elementos, con un total de %3$s.</string>
+    <string name="share_decline">Rechazar</string>
+    <string name="share_accept">Aceptar</string>
+    <string name="clipboard_own_content_skipped">Se omitió el contenido que KeyScan acaba de copiar</string>
+    <string name="clipboard_read_failed">No se pudo leer el portapapeles</string>
+    <string name="backup_folder_permission_failed">No se pudo conservar el acceso a la carpeta. Vuelve a elegir una carpeta con permiso de escritura.</string>
+    <string name="backup_folder_write_failed">El acceso de escritura a la carpeta no está disponible. Vuelve a elegir la carpeta.</string>
+    <string name="input_history_delete_title">Eliminar historial de entrada</string>
+</resources>

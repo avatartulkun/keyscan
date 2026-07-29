@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="input_history_delete_message">Dieses Element des Eingabeverlaufs löschen?</string>
+    <string name="keyscan_unlock_first">KeyScan zuerst entsperren</string>
+    <string name="lan_import_waiting_confirmation">Warten auf Importbestätigung</string>
+    <string name="lan_import_confirm_title">Import bestätigen</string>
+    <string name="lan_import_confirm_message">LAN-Importdaten erkannt:\nPasswörter: %1$d\nTOTP: %2$d\nEinträge: %3$d\nBestätige, um fortzufahren.</string>
+    <string name="action_import">Importieren</string>
+    <string name="data_protection_key_explanation">Der Datenschutzschlüssel schützt deine KeyScan-Daten und wird zur Wiederherstellung von Sicherungen benötigt.\n\nEr ist nicht dein WebDAV-Anmeldepasswort.\n\nBewahre ihn sicher auf. KeyScan kann diesen Schlüssel nicht von einem Server wiederherstellen.</string>
+    <string name="data_protection_key">Datenschutzschlüssel</string>
+    <string name="data_protection_key_setup_title">Datenschutzschlüssel festlegen</string>
+    <string name="data_protection_key_required">Gib den Datenschutzschlüssel ein, um fortzufahren.</string>
+    <string name="data_protection_key_current">Aktueller Datenschutzschlüssel</string>
+    <string name="data_protection_key_new">Neuer Datenschutzschlüssel</string>
+</resources>

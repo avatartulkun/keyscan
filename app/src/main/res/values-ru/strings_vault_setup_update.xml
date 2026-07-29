@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vault_setup_manual_auto_hint">Введите ключ вручную или создайте автоматически. Длина по умолчанию — 16 символов.</string>
+    <string name="vault_setup_copy_key">Копировать ключ</string>
+    <string name="vault_setup_copy_warning">Сохраните ключ как можно скорее. Через 30 секунд он будет удалён из буфера обмена.</string>
+    <string name="vault_setup_key_not_preserved">Текущий ключ ещё не скачан и не скопирован</string>
+    <string name="vault_setup_key_preserved">Сохранение текущего ключа подтверждено</string>
+    <string name="vault_setup_preserve_required">Сначала скачайте или скопируйте текущий ключ защиты данных и сохраните его в безопасном месте.</string>
+</resources>

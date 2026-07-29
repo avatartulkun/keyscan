@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="share_nearby_keyscan_device">近くの KeyScan デバイス</string>
+    <string name="share_invite_title">LAN 共有を受信しました</string>
+    <string name="share_invite_message">%1$s が合計 %3$s の %2$d 件の項目を共有しようとしています。</string>
+    <string name="share_decline">拒否</string>
+    <string name="share_accept">承諾</string>
+    <string name="clipboard_own_content_skipped">KeyScan が直前にコピーした内容をスキップしました</string>
+    <string name="clipboard_read_failed">クリップボードを読み取れませんでした</string>
+    <string name="backup_folder_permission_failed">フォルダーへのアクセスを保持できませんでした。書き込み可能なフォルダーをもう一度選択してください。</string>
+    <string name="backup_folder_write_failed">フォルダーへの書き込み権限がありません。フォルダーをもう一度選択してください。</string>
+    <string name="input_history_delete_title">入力履歴を削除</string>
+</resources>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources><string name="backup_legacy_security_unsupported">Questo vecchio backup non è protetto sia dal PIN sia dalla chiave di protezione dati, quindi il ripristino è bloccato. Crea un nuovo backup con la versione corrente di KeyScan.</string></resources>

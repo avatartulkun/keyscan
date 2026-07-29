@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="input_history_delete_message">この入力履歴項目を削除しますか？</string>
+    <string name="keyscan_unlock_first">先に KeyScan のロックを解除してください</string>
+    <string name="lan_import_waiting_confirmation">インポートの確認を待っています</string>
+    <string name="lan_import_confirm_title">インポートの確認</string>
+    <string name="lan_import_confirm_message">LAN インポートデータを検出しました：\nパスワード：%1$d\nTOTP：%2$d\n記録：%3$d\n確認して続行してください。</string>
+    <string name="action_import">インポート</string>
+    <string name="data_protection_key_explanation">データ保護キーは KeyScan のデータを保護し、バックアップの復元に必要です。\n\nWebDAV のログインパスワードとは異なります。\n\n安全に保管してください。KeyScan はサーバーからこのキーを復元できません。</string>
+    <string name="data_protection_key">データ保護キー</string>
+    <string name="data_protection_key_setup_title">データ保護キーを設定</string>
+    <string name="data_protection_key_required">続行するにはデータ保護キーを入力してください。</string>
+    <string name="data_protection_key_current">現在のデータ保護キー</string>
+    <string name="data_protection_key_new">新しいデータ保護キー</string>
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_action_edit">Editar</string>
+    <string name="password_registration_autofill_summary">Autocompletado de registro en sitios web</string>
+    <string name="database_migration_failed">Error al actualizar la base de datos. Tus datos no se eliminaron.</string>
+    <string name="database_corrupted">La base de datos segura está dañada. Intenta restaurar una copia de seguridad.</string>
+    <string name="database_access_failed">No se pudo acceder a la base de datos segura. Comprueba el acceso al almacenamiento o reinicia el dispositivo e inténtalo de nuevo.</string>
+    <string name="database_open_failed">No se pudo abrir la base de datos segura. Verifica que tus credenciales de seguridad sean correctas.</string>
+    <string name="otp_invalid_uri">URI de TOTP no válido</string>
+    <string name="otp_secret_required_error">El secreto es obligatorio</string>
+    <string name="clipboard_label_ssh_private_key">Clave privada SSH</string>
+    <string name="clipboard_label_ssh_public_key">Clave pública SSH</string>
+    <string name="clipboard_label_otp_secret">Secreto TOTP</string>
+    <string name="clipboard_label_wifi_credentials">Credenciales Wi-Fi</string>
+    <string name="clipboard_label_connection_credentials">Credenciales de conexión al servicio</string>
+    <string name="clipboard_label_api_token">Clave de API/Token</string>
+    <string name="clipboard_label_recovery_code">Código de recuperación</string>
+    <string name="clipboard_label_password_text">Texto de contraseña</string>
+    <string name="clipboard_label_license_key">Clave de licencia de software</string>
+    <string name="clipboard_label_possible_secret">Posible secreto</string>
+    <string name="clipboard_import_auth_reason">Importar contenido del portapapeles a KeyScan</string>
+    <string name="clipboard_check_auth_reason">Comprobar si el portapapeles contiene información sensible</string>
+    <string name="password_add_record">Nuevo registro de contraseña</string>
+    <string name="delete_password_group_with_records">Este grupo contiene %1$d registros. Al eliminarlo, se trasladarán al grupo predeterminado sin borrar los registros de contraseñas.</string>
+</resources>

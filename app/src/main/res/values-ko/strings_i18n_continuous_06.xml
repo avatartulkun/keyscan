@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="autofill_target_installed">상태: 설치됨</string>
+    <string name="autofill_target_not_installed">상태: 설치되지 않음</string>
+    <string name="autofill_common_reasons">일반적인 원인:</string>
+    <string name="autofill_reason_hints">1. 은행 앱이 자동 완성 힌트를 제공하지 않음</string>
+    <string name="autofill_reason_secure_keyboard">2. 입력 필드가 보안 키보드 또는 보호된 컨트롤을 사용함</string>
+    <string name="autofill_reason_webview">3. WebView 또는 사용자 지정 컨테이너가 페이지 구조를 숨김</string>
+    <string name="autofill_reason_service">4. 시스템 자동 완성 서비스가 꺼져 있거나 은행 앱에서 제한함</string>
+    <string name="autofill_reason_scenario">5. 사용자 이름 또는 비밀번호 입력 화면이 아님</string>
+    <string name="autofill_diagnostics_result">진단 결과</string>
+    <string name="vault_target_file_failed">대상 파일을 열 수 없습니다</string>
+    <string name="vault_action_edit_record">기록 편집</string>
+    <string name="vault_section_notes">메모</string>
+    <string name="vault_created_subtitle">%1$s · %2$s 생성</string>
+    <string name="vault_action_favorite">즐겨찾기</string>
+    <string name="vault_favorited">즐겨찾기에 추가했습니다</string>
+    <string name="vault_unfavorited">즐겨찾기에서 삭제했습니다</string>
+    <string name="vault_expand">펼치기</string>
+    <string name="vault_collapse">접기</string>
+    <string name="vault_copy_content">내용 복사</string>
+    <string name="vault_copy_label">레이블 복사</string>
+    <string name="vault_view_sensitive">민감한 내용 보기</string>
+    <string name="vault_view_sensitive_auth">보안 금고의 민감한 데이터 보기</string>
+    <string name="vault_copy_sensitive">민감한 내용 복사</string>
+    <string name="vault_copy_sensitive_auth">보안 금고의 민감한 데이터 복사</string>
+    <string name="vault_copy_notes">메모 복사</string>
+    <string name="vault_attachment_encrypted_hint">첨부 파일은 로컬 보안 금고에서 암호화됩니다. 이미지를 열 때 워터마크를 추가할 수 있습니다.</string>
+    <string name="vault_attachment_open_export">첨부 파일 보기 또는 내보내기</string>
+    <string name="vault_attachment_open_auth">보안 금고 첨부 파일 보기</string>
+    <string name="vault_local_encrypted_notice">이 기록은 KeyScan의 암호화된 로컬 보안 금고에 안전하게 저장됩니다</string>
+    <string name="vault_attachment_open">첨부 파일 열기</string>
+    <string name="vault_attachment_download">기기에 다운로드</string>
+    <string name="vault_attachment_view_export_chooser">첨부 파일 보기 또는 내보내기</string>
+    <string name="vault_watermark_text">KeyScan 보안 금고 · 확인 전용</string>
+    <string name="vault_watermark_failed">워터마크를 추가할 수 없어 원본 이미지를 사용합니다</string>
+    <string name="vault_file_type_file">파일</string>
+    <string name="vault_file_type_image">이미지</string>
+    <string name="vault_file_type_pdf">PDF 문서</string>
+    <string name="vault_file_type_text">텍스트 파일</string>
+    <string name="vault_file_type_encrypted">암호화된 첨부 파일</string>
+    <string name="vault_delete_record_message">“%1$s” 및 첨부 파일을 삭제하시겠습니까?</string>
+</resources>

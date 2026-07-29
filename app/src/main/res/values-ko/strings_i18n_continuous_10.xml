@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="import_otp_auth">TOTP 인증기 가져오기</string>
+    <string name="autofill_unlock_required_title">KeyScan 잠금 해제</string>
+    <string name="autofill_unlock_required_message">자동 완성으로 비밀번호 보관함을 읽으려면 본인 인증이 필요합니다.</string>
+    <string name="autofill_generate_password_message">규칙을 선택하고 확인하세요. 생성된 비밀번호는 현재 등록 페이지에만 입력되며 저장하기 전에 시스템이 다시 확인합니다.</string>
+    <string name="autofill_rule_recommended">권장 보안(문자 + 숫자 + 기호)</string>
+    <string name="autofill_rule_compatible">웹사이트 호환(문자 + 숫자)</string>
+    <string name="autofill_rule_pin">숫자 비밀번호</string>
+    <string name="autofill_password_length">길이: %1$d</string>
+    <string name="autofill_use_password">이 비밀번호 사용</string>
+    <string name="history_source_generated">생성됨</string>
+    <string name="history_source_scanned">스캔됨</string>
+    <string name="history_today">오늘</string>
+    <string name="history_yesterday">어제</string>
+    <string name="history_export_records">기록 내보내기</string>
+    <string name="history_export_success">내보내기 성공</string>
+    <string name="history_export_create_dir_failed">내보내기 폴더를 만들 수 없습니다</string>
+    <string name="history_yes">예</string>
+    <string name="history_no">아니요</string>
+    <string name="history_export_share">내보낸 파일 공유</string>
+    <string name="image_preview_title">이미지 미리보기</string>
+    <string name="image_preview_failed">이미지를 미리 볼 수 없습니다</string>
+    <string name="image_preview_back">뒤로</string>
+    <string name="image_preview_share">공유</string>
+    <string name="image_preview_export">내보내기</string>
+    <string name="image_preview_delete">삭제</string>
+    <string name="image_preview_share_chooser">이미지 공유</string>
+    <string name="image_preview_share_failed">이미지를 공유할 수 없습니다</string>
+    <string name="image_preview_download_title">이미지 다운로드</string>
+    <string name="image_preview_download_original">원본 다운로드</string>
+    <string name="image_preview_download_watermark">워터마크를 사용자 지정하여 다운로드</string>
+    <string name="image_preview_watermark_hint">워터마크 텍스트</string>
+    <string name="image_preview_color_blue">파란색</string>
+    <string name="image_preview_color_red">빨간색</string>
+    <string name="image_preview_color_black">검은색</string>
+    <string name="image_preview_color_gray">회색</string>
+    <string name="image_preview_color_green">초록색</string>
+    <string name="image_preview_color_white">흰색</string>
+    <string name="image_preview_opacity">불투명도: %1$d%%</string>
+    <string name="image_preview_size">크기: %1$d%%</string>
+    <string name="image_preview_opacity_prefix">불투명도:</string>
+</resources>

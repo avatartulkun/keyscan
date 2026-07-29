@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ocr_field_security_password_optional">Sicherheitskennwort (optional)</string>
+    <string name="ocr_bank_result_title">Erkennungsergebnis der Bankkarte</string>
+    <string name="ocr_file_result_title">Ergebnis des Dokumentenscans</string>
+    <string name="ocr_document_result_title">Erkennungsergebnis des Ausweisdokuments</string>
+    <string name="ocr_save_bank_auth_prompt">Bankkarte im sicheren Tresor speichern</string>
+    <string name="ocr_vault_bank_location">Finanzunterlagen · Bankkarte</string>
+    <string name="ocr_vault_identity_location">Ausweisdokumente · %1$s</string>
+    <string name="ocr_save_success_title">Erfolgreich gespeichert</string>
+    <string name="ocr_save_success_message">Im sicheren Tresor gespeichert.\n\nSpeicherort: %1$s\nAnhang: Das Originalfoto wurde verschlüsselt und ohne Wasserzeichen gespeichert.</string>
+    <string name="ocr_return_scanner">Zurück zum intelligenten Scan</string>
+    <string name="ocr_view_record">Eintrag anzeigen</string>
+    <string name="ocr_open_vault">Sicherer Tresor</string>
+</resources>

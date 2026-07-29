@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?><resources>
+<string name="webdav_qr_title">使い捨てWebDAV設定QRコード</string>
+<string name="webdav_qr_security_notice">このQRコードにはWebDAVのログイン情報が含まれます。信頼できる端末だけにスキャンを許可してください。期限切れになると受信端末で拒否されます。</string>
+<string name="webdav_qr_refresh_after_expiry">期限切れ後に更新</string>
+<string name="webdav_qr_expired">期限切れです。手動で更新してください</string>
+<string name="webdav_qr_not_expired">QRコードはまだ期限切れではありません</string>
+<string name="webdav_qr_generate_failed">QRコードを生成できませんでした</string>
+<string name="webdav_qr_invalid">KeyScanのWebDAV設定QRコードではありません</string>
+<string name="webdav_qr_import_expired">QRコードの期限が切れています。古い端末で手動更新してください</string>
+<string name="webdav_qr_import_success">WebDAV設定を入力しました。保存前に接続をテストしてください</string>
+<string name="webdav_qr_import_failed">QRコードを取り込めませんでした</string>
+</resources>

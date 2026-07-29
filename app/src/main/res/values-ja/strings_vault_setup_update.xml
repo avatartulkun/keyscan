@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vault_setup_manual_auto_hint">手動入力または自動生成に対応しています。自動生成は既定で16文字です。</string>
+    <string name="vault_setup_copy_key">キーをコピー</string>
+    <string name="vault_setup_copy_warning">早めに保存してください。キーは30秒後にクリップボードから消去されます。</string>
+    <string name="vault_setup_key_not_preserved">現在のキーはまだダウンロードまたはコピーされていません</string>
+    <string name="vault_setup_key_preserved">現在のキーの保存を確認しました</string>
+    <string name="vault_setup_preserve_required">現在のデータ保護キーをダウンロードまたはコピーし、安全に保存してください。</string>
+</resources>

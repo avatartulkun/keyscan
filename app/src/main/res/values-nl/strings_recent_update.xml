@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="auto_backup_when_changed">Automatisch een back-up maken wanneer gegevens wijzigen</string>
+    <string name="local_auto_backup">Automatische lokale back-up (standaard uitgeschakeld)</string>
+    <string name="security_change_backup_title">Beveiligingsgegevens gewijzigd</string>
+    <string name="security_change_backup_message">Na het wijzigen van de pincode of gegevensbeveiligingssleutel zijn oudere back-ups mogelijk niet meer geschikt voor deze kluis. Nu een nieuwe back-up maken?</string>
+    <string name="security_change_backup_now">Nu back-up maken</string>
+    <string name="security_change_backup_later">Later back-up maken</string>
+    <string name="security_change_backup_started">Nieuwe back-up voltooid</string>
+    <string name="security_change_backup_failed">Back-up mislukt</string>
+    <string name="privacy_agreement_module_title">Privacy en overeenkomsten</string>
+    <string name="about_keyscan_slogan">Jouw wachtwoorden, jouw beheer — vrijheid zonder aanmelden</string>
+    <string name="about_version_format">Versie: %1$s</string>
+    <string name="about_version_unknown">Versie: --</string>
+    <string name="security_lock_clear_title">Vergrendelen en wissen</string>
+    <string name="clipboard_clear_after_import_summary">Geïmporteerde inhoud na het opslaan automatisch van het klembord wissen</string>
+    <string name="about_entry_summary">App-informatie, overeenkomsten, feedback en versie bekijken</string>
+    <string name="about_feedback_summary">Problemen, suggesties en feedback versturen</string>
+    <string name="about_check_updates">Controleren op updates</string>
+    <string name="about_check_updates_summary">Open de releasepagina van het project om nieuwe versies te bekijken</string>
+    <string name="about_open_source">Open-sourceadres</string>
+    <string name="about_copyright">© 2026 KeyScan · tulkun</string>
+    <string name="about_rights_reserved">Alle rechten voorbehouden.</string>
+    <string name="about_open_link_failed">Kan de link niet openen</string>
+    <string name="about_privacy_policy">KeyScan-gebruikersovereenkomst en privacybeleid</string>
+</resources>

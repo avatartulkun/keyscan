@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?><resources>
+<string name="share_text_hint">共有するテキストを入力</string><string name="share_link_hint">URLを入力（例：https://example.com）</string><string name="share_copy_text">テキストをコピー</string><string name="share_copy_link">リンクをコピー</string><string name="share_content_required">先に共有する内容を入力してください</string><string name="share_clip_label">KeyScan共有コンテンツ</string>
+</resources>

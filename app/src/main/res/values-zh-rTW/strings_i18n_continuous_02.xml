@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="security_pin_confirm">確認 PIN</string>
+    <string name="security_pin_access_title">PIN 控制存取權限</string>
+    <string name="security_pin_access_summary">• 開啟密碼保險箱\n• 檢視安全保險箱\n• 授權自動填入\n\nKeyScan 會結合 PIN 與資料保護金鑰來衍生資料庫保護金鑰。PIN 不會直接用作資料庫密碼。</string>
+    <string name="security_pin_save">儲存 PIN</string>
+    <string name="security_pin_current_incorrect">目前的 PIN 不正確</string>
+    <string name="security_pin_mismatch">PIN 不一致</string>
+    <string name="security_pin_database_key_unavailable">資料庫保護金鑰目前無法使用，因此尚不能變更 PIN</string>
+    <string name="security_pin_saved">已儲存 PIN</string>
+    <string name="security_pin_changed">已變更 PIN</string>
+    <string name="security_biometric_settings">生物辨識設定</string>
+    <string name="security_biometric_unlock_summary">使用指紋或臉部辨識快速解鎖</string>
+    <string name="security_tip">安全提示</string>
+    <string name="security_biometric_note">生物辨識僅用於解鎖 KeyScan 及保護敏感操作，不會取代資料保護金鑰，也無法還原雲端備份。</string>
+    <string name="security_pin_setup_first">請先設定 PIN</string>
+    <string name="security_device_unavailable">此裝置無法使用生物辨識</string>
+    <string name="security_database_title">安全資料庫</string>
+    <string name="security_database_open_failed">無法開啟安全資料庫</string>
+    <string name="security_database_preserved">KeyScan 不會自動刪除您的資料庫檔案。請確認安全憑證，或從備份還原。</string>
+    <string name="security_open_recovery">開啟安全復原中心</string>
+    <string name="security_view_status">檢視安全狀態</string>
+    <string name="security_database_migration_failed">資料庫移轉失敗。您的資料並未刪除。</string>
+    <string name="security_database_abnormal">安全資料庫處於非預期狀態。請嘗試從備份還原。</string>
+    <string name="security_database_access_failed">無法存取安全資料庫。請檢查儲存空間存取權限，或重新啟動裝置後再試一次。</string>
+    <string name="security_database_credentials_failed">無法開啟安全資料庫。請確認您的安全憑證正確。</string>
+    <string name="data_key_page_summary">KeyScan 會結合您的 PIN 與資料保護金鑰來衍生資料庫保護金鑰，以保護密碼、TOTP 及安全保險箱資料。</string>
+    <string name="status_set_line">狀態：已設定</string>
+    <string name="status_not_set_line">狀態：未設定</string>
+    <string name="data_key_usage_title">用途</string>
+    <string name="data_key_usage_summary">✓ 與 PIN 一同保護資料庫\n✓ 保護備份資料\n✓ 資料復原與裝置移轉</string>
+    <string name="data_key_view_auth">檢視資料保護金鑰</string>
+    <string name="data_key_security_note">檢視資料保護金鑰需要指紋或臉部辨識，只有 PIN 並不足夠。KeyScan 會在變更金鑰前確認目前的安全狀態，若變更失敗則還原舊狀態。</string>
+    <string name="data_key_biometric_required">請開啟生物辨識保護以檢視資料保護金鑰。</string>
+    <string name="biometric_verify_face_fingerprint">驗證您的指紋或臉部</string>
+    <string name="authentication_incomplete">驗證未完成</string>
+    <string name="data_key_unlock_pin_input">輸入解鎖 PIN</string>
+    <string name="data_key_verify_security_title">驗證安全狀態</string>
+    <string name="data_key_verify_security_message">變更資料保護金鑰前，請驗證解鎖 PIN 或生物辨識。</string>
+    <string name="action_continue">繼續</string>
+    <string name="pin_incorrect">PIN 不正確</string>
+    <string name="data_key_old_input">輸入舊的資料保護金鑰</string>
+</resources>

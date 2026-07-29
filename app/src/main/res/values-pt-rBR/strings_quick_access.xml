@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="quick_access_enable">Ativar acesso rápido flutuante</string>
+    <string name="quick_access_enable_summary">Mostra um botão de acesso rápido arrastável nas principais páginas e memoriza sua posição</string>
+    <string name="quick_access_open">Abrir acesso rápido</string>
+    <string name="quick_access_close">Fechar acesso rápido</string>
+    <string name="quick_access_icon_style">Estilo do ícone flutuante</string>
+    <string name="quick_access_style_sparkle">Brilho</string>
+    <string name="quick_access_style_ks">KS</string>
+    <string name="quick_access_style_key">Chave</string>
+</resources>

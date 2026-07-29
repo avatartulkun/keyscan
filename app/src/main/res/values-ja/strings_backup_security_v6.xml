@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources><string name="backup_legacy_security_unsupported">この旧形式のバックアップは PIN とデータ保護キーの両方で保護されていないため、復元できません。現在の KeyScan で新しいバックアップを作成してください。</string></resources>

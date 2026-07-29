@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources><string name="primary_password_locked_summary">Sblocca per vedere il numero di account</string><string name="primary_vault_locked_summary">Crittografia locale</string><string name="primary_otp_locked_summary">Archiviazione sicura</string></resources>

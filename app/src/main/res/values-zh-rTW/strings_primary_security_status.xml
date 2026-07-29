@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources><string name="primary_security_biometric_enabled">生物辨識已開啟</string><string name="primary_security_biometric_disabled">生物辨識未開啟</string><string name="primary_security_data_encrypted">資料已加密</string><string name="primary_security_data_not_encrypted">資料加密未啟用</string><string name="primary_security_duplicate_found">發現 %1$d 個重複密碼</string><string name="primary_security_duplicate_none">未發現重複密碼</string><string name="primary_security_duplicate_locked">解鎖後檢查重複密碼</string></resources>

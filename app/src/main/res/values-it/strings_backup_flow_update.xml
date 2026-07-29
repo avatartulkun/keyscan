@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?><resources>
+<string name="online_backup_restore_title">Backup e ripristino online</string><string name="local_backup_restore_title">Backup e ripristino locale</string>
+<string name="backup_file_prefix_title">Prefisso personalizzato del file di backup</string><string name="backup_file_prefix_hint">Predefinito: filebackup</string>
+<string name="vault_setup_input_password_short">Inserisci chiave</string><string name="vault_setup_confirm_password_short">Conferma chiave</string>
+<string name="primary_export_summary">Seleziona ed esporta password, TOTP o dati della cassaforte</string>
+</resources>

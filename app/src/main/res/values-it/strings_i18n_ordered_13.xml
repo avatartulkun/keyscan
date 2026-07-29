@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="input_history_delete_message">Eliminare questo elemento dalla cronologia di immissione?</string>
+    <string name="keyscan_unlock_first">Prima sblocca KeyScan</string>
+    <string name="lan_import_waiting_confirmation">In attesa della conferma di importazione</string>
+    <string name="lan_import_confirm_title">Conferma importazione</string>
+    <string name="lan_import_confirm_message">Rilevati dati da importare tramite LAN:\nPassword: %1$d\nTOTP: %2$d\nRecord: %3$d\nConferma per continuare.</string>
+    <string name="action_import">Importa</string>
+    <string name="data_protection_key_explanation">La chiave di protezione dei dati protegge i tuoi dati KeyScan ed è necessaria per ripristinare i backup.\n\nNon è la password di accesso a WebDAV.\n\nConservala al sicuro. KeyScan non può recuperare questa chiave da un server.</string>
+    <string name="data_protection_key">Chiave di protezione dei dati</string>
+    <string name="data_protection_key_setup_title">Imposta chiave di protezione dei dati</string>
+    <string name="data_protection_key_required">Inserisci la chiave di protezione dei dati per continuare.</string>
+    <string name="data_protection_key_current">Chiave di protezione dei dati attuale</string>
+    <string name="data_protection_key_new">Nuova chiave di protezione dei dati</string>
+</resources>

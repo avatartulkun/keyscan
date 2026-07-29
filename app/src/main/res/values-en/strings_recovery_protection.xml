@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="recovery_protection_title">Recovery protection</string>
+    <string name="recovery_protection_summary">Check that a backup exists and can restore data on a new device</string>
+    <string name="recovery_protection_explanation">Recovery protection checks cloud configuration, the Data Protection Key, the latest backup, and restore verification.</string>
+    <string name="recovery_protection_not_set">Not set</string>
+    <string name="recovery_protection_pending">Verification needed</string>
+    <string name="recovery_protection_ready">Protected</string>
+    <string name="recovery_protection_update">Update needed</string>
+    <string name="recovery_protection_expired">Expired</string>
+    <string name="vault_export_archive_note">A ZIP file containing vault items, fields, and every attachment will be exported. Its contents are readable; save it only to a trusted location and delete it when no longer needed.</string>
+    <string name="vault_export_archive_done">Vault items and attachments exported</string>
+    <string name="vault_export_archive_failed">Vault export failed</string>
+</resources>

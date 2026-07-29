@@ -1,0 +1,1 @@
+<resources><string name="data_key_hide">キーを非表示</string><string name="data_key_import_downloaded">ダウンロードしたキーファイルを読み込む</string><string name="data_key_import_failed">キーファイルを読み込めません</string><string name="data_key_import_invalid">有効な8～16文字のデータ保護キーが見つかりません</string><string name="data_key_import_success">以前のデータ保護キーを読み込みました</string></resources>

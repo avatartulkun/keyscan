@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="ocr_cache_create_failed">Impossibile creare la cache di scansione</string>
+    <string name="ocr_file_bank_front">fronte_carta_bancaria.jpg</string>
+    <string name="ocr_file_scanned_document">documento_scansionato.jpg</string>
+    <string name="ocr_file_id_front">fronte_documento_identita.jpg</string>
+    <string name="ocr_file_passport_photo">pagina_foto_passaporto.jpg</string>
+    <string name="ocr_file_driver_license">patente_di_guida.jpg</string>
+    <string name="ocr_file_document">documento.jpg</string>
+    <string name="ocr_file_id_back">retro_documento_identita.jpg</string>
+    <string name="ocr_file_document_back">retro_documento.jpg</string>
+    <string name="vault_field_label">Etichetta (facoltativa)</string>
+    <string name="vault_field_password">Password</string>
+    <string name="vault_field_api_address">Indirizzo API</string>
+    <string name="vault_field_docs_url">URL documentazione (facoltativo)</string>
+</resources>

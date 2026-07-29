@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="security_pin_confirm">PIN 확인</string>
+    <string name="security_pin_access_title">PIN으로 접근 제어</string>
+    <string name="security_pin_access_summary">• 비밀번호 보관함 열기\n• 보안 금고 보기\n• 자동 완성 승인\n\nKeyScan은 PIN과 데이터 보호 키를 결합하여 데이터베이스 보호 키를 생성합니다. PIN은 데이터베이스 비밀번호로 직접 사용되지 않습니다.</string>
+    <string name="security_pin_save">PIN 저장</string>
+    <string name="security_pin_current_incorrect">현재 PIN이 올바르지 않습니다</string>
+    <string name="security_pin_mismatch">PIN이 일치하지 않습니다</string>
+    <string name="security_pin_database_key_unavailable">데이터베이스 보호 키를 사용할 수 없어 아직 PIN을 변경할 수 없습니다</string>
+    <string name="security_pin_saved">PIN을 저장했습니다</string>
+    <string name="security_pin_changed">PIN을 변경했습니다</string>
+    <string name="security_biometric_settings">생체 인식 설정</string>
+    <string name="security_biometric_unlock_summary">지문 또는 얼굴 인식으로 빠르게 잠금 해제</string>
+    <string name="security_tip">보안 팁</string>
+    <string name="security_biometric_note">생체 인식은 KeyScan 잠금 해제와 민감한 작업 보호에만 사용됩니다. 데이터 보호 키를 대체하지 않으며 클라우드 백업을 복원할 수 없습니다.</string>
+    <string name="security_pin_setup_first">먼저 PIN을 설정하세요</string>
+    <string name="security_device_unavailable">이 기기에서는 생체 인식을 사용할 수 없습니다</string>
+    <string name="security_database_title">보안 데이터베이스</string>
+    <string name="security_database_open_failed">보안 데이터베이스를 열 수 없습니다</string>
+    <string name="security_database_preserved">KeyScan은 데이터베이스 파일을 자동으로 삭제하지 않습니다. 보안 자격 증명을 확인하거나 백업에서 복원하세요.</string>
+    <string name="security_open_recovery">보안 복구 센터 열기</string>
+    <string name="security_view_status">보안 상태 보기</string>
+    <string name="security_database_migration_failed">데이터베이스 마이그레이션에 실패했습니다. 데이터는 삭제되지 않았습니다.</string>
+    <string name="security_database_abnormal">보안 데이터베이스가 예기치 않은 상태입니다. 백업에서 복원해 보세요.</string>
+    <string name="security_database_access_failed">보안 데이터베이스에 접근할 수 없습니다. 저장소 접근 권한을 확인하거나 기기를 다시 시작한 후 다시 시도하세요.</string>
+    <string name="security_database_credentials_failed">보안 데이터베이스를 열 수 없습니다. 보안 자격 증명이 올바른지 확인하세요.</string>
+    <string name="data_key_page_summary">KeyScan은 PIN과 데이터 보호 키를 결합하여 비밀번호, TOTP 및 보안 금고 데이터를 보호하는 데이터베이스 보호 키를 생성합니다.</string>
+    <string name="status_set_line">상태: 설정됨</string>
+    <string name="status_not_set_line">상태: 설정되지 않음</string>
+    <string name="data_key_usage_title">사용 용도</string>
+    <string name="data_key_usage_summary">✓ PIN과 함께 데이터베이스 보호\n✓ 백업 데이터 보호\n✓ 데이터 복구 및 기기 이전</string>
+    <string name="data_key_view_auth">데이터 보호 키 보기</string>
+    <string name="data_key_security_note">데이터 보호 키를 보려면 지문 또는 얼굴 인증이 필요하며 PIN만으로는 충분하지 않습니다. KeyScan은 키를 변경하기 전에 현재 보안 상태를 확인하고 변경에 실패하면 이전 상태를 복원합니다.</string>
+    <string name="data_key_biometric_required">데이터 보호 키를 보려면 생체 인식 보호를 켜세요.</string>
+    <string name="biometric_verify_face_fingerprint">지문 또는 얼굴 인증</string>
+    <string name="authentication_incomplete">인증이 완료되지 않았습니다</string>
+    <string name="data_key_unlock_pin_input">잠금 해제 PIN 입력</string>
+    <string name="data_key_verify_security_title">보안 상태 확인</string>
+    <string name="data_key_verify_security_message">데이터 보호 키를 변경하기 전에 잠금 해제 PIN 또는 생체 인식을 확인하세요.</string>
+    <string name="action_continue">계속</string>
+    <string name="pin_incorrect">PIN이 올바르지 않습니다</string>
+    <string name="data_key_old_input">이전 데이터 보호 키 입력</string>
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="data_protection_key_confirm">Confirmar nova chave de proteção de dados</string>
+    <string name="data_protection_key_change_title">Alterar chave de proteção de dados</string>
+    <string name="current_password_incorrect">A senha atual está incorreta</string>
+    <string name="data_protection_key_short_explanation">A chave de proteção de dados protege os dados dos backups. Ela não é sua senha de login do WebDAV.</string>
+    <string name="data_protection_key_required_short">Insira a chave de proteção de dados</string>
+    <string name="local_backup_failed_detail">Falha no backup local: %1$s</string>
+    <string name="local_backup_location_unavailable">Falha no backup local: a pasta ou o arquivo selecionado não está disponível</string>
+    <string name="backup_history_no_folder">Histórico de backups · Nenhuma pasta selecionada</string>
+    <string name="backup_history_permission_expired">Histórico de backups · Permissão da pasta expirada</string>
+    <string name="backup_folder_unreadable_help">Não foi possível ler a pasta padrão. Escolha-a novamente ou selecione um arquivo usando “Restaurar do dispositivo”.</string>
+    <string name="backup_history_count">Histórico de backups · %1$d arquivos</string>
+    <string name="time_unknown">Horário desconhecido</string>
+</resources>

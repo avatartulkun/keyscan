@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources><string name="primary_password_locked_summary">解鎖後顯示帳號數量</string><string name="primary_vault_locked_summary">本機加密保護</string><string name="primary_otp_locked_summary">驗證碼安全儲存</string></resources>

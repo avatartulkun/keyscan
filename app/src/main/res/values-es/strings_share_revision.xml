@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="share_unified_content_title">Compartir contenido</string>
+    <string name="share_content_summary">Convierte el contenido compartido en un código QR</string>
+    <string name="share_content_input">Introduce el contenido para compartir</string>
+    <string name="share_content_hint">Admite enlaces, texto y otros contenidos</string>
+    <string name="share_add_note_title">Añadir nota</string>
+    <string name="share_save_note_hint">Añadir una nota (opcional)</string>
+    <string name="share_save_history_notice">Al guardar, también se añadirá al historial</string>
+    <string name="share_saved_album_and_history">Guardado en la galería y añadido al historial</string>
+    <string name="biometric_change_pin_auth">Introduce el PIN de desbloqueo para cambiar la biometría</string>
+</resources>

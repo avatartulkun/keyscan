@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="data_protection_key_confirm">Nieuwe gegevensbeveiligingssleutel bevestigen</string>
+    <string name="data_protection_key_change_title">Gegevensbeveiligingssleutel wijzigen</string>
+    <string name="current_password_incorrect">Het huidige wachtwoord is onjuist</string>
+    <string name="data_protection_key_short_explanation">De gegevensbeveiligingssleutel beschermt back-upgegevens. Dit is niet je WebDAV-aanmeldwachtwoord.</string>
+    <string name="data_protection_key_required_short">Voer de gegevensbeveiligingssleutel in</string>
+    <string name="local_backup_failed_detail">Lokale back-up mislukt: %1$s</string>
+    <string name="local_backup_location_unavailable">Lokale back-up mislukt: de geselecteerde map of het bestand is niet beschikbaar</string>
+    <string name="backup_history_no_folder">Back-upgeschiedenis · Geen map geselecteerd</string>
+    <string name="backup_history_permission_expired">Back-upgeschiedenis · Mapmachtiging verlopen</string>
+    <string name="backup_folder_unreadable_help">De standaardmap kan niet worden gelezen. Kies de map opnieuw of selecteer een bestand via ‘Herstellen vanaf apparaat’.</string>
+    <string name="backup_history_count">Back-upgeschiedenis · %1$d bestanden</string>
+    <string name="time_unknown">Tijd onbekend</string>
+</resources>

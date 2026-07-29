@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources><string name="primary_tools">Werkzeuge</string><string name="primary_home">Start</string><string name="primary_data">Datenverwaltung</string><string name="primary_security_freedom">Sicher · frei</string><string name="primary_add">Hinzufügen</string><string name="primary_password_summary">%1$d Konten</string><string name="primary_vault_summary">%1$d Einträge · Lokal verschlüsselt</string><string name="primary_otp_summary">%1$d TOTP-Codes · Sicher gespeichert</string></resources>

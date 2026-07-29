@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="password_history_records_count"><item quantity="other">기록 %1$d개  &gt;</item></plurals>
+    <plurals name="password_items_count"><item quantity="other">%1$d개</item></plurals>
+    <plurals name="trash_retention_days"><item quantity="other">삭제된 항목을 %1$d일 동안 보관한 후 자동으로 영구 삭제합니다</item></plurals>
+    <plurals name="trash_restore_selected_count"><item quantity="other">선택 항목 복원(%1$d)</item></plurals>
+    <plurals name="trash_delete_selected_count"><item quantity="other">영구 삭제(%1$d)</item></plurals>
+    <plurals name="trash_restore_confirm_items"><item quantity="other">선택한 항목 %1$d개를 복원하시겠습니까?</item></plurals>
+    <plurals name="trash_delete_confirm_items"><item quantity="other">%1$d개 항목을 선택했습니다. 삭제 후에는 복원할 수 없습니다.</item></plurals>
+    <plurals name="trash_restore_result"><item quantity="other">%1$d개 항목을 복원했습니다</item></plurals>
+    <plurals name="trash_restore_partial_result"><item quantity="other">%1$d개 항목 복원, %2$d개 실패%3$s</item></plurals>
+</resources>

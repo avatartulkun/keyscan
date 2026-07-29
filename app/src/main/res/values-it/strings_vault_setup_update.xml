@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vault_setup_manual_auto_hint">Inserisci una chiave manualmente o generala automaticamente. La lunghezza predefinita è 16.</string>
+    <string name="vault_setup_copy_key">Copia chiave</string>
+    <string name="vault_setup_copy_warning">Salvala subito. La chiave verrà cancellata dagli appunti dopo 30 secondi.</string>
+    <string name="vault_setup_key_not_preserved">La chiave attuale non è ancora stata scaricata o copiata</string>
+    <string name="vault_setup_key_preserved">Salvataggio della chiave attuale confermato</string>
+    <string name="vault_setup_preserve_required">Prima scarica o copia la chiave di protezione dei dati attuale e conservala in modo sicuro.</string>
+</resources>

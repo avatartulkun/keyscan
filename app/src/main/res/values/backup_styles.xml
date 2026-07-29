@@ -1,0 +1,18 @@
+<resources>
+    <style name="BackupCard">
+        <item name="android:layout_width">match_parent</item><item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">12dp</item><item name="android:background">@drawable/bg_card</item>
+        <item name="android:elevation">1dp</item><item name="android:orientation">vertical</item><item name="android:padding">14dp</item>
+    </style>
+    <style name="BackupHeaderRow"><item name="android:layout_width">match_parent</item><item name="android:layout_height">64dp</item><item name="android:gravity">center_vertical</item><item name="android:orientation">horizontal</item></style>
+    <style name="BackupHeaderIcon"><item name="android:layout_width">34dp</item><item name="android:layout_height">34dp</item><item name="android:layout_marginEnd">12dp</item><item name="android:tint">@color/info</item></style>
+    <style name="BackupHeaderTextBlock"><item name="android:layout_width">0dp</item><item name="android:layout_height">wrap_content</item><item name="android:layout_weight">1</item><item name="android:orientation">vertical</item></style>
+    <style name="BackupHeaderTitle"><item name="android:layout_width">match_parent</item><item name="android:layout_height">wrap_content</item><item name="android:maxLines">1</item><item name="android:textColor">@color/text_main</item><item name="android:textSize">17sp</item><item name="android:textStyle">bold</item></style>
+    <style name="BackupHeaderSummary"><item name="android:layout_width">match_parent</item><item name="android:layout_height">wrap_content</item><item name="android:ellipsize">end</item><item name="android:maxLines">1</item><item name="android:textColor">@color/text_secondary</item><item name="android:textSize">12sp</item></style>
+    <style name="BackupHeaderArrow"><item name="android:layout_width">36dp</item><item name="android:layout_height">48dp</item><item name="android:gravity">center</item><item name="android:text">▶</item><item name="android:textColor">@color/text_main</item><item name="android:textSize">18sp</item></style>
+    <style name="BackupContent"><item name="android:layout_width">match_parent</item><item name="android:layout_height">wrap_content</item><item name="android:orientation">vertical</item><item name="android:visibility">gone</item></style>
+    <style name="BackupSubTitle"><item name="android:layout_width">match_parent</item><item name="android:layout_height">wrap_content</item><item name="android:layout_marginTop">6dp</item><item name="android:layout_marginBottom">4dp</item><item name="android:textColor">@color/info</item><item name="android:textSize">16sp</item><item name="android:textStyle">bold</item></style>
+    <style name="BackupEdit"><item name="android:layout_width">match_parent</item><item name="android:layout_height">42dp</item><item name="android:layout_marginTop">6dp</item><item name="android:background">@drawable/bg_edit_text</item><item name="android:gravity">center_vertical</item><item name="android:paddingStart">12dp</item><item name="android:paddingEnd">12dp</item><item name="android:textColor">@color/text_main</item><item name="android:textColorHint">@color/text_hint</item></style>
+    <style name="BackupButtonRow"><item name="android:layout_width">match_parent</item><item name="android:layout_height">48dp</item><item name="android:layout_marginTop">6dp</item><item name="android:orientation">horizontal</item></style>
+    <style name="BackupHalfButton"><item name="android:layout_width">0dp</item><item name="android:layout_height">48dp</item><item name="android:layout_weight">1</item></style>
+</resources>

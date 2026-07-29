@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="security_center_title">Sicherheitscenter</string>
+    <string name="security_center_summary">KeyScan-Sicherheitseinstellungen verwalten</string>
+    <string name="security_data_protection_section">Datenschutz</string>
+    <string name="security_unlock_pin">Entsperr-PIN</string>
+    <string name="security_biometric_protection">Biometrischer Schutz</string>
+    <string name="security_backup_restore_section">Sichern und Wiederherstellen</string>
+    <string name="security_recovery_center">Sicheres Wiederherstellungscenter</string>
+    <string name="security_status_label">KeyScan-Sicherheitsstatus</string>
+    <string name="security_status_title">Sicherheitsstatus</string>
+    <string name="data_key_view">Schlüssel anzeigen</string>
+    <string name="data_key_modify">Schlüssel ändern</string>
+    <string name="data_key_not_set">Datenschutzschlüssel wurde noch nicht festgelegt</string>
+    <string name="security_vault_title">Sicherer Tresor</string>
+    <string name="security_vault_summary">Passwörter, TOTP und sensible Daten verwalten</string>
+    <string name="security_data_key_summary">Leitet zusammen mit Ihrer PIN den Datenbankschutzschlüssel für lokale Daten und Backups ab</string>
+    <string name="security_unlock_pin_summary">Zum Öffnen von KeyScan und für sensible Daten</string>
+    <string name="security_biometric_summary">Erforderlich zum Anzeigen des Datenschutzschlüssels und zum Bestätigen besonders sensibler Aktionen</string>
+    <string name="security_recovery_summary">Backups prüfen, Wiederherstellungsstatus prüfen und Migrationshinweise ansehen</string>
+    <string name="security_webdav_sync">WebDAV-Synchronisierung</string>
+    <string name="security_webdav_summary">Backups und Datenwiederherstellung verwalten</string>
+    <string name="security_level_basic">Grundschutz</string>
+    <string name="security_level_enhanced">Erweiterter Schutz</string>
+    <string name="security_level_advanced">Höchster Schutz</string>
+    <string name="security_level_incomplete">Aufmerksamkeit erforderlich</string>
+    <string name="security_pin_change">PIN ändern</string>
+    <string name="security_pin_setup">PIN festlegen</string>
+    <string name="security_biometric_unlock">Biometrisches Entsperren</string>
+    <string name="security_backup_verification">Backups überprüfen</string>
+</resources>
