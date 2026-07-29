@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?><resources>
-<string name="online_backup_restore_title">Online Backup &amp; Restore</string><string name="local_backup_restore_title">Local Backup &amp; Restore</string>
-<string name="backup_file_prefix_title">Custom backup file prefix</string><string name="backup_file_prefix_hint">Default: filebackup</string>
-<string name="vault_setup_input_password_short">Enter key</string><string name="vault_setup_confirm_password_short">Confirm key</string>
-<string name="primary_export_summary">Select and export passwords, TOTP, or vault data</string>
-    <string name="backup_unlock_prompt">Verify with your PIN or fingerprint to back up now</string>
-    <string name="backup_unlock_required">Unlock the password ledger with your PIN or fingerprint before backing up</string>
-</resources>

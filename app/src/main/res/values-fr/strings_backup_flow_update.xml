@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?><resources>
-<string name="online_backup_restore_title">Sauvegarde et restauration en ligne</string><string name="local_backup_restore_title">Sauvegarde et restauration locale</string>
-<string name="backup_file_prefix_title">Préfixe personnalisé du fichier de sauvegarde</string><string name="backup_file_prefix_hint">Par défaut : filebackup</string>
-<string name="vault_setup_input_password_short">Saisir la clé</string><string name="vault_setup_confirm_password_short">Confirmer la clé</string>
-<string name="primary_export_summary">Sélectionnez et exportez mots de passe, TOTP ou données du coffre</string>
-</resources>

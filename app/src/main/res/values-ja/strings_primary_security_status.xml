@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources><string name="primary_security_biometric_enabled">生体認証は有効です</string><string name="primary_security_biometric_disabled">生体認証は無効です</string><string name="primary_security_data_encrypted">データは暗号化されています</string><string name="primary_security_data_not_encrypted">データ暗号化は無効です</string><string name="primary_security_duplicate_found">使い回しパスワードが %1$d 件あります</string><string name="primary_security_duplicate_none">使い回しパスワードはありません</string><string name="primary_security_duplicate_locked">ロック解除後に使い回しを確認</string></resources>

@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources><string name="primary_password_locked_summary">Unlock to show account count</string><string name="primary_vault_locked_summary">Encrypted locally</string><string name="primary_otp_locked_summary">Codes stored securely</string></resources>

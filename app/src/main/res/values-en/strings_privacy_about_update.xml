@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="privacy_agreement_module_title">Privacy &amp; agreements</string>
-    <string name="about_keyscan_slogan">Your passwords, your control—freedom without signing in</string>
-    <string name="about_version_format">Version: %1$s</string>
-    <string name="about_version_unknown">Version: --</string>
-</resources>

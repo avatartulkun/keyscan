@@ -1,7 +1,0 @@
-<resources>
-    <string name="data_key_hide">隐藏密钥</string>
-    <string name="data_key_import_downloaded">导入已下载的密钥文件</string>
-    <string name="data_key_import_failed">无法读取密钥文件</string>
-    <string name="data_key_import_invalid">文件中未找到有效的 8–16 位数据保护密钥</string>
-    <string name="data_key_import_success">已导入旧数据保护密钥</string>
-</resources>

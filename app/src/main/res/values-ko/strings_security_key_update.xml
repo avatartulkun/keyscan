@@ -1,1 +1,0 @@
-<resources><string name="data_key_hide">키 숨기기</string><string name="data_key_import_downloaded">다운로드한 키 파일 가져오기</string><string name="data_key_import_failed">키 파일을 읽을 수 없습니다</string><string name="data_key_import_invalid">유효한 8~16자 데이터 보호 키를 찾지 못했습니다</string><string name="data_key_import_success">이전 데이터 보호 키를 가져왔습니다</string></resources>

@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources><string name="backup_legacy_security_unsupported">Deze oude back-up is niet beveiligd met zowel de pincode als de gegevensbeveiligingssleutel en kan daarom niet worden hersteld. Maak een nieuwe back-up met de huidige KeyScan-versie.</string></resources>

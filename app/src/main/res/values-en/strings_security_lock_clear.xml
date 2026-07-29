@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="security_lock_clear_title">Lock &amp; clear</string>
-    <string name="clipboard_clear_after_import_summary">Clear imported clipboard content automatically after it is saved</string>
-</resources>

@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="backup_legacy_security_unsupported">旧备份未使用 PIN 与数据保护密钥的双重保护，已禁止恢复。请先使用新版 KeyScan 重新创建备份。</string>
-</resources>

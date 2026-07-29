@@ -1,7 +1,0 @@
-<resources>
-    <string name="data_key_hide">Hide key</string>
-    <string name="data_key_import_downloaded">Import downloaded key file</string>
-    <string name="data_key_import_failed">Unable to read the key file</string>
-    <string name="data_key_import_invalid">No valid 8–16 character data protection key was found</string>
-    <string name="data_key_import_success">Old data protection key imported</string>
-</resources>

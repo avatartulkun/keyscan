@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="vault_setup_manual_auto_hint">Digite uma chave ou gere-a automaticamente. O tamanho padrão gerado é 16.</string>
-    <string name="vault_setup_copy_key">Copiar chave</string>
-    <string name="vault_setup_copy_warning">Salve-a imediatamente. A chave será apagada da área de transferência após 30 segundos.</string>
-    <string name="vault_setup_key_not_preserved">A chave atual ainda não foi baixada nem copiada</string>
-    <string name="vault_setup_key_preserved">Armazenamento da chave atual confirmado</string>
-    <string name="vault_setup_preserve_required">Primeiro baixe ou copie a chave de proteção de dados atual e guarde-a com segurança.</string>
-</resources>

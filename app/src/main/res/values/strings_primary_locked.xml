@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources><string name="primary_password_locked_summary">解锁后显示账号数量</string><string name="primary_vault_locked_summary">本地加密保护</string><string name="primary_otp_locked_summary">验证码安全存储</string></resources>

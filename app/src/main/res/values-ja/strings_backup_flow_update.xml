@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?><resources>
-<string name="online_backup_restore_title">オンラインバックアップと復元</string><string name="local_backup_restore_title">ローカルバックアップと復元</string>
-<string name="backup_file_prefix_title">バックアップファイル接頭辞をカスタマイズ</string><string name="backup_file_prefix_hint">既定：filebackup</string>
-<string name="vault_setup_input_password_short">キーを入力</string><string name="vault_setup_confirm_password_short">キーを確認</string>
-<string name="primary_export_summary">パスワード、TOTP、保管庫データを選択してエクスポート</string>
-</resources>

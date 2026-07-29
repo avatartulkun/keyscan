@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="vault_setup_manual_auto_hint">Introduce una clave manualmente o genérala automáticamente. La longitud predeterminada es 16.</string>
-    <string name="vault_setup_copy_key">Copiar clave</string>
-    <string name="vault_setup_copy_warning">Guárdala cuanto antes. La clave se borrará del portapapeles después de 30 segundos.</string>
-    <string name="vault_setup_key_not_preserved">La clave actual aún no se ha descargado ni copiado</string>
-    <string name="vault_setup_key_preserved">Guardado de la clave actual confirmado</string>
-    <string name="vault_setup_preserve_required">Primero descarga o copia la clave de protección de datos actual y guárdala de forma segura.</string>
-</resources>

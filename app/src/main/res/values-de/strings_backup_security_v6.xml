@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources><string name="backup_legacy_security_unsupported">Dieses alte Backup ist nicht durch PIN und Datenschutzschlüssel geschützt und kann daher nicht wiederhergestellt werden. Erstellen Sie mit der aktuellen KeyScan-Version ein neues Backup.</string></resources>

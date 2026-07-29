@@ -1,1 +1,0 @@
-<resources><string name="data_key_hide">隱藏金鑰</string><string name="data_key_import_downloaded">匯入已下載的金鑰檔案</string><string name="data_key_import_failed">無法讀取金鑰檔案</string><string name="data_key_import_invalid">檔案中找不到有效的 8–16 位資料保護金鑰</string><string name="data_key_import_success">已匯入舊資料保護金鑰</string></resources>

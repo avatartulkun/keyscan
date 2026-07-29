@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="backup_legacy_security_unsupported">This legacy backup is not protected by both the PIN and data protection key, so restoration is blocked. Create a new backup with the current KeyScan version.</string>
-</resources>

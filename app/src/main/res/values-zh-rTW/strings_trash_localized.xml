@@ -1,1 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?><resources><string name="trash_unnamed">未命名</string><string name="trash_default_secure_item">安全項目</string><string name="trash_restore_content_failed">無法還原已刪除的項目</string><string name="trash_conflict_password">已存在相同的密碼項目，未覆寫現有資料。</string><string name="trash_conflict_otp">已存在相同的 TOTP，未覆寫現有資料。</string></resources>

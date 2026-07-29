@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="security_lock_clear_title">锁定与清除</string>
-    <string name="clipboard_clear_after_import_summary">保存导入内容后，自动从剪贴板清除该内容</string>
-</resources>

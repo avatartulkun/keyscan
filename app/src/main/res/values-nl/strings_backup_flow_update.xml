@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?><resources>
-<string name="online_backup_restore_title">Online back-up en herstel</string><string name="local_backup_restore_title">Lokale back-up en herstel</string>
-<string name="backup_file_prefix_title">Aangepast voorvoegsel voor back-upbestand</string><string name="backup_file_prefix_hint">Standaard: filebackup</string>
-<string name="vault_setup_input_password_short">Sleutel invoeren</string><string name="vault_setup_confirm_password_short">Sleutel bevestigen</string>
-<string name="primary_export_summary">Selecteer en exporteer wachtwoorden, TOTP- of kluisgegevens</string>
-</resources>

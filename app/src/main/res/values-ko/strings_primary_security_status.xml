@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources><string name="primary_security_biometric_enabled">생체 인식 사용 중</string><string name="primary_security_biometric_disabled">생체 인식 사용 안 함</string><string name="primary_security_data_encrypted">데이터 암호화됨</string><string name="primary_security_data_not_encrypted">데이터 암호화 사용 안 함</string><string name="primary_security_duplicate_found">재사용된 비밀번호 %1$d개 발견</string><string name="primary_security_duplicate_none">재사용된 비밀번호 없음</string><string name="primary_security_duplicate_locked">잠금 해제 후 재사용 여부 확인</string></resources>

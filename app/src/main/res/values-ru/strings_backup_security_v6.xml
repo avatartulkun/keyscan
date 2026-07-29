@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources><string name="backup_legacy_security_unsupported">Эта старая резервная копия не защищена одновременно PIN-кодом и ключом защиты данных, поэтому восстановление заблокировано. Создайте новую копию в текущей версии KeyScan.</string></resources>

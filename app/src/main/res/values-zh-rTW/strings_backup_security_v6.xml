@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources><string name="backup_legacy_security_unsupported">舊備份未同時使用 PIN 與資料保護金鑰保護，因此已禁止還原。請使用目前版本的 KeyScan 重新建立備份。</string></resources>

@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources><string name="primary_tools">Hulpmiddelen</string><string name="primary_home">Start</string><string name="primary_data">Gegevensbeheer</string><string name="primary_security_freedom">Veilig · vrij</string><string name="primary_add">Toevoegen</string><string name="primary_password_summary">%1$d accounts</string><string name="primary_vault_summary">%1$d items · Lokaal versleuteld</string><string name="primary_otp_summary">%1$d TOTP-codes · Veilig opgeslagen</string></resources>

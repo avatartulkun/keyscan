@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources><string name="primary_tools">Инструменты</string><string name="primary_home">Главная</string><string name="primary_data">Управление данными</string><string name="primary_security_freedom">Безопасность · свобода</string><string name="primary_add">Добавить</string><string name="primary_password_summary">Аккаунты: %1$d</string><string name="primary_vault_summary">Записи: %1$d · Локальное шифрование</string><string name="primary_otp_summary">Коды TOTP: %1$d · Безопасное хранение</string></resources>

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="vault_setup_manual_auto_hint">Voer een sleutel handmatig in of genereer er automatisch een. De standaardlengte is 16.</string>
-    <string name="vault_setup_copy_key">Sleutel kopiëren</string>
-    <string name="vault_setup_copy_warning">Sla de sleutel meteen op. Hij wordt na 30 seconden van het klembord gewist.</string>
-    <string name="vault_setup_key_not_preserved">De huidige sleutel is nog niet gedownload of gekopieerd</string>
-    <string name="vault_setup_key_preserved">Opslaan van huidige sleutel bevestigd</string>
-    <string name="vault_setup_preserve_required">Download of kopieer eerst de huidige gegevensbeveiligingssleutel en bewaar deze veilig.</string>
-</resources>

@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string-array name="trash_retention_labels"><item>7 dias</item><item>30 dias (padrão)</item><item>90 dias</item><item>Manter permanentemente</item></string-array>
-</resources>

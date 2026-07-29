@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?><resources>
-<string name="online_backup_restore_title">Онлайн-резервирование и восстановление</string><string name="local_backup_restore_title">Локальное резервирование и восстановление</string>
-<string name="backup_file_prefix_title">Пользовательский префикс файла резервной копии</string><string name="backup_file_prefix_hint">По умолчанию: filebackup</string>
-<string name="vault_setup_input_password_short">Введите ключ</string><string name="vault_setup_confirm_password_short">Подтвердите ключ</string>
-<string name="primary_export_summary">Выберите и экспортируйте пароли, TOTP или данные хранилища</string>
-</resources>
