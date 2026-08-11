@@ -27,6 +27,22 @@
   }
   .container { max-width: 1080px; margin: 0 auto; padding: 0 22px; }
 
+  /* Lang switch */
+  .lang-switch {
+    position: fixed; top: 18px; right: 20px; z-index: 100;
+    display: flex; gap: 4px;
+    background: rgba(11,30,62,.55);
+    border: 1px solid rgba(255,255,255,.25);
+    border-radius: 999px; padding: 4px;
+    backdrop-filter: blur(8px);
+  }
+  .lang-switch button {
+    border: none; background: transparent; color: rgba(255,255,255,.75);
+    font-size: 13px; font-weight: 700; padding: 6px 14px; border-radius: 999px;
+    cursor: pointer; transition: background .15s;
+  }
+  .lang-switch button.active { background: #fff; color: var(--primary-dark); }
+
   /* Hero */
   .hero {
     background: linear-gradient(135deg, #0B1E3E 0%, #123A7E 55%, #1E56C4 100%);
@@ -81,6 +97,12 @@
   .card h3 { font-size: 18px; font-weight: 700; margin: 12px 0 6px; }
   .card p { font-size: 14px; color: var(--ink-soft); }
 
+  /* Banner & screenshot grids */
+  .banner-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); gap: 16px; }
+  .banner-grid img { width: 100%; height: auto; border-radius: 16px; border: 1px solid var(--border); box-shadow: 0 8px 26px rgba(37,99,235,.09); }
+  .shot-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; max-width: 980px; margin: 0 auto; }
+  .shot-grid img { width: 100%; height: auto; border-radius: 18px; border: 1px solid var(--border); box-shadow: 0 12px 30px rgba(37,99,235,.14); }
+
   /* Security strip */
   .security { background: var(--card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
   .security .pills { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
@@ -102,17 +124,9 @@
   footer .links { display: flex; gap: 26px; justify-content: center; margin-bottom: 18px; flex-wrap: wrap; }
   footer .links a { border: none; font-weight: 600; }
 
-  /* Banner & screenshot grids */
-  .banner-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); gap: 16px; }
-  .banner-grid img { width: 100%; height: auto; border-radius: 16px; border: 1px solid var(--border); box-shadow: 0 8px 26px rgba(37,99,235,.09); }
-  .shot-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; max-width: 780px; margin: 0 auto; }
-  .shot-grid img { width: 100%; height: auto; border-radius: 18px; border: 1px solid var(--border); box-shadow: 0 12px 30px rgba(37,99,235,.14); }
   @media (max-width: 640px) {
     .banner-grid { grid-template-columns: 1fr; }
     .shot-grid { grid-template-columns: repeat(2, 1fr); }
-  }
-
-  @media (max-width: 640px) {
     .hero h1 { font-size: 34px; }
     .hero { padding: 60px 0 56px; }
   }
@@ -120,82 +134,91 @@
 </head>
 <body>
 
+  <div class="lang-switch">
+    <button id="lang-zh" onclick="setLang('zh')" class="active">中文</button>
+    <button id="lang-en" onclick="setLang('en')">EN</button>
+  </div>
+
   <header class="hero">
     <div class="container">
       <img class="logo" src="assets/keyscan-icon-512.png" alt="KeyScan">
       <h1>KeyScan</h1>
-      <p class="tagline">本地优先 · 纯离线可用 · 数据自主掌控</p>
-      <p class="sub">智能扫描 · 密码账本 · TOTP 认证器 · 安全保险箱 · 自动填充 · 加密备份</p>
+      <p class="tagline" data-zh="本地优先 · 纯离线可用 · 数据自主掌控" data-en="Local-first · Fully offline · Your data, your control">本地优先 · 纯离线可用 · 数据自主掌控</p>
+      <p class="sub" data-zh="智能扫描 · 密码账本 · TOTP 认证器 · 安全保险箱 · 自动填充 · 加密备份" data-en="Smart Scan · Password Ledger · TOTP · Secure Vault · Autofill · Encrypted Backup">智能扫描 · 密码账本 · TOTP 认证器 · 安全保险箱 · 自动填充 · 加密备份</p>
       <div class="cta">
-        <a class="btn btn-primary" href="https://play.google.com/">从 Google Play 下载</a>
-        <a class="btn btn-ghost" href="https://avatartulkun.github.io/keyscan/KeyScan-privacy-policy.html">阅读隐私政策</a>
+        <a class="btn btn-primary" href="https://play.google.com/"><span data-zh="从 Google Play 下载" data-en="Download from Google Play">从 Google Play 下载</span></a>
+        <a class="btn btn-ghost" href="https://avatartulkun.github.io/keyscan/KeyScan-privacy-policy.html"><span data-zh="阅读隐私政策" data-en="Read Privacy Policy">阅读隐私政策</span></a>
       </div>
     </div>
   </header>
 
   <section>
     <div class="container">
-      <h2 class="section-title">产品展示</h2>
-      <p class="section-desc">一个应用，管理您的数字安全</p>
+      <h2 class="section-title" data-zh="产品展示" data-en="Product Showcase">产品展示</h2>
+      <p class="section-desc" data-zh="一个应用，管理您的数字安全" data-en="One app for your digital security">一个应用，管理您的数字安全</p>
       <div class="banner-grid">
-        <img src="assets/banner-1.png" alt="KeyScan 横幅 1">
-        <img src="assets/banner-2.png" alt="KeyScan 横幅 2">
-        <img src="assets/banner-3.png" alt="KeyScan 横幅 3">
-        <img src="assets/banner-4.png" alt="KeyScan 横幅 4">
-        <img src="assets/banner-5.png" alt="KeyScan 横幅 5">
+        <img src="assets/banner-2.png" alt="KeyScan banner 1">
+        <img src="assets/banner-5.png" alt="KeyScan banner 2">
       </div>
     </div>
   </section>
 
   <section>
     <div class="container">
-      <h2 class="section-title">一个应用，管理您的数字安全</h2>
-      <p class="section-desc">不需要注册账号，不依赖开发者服务器，核心功能纯离线可用</p>
+      <h2 class="section-title" data-zh="一个应用，管理您的数字安全" data-en="One app to manage your digital security">一个应用，管理您的数字安全</h2>
+      <p class="section-desc" data-zh="不需要注册账号，不依赖开发者服务器，核心功能纯离线可用" data-en="No account required, no developer servers, core features work fully offline">不需要注册账号，不依赖开发者服务器，核心功能纯离线可用</p>
       <div class="grid">
-        <div class="card"><div class="icon">📷</div><h3>智能扫描</h3><p>二维码、条形码、文字识别（OCR）一次完成，自动识别内容类型并给出后续动作。</p></div>
-        <div class="card"><div class="icon">🔑</div><h3>密码账本</h3><p>账号密码加密保存，支持分组、排序、过期提醒，兼容 Bitwarden 格式导入导出。</p></div>
-        <div class="card"><div class="icon">⏱️</div><h3>TOTP 认证器</h3><p>动态验证码，支持批量导入，登录页面自动填充 OTP 候选，一步到位。</p></div>
-        <div class="card"><div class="icon">🛡️</div><h3>安全保险箱</h3><p>证件、银行卡、许可证、恢复密码等敏感资料的加密档案库，支持图片附件。</p></div>
-        <div class="card"><div class="icon">✨</div><h3>智能自动填充</h3><p>登录、注册、改密全场景覆盖，凭据本地匹配，永不自动提交表单。</p></div>
-        <div class="card"><div class="icon">☁️</div><h3>WebDAV 加密备份</h3><p>兼容坚果云、Koofr、NAS 等，备份恢复全程加密，可一键验证备份完整性。</p></div>
-        <div class="card"><div class="icon">📡</div><h3>局域网传输</h3><p>同局域网设备间加密迁移备份、分享凭据，无需经过任何服务器。</p></div>
-        <div class="card"><div class="icon">🧩</div><h3>自定义资料</h3><p>保险箱支持自定义类型与字段，灵活的本地密码生成器，满足个性需求。</p></div>
+        <div class="card"><div class="icon">📷</div><h3 data-zh="智能扫描" data-en="Smart Scan">智能扫描</h3><p data-zh="二维码、条形码、文字识别（OCR）一次完成，自动识别内容类型并给出后续动作。" data-en="Scan QR codes, barcodes and text (OCR) in one step, with automatic content type detection.">二维码、条形码、文字识别（OCR）一次完成，自动识别内容类型并给出后续动作。</p></div>
+        <div class="card"><div class="icon">🔑</div><h3 data-zh="密码账本" data-en="Password Ledger">密码账本</h3><p data-zh="账号密码加密保存，支持分组、排序、过期提醒，兼容 Bitwarden 格式导入导出。" data-en="Encrypted password storage with groups, sorting, expiry reminders and Bitwarden import/export.">账号密码加密保存，支持分组、排序、过期提醒，兼容 Bitwarden 格式导入导出。</p></div>
+        <div class="card"><div class="icon">⏱️</div><h3 data-zh="TOTP 认证器" data-en="TOTP Authenticator">TOTP 认证器</h3><p data-zh="动态验证码，支持批量导入，登录页面自动填充 OTP 候选，一步到位。" data-en="Time-based one-time codes with bulk import and OTP autofill candidates on login pages.">动态验证码，支持批量导入，登录页面自动填充 OTP 候选，一步到位。</p></div>
+        <div class="card"><div class="icon">🛡️</div><h3 data-zh="安全保险箱" data-en="Secure Vault">安全保险箱</h3><p data-zh="证件、银行卡、许可证、恢复密码等敏感资料的加密档案库，支持图片附件。" data-en="An encrypted archive for IDs, bank cards, licenses, recovery codes and more, with image attachments.">证件、银行卡、许可证、恢复密码等敏感资料的加密档案库，支持图片附件。</p></div>
+        <div class="card"><div class="icon">✨</div><h3 data-zh="智能自动填充" data-en="Smart Autofill">智能自动填充</h3><p data-zh="登录、注册、改密全场景覆盖，凭据本地匹配，永不自动提交表单。" data-en="Covers login, registration and password change; matches credentials locally and never submits forms.">登录、注册、改密全场景覆盖，凭据本地匹配，永不自动提交表单。</p></div>
+        <div class="card"><div class="icon">☁️</div><h3 data-zh="WebDAV 加密备份" data-en="WebDAV Encrypted Backup">WebDAV 加密备份</h3><p data-zh="兼容坚果云、Koofr、NAS 等，备份恢复全程加密，可一键验证备份完整性。" data-en="Works with Nutstore, Koofr, NAS and more; end-to-end encrypted with one-tap backup verification.">兼容坚果云、Koofr、NAS 等，备份恢复全程加密，可一键验证备份完整性。</p></div>
+        <div class="card"><div class="icon">📡</div><h3 data-zh="局域网传输" data-en="LAN Transfer">局域网传输</h3><p data-zh="同局域网设备间加密迁移备份、分享凭据，无需经过任何服务器。" data-en="Encrypted backup migration and credential sharing between devices on the same LAN — no servers involved.">同局域网设备间加密迁移备份、分享凭据，无需经过任何服务器。</p></div>
+        <div class="card"><div class="icon">🧩</div><h3 data-zh="自定义资料" data-en="Custom Items">自定义资料</h3><p data-zh="保险箱支持自定义类型与字段，灵活的本地密码生成器，满足个性需求。" data-en="Custom vault types and fields plus a flexible local password generator.">保险箱支持自定义类型与字段，灵活的本地密码生成器，满足个性需求。</p></div>
       </div>
     </div>
   </section>
 
   <section class="security">
     <div class="container">
-      <h2 class="section-title">安全设计</h2>
-      <p class="section-desc">您的数据，只属于您自己</p>
+      <h2 class="section-title" data-zh="安全设计" data-en="Security Design">安全设计</h2>
+      <p class="section-desc" data-zh="您的数据，只属于您自己" data-en="Your data belongs to you only">您的数据，只属于您自己</p>
       <div class="pills">
-        <span class="pill">🔐 AES-GCM 加密存储</span>
-        <span class="pill">🔑 Android Keystore / iOS Keychain</span>
-        <span class="pill">👆 指纹 / Face ID / Touch ID</span>
-        <span class="pill">🧹 敏感内容复制自动清除</span>
-        <span class="pill">🔒 自动锁定与安全窗口</span>
-        <span class="pill">🚫 无广告 · 无追踪 · 无账号</span>
+        <span class="pill">🔐 <span data-zh="AES-GCM 加密存储" data-en="AES-GCM Encrypted Storage">AES-GCM 加密存储</span></span>
+        <span class="pill">🔑 <span data-zh="Android Keystore / iOS Keychain" data-en="Android Keystore / iOS Keychain">Android Keystore / iOS Keychain</span></span>
+        <span class="pill">👆 <span data-zh="指纹 / Face ID / Touch ID" data-en="Fingerprint / Face ID / Touch ID">指纹 / Face ID / Touch ID</span></span>
+        <span class="pill">🧹 <span data-zh="敏感内容复制自动清除" data-en="Auto-clear for sensitive copies">敏感内容复制自动清除</span></span>
+        <span class="pill">🔒 <span data-zh="自动锁定与安全窗口" data-en="Auto-lock & secure window">自动锁定与安全窗口</span></span>
+        <span class="pill">🚫 <span data-zh="无广告 · 无追踪 · 无账号" data-en="No ads · No tracking · No account">无广告 · 无追踪 · 无账号</span></span>
       </div>
     </div>
   </section>
 
   <section>
     <div class="container">
-      <h2 class="section-title">界面预览</h2>
-      <p class="section-desc">真实界面，本地优先，简洁安全</p>
+      <h2 class="section-title" data-zh="界面预览" data-en="Screenshots">界面预览</h2>
+      <p class="section-desc" data-zh="真实界面，本地优先，简洁安全" data-en="Real screens, local-first, simple and secure">真实界面，本地优先，简洁安全</p>
       <div class="shot-grid">
-        <img src="assets/shot-1.jpg" alt="KeyScan 界面 1">
-        <img src="assets/shot-2.jpg" alt="KeyScan 界面 2">
-        <img src="assets/shot-3.jpg" alt="KeyScan 界面 3">
-        <img src="assets/shot-4.jpg" alt="KeyScan 界面 4">
+        <img src="assets/shot-1.jpg" alt="KeyScan 1">
+        <img src="assets/shot-2.jpg" alt="KeyScan 2">
+        <img src="assets/shot-3.jpg" alt="KeyScan 3">
+        <img src="assets/shot-4.jpg" alt="KeyScan 4">
+        <img src="assets/shot-en-1.jpg" alt="KeyScan 5">
+        <img src="assets/shot-en-2.jpg" alt="KeyScan 6">
+        <img src="assets/shot-en-3.jpg" alt="KeyScan 7">
+        <img src="assets/shot-en-4.jpg" alt="KeyScan 8">
+        <img src="assets/shot-en-5.jpg" alt="KeyScan 9">
+        <img src="assets/shot-en-6.jpg" alt="KeyScan 10">
+        <img src="assets/shot-en-7.jpg" alt="KeyScan 11">
       </div>
     </div>
   </section>
 
   <section>
     <div class="container">
-      <h2 class="section-title">12 种语言</h2>
-      <p class="section-desc">面向全球用户，全界面本地化</p>
+      <h2 class="section-title" data-zh="12 种语言" data-en="12 Languages">12 种语言</h2>
+      <p class="section-desc" data-zh="面向全球用户，全界面本地化" data-en="Fully localized for users worldwide">面向全球用户，全界面本地化</p>
       <div class="langs">
         <span class="lang">简体中文</span>
         <span class="lang">繁體中文</span>
@@ -216,14 +239,32 @@
   <footer>
     <div class="container">
       <div class="links">
-        <a href="https://avatartulkun.github.io/keyscan/KeyScan-privacy-policy.html">隐私政策</a>
-        <a href="https://github.com/avatartulkun">GitHub</a>
-        <a href="https://t.me/KeyScanDev">Telegram</a>
-        <a href="mailto:keyscan.feedback@zohomail.com">联系开发者</a>
+        <a href="https://avatartulkun.github.io/keyscan/KeyScan-privacy-policy.html" data-zh="隐私政策" data-en="Privacy Policy">隐私政策</a>
+        <a href="https://github.com/avatartulkun" data-zh="GitHub" data-en="GitHub">GitHub</a>
+        <a href="https://t.me/KeyScanDev" data-zh="Telegram" data-en="Telegram">Telegram</a>
+        <a href="mailto:keyscan.feedback@zohomail.com" data-zh="联系开发者" data-en="Contact">联系开发者</a>
       </div>
-      <p>© 2026 KeyScan · 开发者 tulkun · 本地优先，数据自主掌控</p>
+      <p><span data-zh="© 2026 KeyScan · 开发者 tulkun · 本地优先，数据自主掌控" data-en="© 2026 KeyScan · Developer tulkun · Local-first, your data stays yours">© 2026 KeyScan · 开发者 tulkun · 本地优先，数据自主掌控</span></p>
     </div>
   </footer>
 
+  <script>
+    function applyLang(lang) {
+      document.documentElement.lang = lang === 'en' ? 'en' : 'zh-Hans';
+      document.title = lang === 'en' ? 'KeyScan — Local-first Security Toolbox' : 'KeyScan — 本地优先的安全工具箱';
+      document.querySelectorAll('[data-zh][data-en]').forEach(function (el) {
+        el.textContent = el.getAttribute('data-' + lang);
+      });
+      document.getElementById('lang-zh').classList.toggle('active', lang === 'zh');
+      document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+      try { localStorage.setItem('keyscan_lang', lang); } catch (e) {}
+    }
+    function setLang(lang) { applyLang(lang); }
+    (function () {
+      var saved = 'zh';
+      try { saved = localStorage.getItem('keyscan_lang') || 'zh'; } catch (e) {}
+      applyLang(saved);
+    })();
+  </script>
 </body>
 </html>
