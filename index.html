@@ -52,9 +52,15 @@
     background: linear-gradient(135deg, #0B1E3E 0%, #123A7E 55%, #1E56C4 100%);
     color: #fff;
     padding: 84px 0 76px;
-    text-align: center;
     position: relative;
     overflow: hidden;
+  }
+  .hero-inner {
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    gap: 48px;
+    align-items: center;
+    text-align: left;
   }
   .hero::after {
     content: "";
@@ -74,7 +80,7 @@
   .hero h1 { font-size: 46px; font-weight: 800; letter-spacing: .5px; }
   .hero .tagline { font-size: 18px; opacity: .88; margin-top: 12px; font-weight: 500; }
   .hero .sub { font-size: 15px; opacity: .66; margin-top: 8px; }
-  .hero .cta { margin-top: 34px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .hero .cta { margin-top: 34px; display: flex; gap: 14px; justify-content: flex-start; flex-wrap: wrap; }
   .btn {
     display: inline-flex; align-items: center; gap: 8px;
     padding: 13px 30px; border-radius: 999px;
@@ -84,6 +90,31 @@
   .btn-primary { background: #fff; color: var(--primary-dark); box-shadow: 0 6px 20px rgba(0,0,0,.25); }
   .btn-ghost { border: 1.5px solid rgba(255,255,255,.5); color: #fff; }
   .btn:hover { transform: translateY(-2px); }
+
+  /* Hero carousel (截图轮播) */
+  .hero-carousel { position: relative; max-width: 252px; width: 100%; margin: 0 auto; }
+  .phone-frame {
+    background: #0A1630;
+    border: 1px solid rgba(255,255,255,.18);
+    border-radius: 42px;
+    padding: 10px;
+    box-shadow: 0 24px 60px rgba(0,0,0,.45);
+  }
+  .slides { position: relative; overflow: hidden; border-radius: 33px; aspect-ratio: 9 / 19.5; background: #0A1630; }
+  .slides img {
+    position: absolute; inset: 0; width: 100%; height: 100%;
+    object-fit: cover; object-position: top;
+    opacity: 0; transform: translateX(24px);
+    transition: opacity .7s ease, transform .7s ease;
+  }
+  .slides img.active { opacity: 1; transform: translateX(0); }
+  .dots { display: flex; gap: 8px; justify-content: center; margin-top: 16px; }
+  .dots button {
+    width: 8px; height: 8px; padding: 0; border: none; border-radius: 50%;
+    background: rgba(255,255,255,.35); cursor: pointer;
+    transition: background .3s, transform .3s;
+  }
+  .dots button.active { background: #fff; transform: scale(1.3); }
 
   /* Sections */
   section { padding: 64px 0; }
@@ -133,6 +164,9 @@
     .shot-grid { grid-template-columns: repeat(2, 1fr); }
     .hero h1 { font-size: 34px; }
     .hero { padding: 60px 0 56px; }
+    .hero-inner { grid-template-columns: 1fr; text-align: center; gap: 36px; }
+    .hero .cta { justify-content: center; }
+    .hero-carousel { max-width: 210px; }
   }
 </style>
 </head>
@@ -144,14 +178,22 @@
   </div>
 
   <header class="hero">
-    <div class="container">
-      <img class="logo" src="assets/keyscan-icon-512.png" alt="KeyScan">
-      <h1>KeyScan</h1>
-      <p class="tagline" data-zh="本地优先 · 纯离线可用 · 数据自主掌控" data-en="Local-first · Fully offline · Your data, your control">本地优先 · 纯离线可用 · 数据自主掌控</p>
-      <p class="sub" data-zh="智能扫描 · 密码账本 · TOTP 认证器 · 安全保险箱 · 自动填充 · 加密备份" data-en="Smart Scan · Password Ledger · TOTP · Secure Vault · Autofill · Encrypted Backup">智能扫描 · 密码账本 · TOTP 认证器 · 安全保险箱 · 自动填充 · 加密备份</p>
-      <div class="cta">
-        <a class="btn btn-primary" href="https://play.google.com/"><span data-zh="从 Google Play 下载" data-en="Download from Google Play">从 Google Play 下载</span></a>
-        <a class="btn btn-ghost" href="https://avatartulkun.github.io/keyscan/KeyScan-privacy-policy.html"><span data-zh="阅读隐私政策" data-en="Read Privacy Policy">阅读隐私政策</span></a>
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <img class="logo" src="assets/keyscan-icon-512.png" alt="KeyScan">
+        <h1>KeyScan</h1>
+        <p class="tagline" data-zh="本地优先 · 纯离线可用 · 数据自主掌控" data-en="Local-first · Fully offline · Your data, your control">本地优先 · 纯离线可用 · 数据自主掌控</p>
+        <p class="sub" data-zh="智能扫描 · 密码账本 · TOTP 认证器 · 安全保险箱 · 自动填充 · 加密备份" data-en="Smart Scan · Password Ledger · TOTP · Secure Vault · Autofill · Encrypted Backup">智能扫描 · 密码账本 · TOTP 认证器 · 安全保险箱 · 自动填充 · 加密备份</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="https://play.google.com/"><span data-zh="从 Google Play 下载" data-en="Download from Google Play">从 Google Play 下载</span></a>
+          <a class="btn btn-ghost" href="https://avatartulkun.github.io/keyscan/KeyScan-privacy-policy.html"><span data-zh="阅读隐私政策" data-en="Read Privacy Policy">阅读隐私政策</span></a>
+        </div>
+      </div>
+      <div class="hero-carousel">
+        <div class="phone-frame">
+          <div class="slides" id="hero-slides"></div>
+        </div>
+        <div class="dots" id="hero-dots"></div>
       </div>
     </div>
   </header>
@@ -203,19 +245,7 @@
     <div class="container">
       <h2 class="section-title" data-zh="界面预览" data-en="Screenshots">界面预览</h2>
       <p class="section-desc" data-zh="真实界面，本地优先，简洁安全" data-en="Real screens, local-first, simple and secure">真实界面，本地优先，简洁安全</p>
-      <div class="shot-grid">
-        <img src="assets/shot-1.jpg" alt="KeyScan 1">
-        <img src="assets/shot-2.jpg" alt="KeyScan 2">
-        <img src="assets/shot-3.jpg" alt="KeyScan 3">
-        <img src="assets/shot-4.jpg" alt="KeyScan 4">
-        <img src="assets/shot-en-1.jpg" alt="KeyScan 5">
-        <img src="assets/shot-en-2.jpg" alt="KeyScan 6">
-        <img src="assets/shot-en-3.jpg" alt="KeyScan 7">
-        <img src="assets/shot-en-4.jpg" alt="KeyScan 8">
-        <img src="assets/shot-en-5.jpg" alt="KeyScan 9">
-        <img src="assets/shot-en-6.jpg" alt="KeyScan 10">
-        <img src="assets/shot-en-7.jpg" alt="KeyScan 11">
-      </div>
+      <div class="shot-grid" id="shot-grid"></div>
     </div>
   </section>
 
@@ -253,6 +283,60 @@
   </footer>
 
   <script>
+    /* ============================================================
+       👉 想自己加截图？照着做：
+       1) 打开 github.com/avatartulkun/keyscan → Add file → Upload files
+          把新截图传进 assets/ 文件夹（文件名比如 shot-en-8.jpg）
+       2) 回来改下面的两个数组，把文件名加进去：
+          - HERO_SHOTS = 蓝色大块里自动播放的截图
+          - ALL_SHOTS  = 页面下方「界面预览」网格的截图
+       3) 页面最底下点 Commit changes（绿色按钮）
+       等 1~2 分钟，网页自动更新，不需要别的操作。
+       ============================================================ */
+    var HERO_SHOTS = ["shot-en-1.jpg","shot-en-2.jpg","shot-en-3.jpg","shot-en-4.jpg","shot-en-5.jpg","shot-en-6.jpg","shot-en-7.jpg"];
+    var ALL_SHOTS = ["shot-1.jpg","shot-2.jpg","shot-3.jpg","shot-4.jpg","shot-en-1.jpg","shot-en-2.jpg","shot-en-3.jpg","shot-en-4.jpg","shot-en-5.jpg","shot-en-6.jpg","shot-en-7.jpg"];
+
+    (function initCarousel() {
+      var slidesEl = document.getElementById("hero-slides");
+      var dotsEl = document.getElementById("hero-dots");
+      if (!slidesEl || !HERO_SHOTS.length) return;
+      var current = 0, timer = null;
+      HERO_SHOTS.forEach(function (name, i) {
+        var img = document.createElement("img");
+        img.src = "assets/" + name;
+        img.alt = "KeyScan screenshot " + (i + 1);
+        if (i === 0) img.className = "active";
+        slidesEl.appendChild(img);
+        var dot = document.createElement("button");
+        dot.setAttribute("aria-label", "slide " + (i + 1));
+        if (i === 0) dot.className = "active";
+        dot.onclick = function () { go(i); restart(); };
+        dotsEl.appendChild(dot);
+      });
+      function go(i) {
+        current = i;
+        slidesEl.querySelectorAll("img").forEach(function (im, j) { im.classList.toggle("active", j === i); });
+        dotsEl.querySelectorAll("button").forEach(function (d, j) { d.classList.toggle("active", j === i); });
+      }
+      function restart() {
+        clearInterval(timer);
+        timer = setInterval(function () { go((current + 1) % HERO_SHOTS.length); }, 3500);
+      }
+      restart();
+    })();
+
+    (function renderShots() {
+      var grid = document.getElementById("shot-grid");
+      if (!grid) return;
+      ALL_SHOTS.forEach(function (name, i) {
+        var img = document.createElement("img");
+        img.src = "assets/" + name;
+        img.alt = "KeyScan " + (i + 1);
+        img.loading = "lazy";
+        grid.appendChild(img);
+      });
+    })();
+
     function applyLang(lang) {
       document.documentElement.lang = lang === 'en' ? 'en' : 'zh-Hans';
       document.title = lang === 'en' ? 'KeyScan — Local-first Security Toolbox' : 'KeyScan — 本地优先的安全工具箱';
