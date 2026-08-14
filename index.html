@@ -389,6 +389,7 @@
     })();
 
     function applyLang(lang) {
+      lang = (lang === 'en' || lang === 'zh') ? lang : 'zh';
       document.documentElement.lang = lang === 'en' ? 'en' : 'zh-Hans';
       document.title = lang === 'en' ? 'KeyScan — Local-first Security Toolbox' : 'KeyScan — 本地优先的安全工具箱';
       document.querySelectorAll('[data-zh][data-en]').forEach(function (el) {
