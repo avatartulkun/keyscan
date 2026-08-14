@@ -172,7 +172,23 @@
   .letter-body {
     max-width: 760px; margin: 0 auto; text-align: left;
     color: var(--ink-soft); font-size: 15px; line-height: 1.85;
+    max-height: 320px; overflow: hidden; position: relative;
+    transition: max-height .45s ease;
   }
+  .letter-body.expanded { max-height: none; }
+  .letter-body::after {
+    content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 90px;
+    background: linear-gradient(transparent, var(--bg-soft)); pointer-events: none;
+  }
+  .letter-body.expanded::after { display: none; }
+  .letter-toggle { text-align: center; margin-top: 8px; }
+  .letter-btn {
+    display: inline-block; border: 1px solid var(--border); background: #fff;
+    color: var(--ink); font-size: 14px; font-weight: 600;
+    padding: 9px 26px; border-radius: 22px; cursor: pointer;
+    transition: box-shadow .2s;
+  }
+  .letter-btn:hover { box-shadow: 0 6px 18px rgba(37,99,235,.14); }
   .letter-body h3 { font-size: 17px; font-weight: 700; color: var(--ink); margin: 30px 0 10px; }
   .letter-body p { margin: 12px 0; }
   .letter-body blockquote {
@@ -294,16 +310,20 @@
     </div>
   </section>
 
-  <section class="letter">
+  <section class="letter" id="letter">
     <div class="container">
       <h2 class="section-title" data-zh="致用户" data-en="A Note to Users">致用户</h2>
       <div class="letter-body" id="letter-body"></div>
+      <div class="letter-toggle">
+        <button type="button" class="letter-btn" id="letter-toggle-btn" onclick="toggleLetter()">展开阅读 ▼</button>
+      </div>
     </div>
   </section>
 
   <footer>
     <div class="container">
       <div class="links">
+        <a href="#letter" onclick="return expandLetterFromFooter(event)" data-zh="致用户" data-en="Note to Users">致用户</a>
         <a href="https://avatartulkun.github.io/keyscan/KeyScan-privacy-policy.html" data-zh="隐私政策" data-en="Privacy Policy">隐私政策</a>
         <a href="https://github.com/avatartulkun" data-zh="GitHub" data-en="GitHub">GitHub</a>
         <a href="https://t.me/keyScanUsers" data-zh="Telegram" data-en="Telegram">Telegram</a>
@@ -426,6 +446,30 @@
       var el = document.getElementById("letter-body");
       if (!el) return;
       el.innerHTML = lang === "en" ? LETTER_EN : LETTER_ZH;
+      var btn = document.getElementById("letter-toggle-btn");
+      if (!btn) return;
+      var expanded = el.classList.contains("expanded");
+      btn.textContent = expanded
+        ? (lang === "en" ? "Collapse ▲" : "收起 ▲")
+        : (lang === "en" ? "Read More ▼" : "展开阅读 ▼");
+    }
+    function toggleLetter() {
+      var el = document.getElementById("letter-body");
+      var btn = document.getElementById("letter-toggle-btn");
+      if (!el || !btn) return;
+      var expanded = el.classList.toggle("expanded");
+      var en = (document.documentElement.lang || "").indexOf("en") === 0;
+      btn.textContent = expanded
+        ? (en ? "Collapse ▲" : "收起 ▲")
+        : (en ? "Read More ▼" : "展开阅读 ▼");
+    }
+    function expandLetterFromFooter(e) {
+      if (e) e.preventDefault();
+      var el = document.getElementById("letter-body");
+      if (el && !el.classList.contains("expanded")) toggleLetter();
+      var sec = document.getElementById("letter");
+      if (sec) sec.scrollIntoView({ behavior: "smooth", block: "start" });
+      return false;
     }
   </script>
 </body>
