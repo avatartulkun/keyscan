@@ -382,11 +382,6 @@
       try { localStorage.setItem('keyscan_lang', lang); } catch (e) {}
     }
     function setLang(lang) { applyLang(lang); }
-    (function () {
-      var saved = 'zh';
-      try { saved = localStorage.getItem('keyscan_lang') || 'zh'; } catch (e) {}
-      applyLang(saved);
-    })();
 
     /* Contact: copy email as a fallback when mailto can't open */
     function copyEmail(e) {
@@ -427,8 +422,15 @@
     function renderLetter(lang) {
       var el = document.getElementById("letter-body");
       if (!el) return;
+      if (lang === "en" ? !LETTER_EN : !LETTER_ZH) return;
       el.innerHTML = lang === "en" ? LETTER_EN : LETTER_ZH;
     }
+
+    (function () {
+      var saved = 'zh';
+      try { saved = localStorage.getItem('keyscan_lang') || 'zh'; } catch (e) {}
+      applyLang(saved);
+    })();
   </script>
 </body>
 </html>
