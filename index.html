@@ -159,6 +159,14 @@
   footer .links { display: flex; gap: 26px; justify-content: center; margin-bottom: 18px; flex-wrap: wrap; }
   footer .links a { border: none; font-weight: 600; }
 
+  /* Copy toast */
+  #copy-tip {
+    position: fixed; left: 50%; bottom: 28px; transform: translateX(-50%);
+    background: rgba(15, 23, 42, .92); color: #fff; font-size: 13px;
+    padding: 10px 18px; border-radius: 22px; box-shadow: 0 6px 24px rgba(0,0,0,.35);
+    display: none; z-index: 200; max-width: 88vw; text-align: center; word-break: break-all;
+  }
+
   @media (max-width: 640px) {
     .banner-grid { grid-template-columns: 1fr; }
     .shot-grid { grid-template-columns: repeat(2, 1fr); }
@@ -276,7 +284,7 @@
         <a href="https://avatartulkun.github.io/keyscan/KeyScan-privacy-policy.html" data-zh="隐私政策" data-en="Privacy Policy">隐私政策</a>
         <a href="https://github.com/avatartulkun" data-zh="GitHub" data-en="GitHub">GitHub</a>
         <a href="https://t.me/keyScanUsers" data-zh="Telegram" data-en="Telegram">Telegram</a>
-        <a href="mailto:keyscan.feedback@zohomail.com" data-zh="联系开发者" data-en="Contact">联系开发者</a>
+        <a href="mailto:keyscan.feedback@zohomail.com" data-zh="联系开发者" data-en="Contact" onclick="copyEmail(event)">联系开发者</a>
       </div>
       <p><span data-zh="© 2026 KeyScan · 开发者 tulkun · 本地优先，数据自主掌控" data-en="© 2026 KeyScan · Developer tulkun · Local-first, your data stays yours">© 2026 KeyScan · 开发者 tulkun · 本地优先，数据自主掌控</span></p>
     </div>
@@ -353,6 +361,39 @@
       try { saved = localStorage.getItem('keyscan_lang') || 'zh'; } catch (e) {}
       applyLang(saved);
     })();
+
+    /* Contact: copy email as a fallback when mailto can't open */
+    function copyEmail(e) {
+      var email = "keyscan.feedback@zohomail.com";
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(email).then(function () { showCopyTip(email); })
+          .catch(function () { legacyCopy(email); });
+      } else {
+        legacyCopy(email);
+      }
+    }
+    function legacyCopy(email) {
+      var ta = document.createElement("textarea");
+      ta.value = email;
+      ta.style.position = "fixed"; ta.style.opacity = "0";
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand("copy"); showCopyTip(email); } catch (err) {}
+      document.body.removeChild(ta);
+    }
+    function showCopyTip(email) {
+      var tip = document.getElementById("copy-tip");
+      if (!tip) {
+        tip = document.createElement("div");
+        tip.id = "copy-tip";
+        document.body.appendChild(tip);
+      }
+      var en = (document.documentElement.lang || "").indexOf("en") === 0;
+      tip.textContent = en ? "Email copied: " + email : "邮箱已复制：" + email;
+      tip.style.display = "block";
+      clearTimeout(tip._t);
+      tip._t = setTimeout(function () { tip.style.display = "none"; }, 2600);
+    }
   </script>
 </body>
 </html>
