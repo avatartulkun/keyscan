@@ -167,6 +167,23 @@
     display: none; z-index: 200; max-width: 88vw; text-align: center; word-break: break-all;
   }
 
+  /* Letter to users */
+  .letter { background: var(--bg-soft); }
+  .letter-body {
+    max-width: 760px; margin: 0 auto; text-align: left;
+    color: var(--ink-soft); font-size: 15px; line-height: 1.85;
+  }
+  .letter-body h3 { font-size: 17px; font-weight: 700; color: var(--ink); margin: 30px 0 10px; }
+  .letter-body p { margin: 12px 0; }
+  .letter-body blockquote {
+    margin: 16px 0; padding: 12px 18px; border-left: 3px solid var(--accent);
+    background: rgba(37, 99, 235, .06); border-radius: 0 10px 10px 0;
+  }
+  .letter-body blockquote b { color: var(--ink); }
+  .letter-body ul { margin: 10px 0 10px 22px; }
+  .letter-body li { margin: 6px 0; }
+  .letter-body a { color: var(--accent); text-decoration: underline; }
+
   @media (max-width: 640px) {
     .banner-grid { grid-template-columns: 1fr; }
     .shot-grid { grid-template-columns: repeat(2, 1fr); }
@@ -194,7 +211,6 @@
         <p class="sub" data-zh="智能扫描 · 密码账本 · TOTP 认证器 · 安全保险箱 · 自动填充 · 加密备份" data-en="Smart Scan · Password Ledger · TOTP · Secure Vault · Autofill · Encrypted Backup">智能扫描 · 密码账本 · TOTP 认证器 · 安全保险箱 · 自动填充 · 加密备份</p>
         <div class="cta">
           <a class="btn btn-primary" href="https://play.google.com/"><span data-zh="从 Google Play 下载" data-en="Download from Google Play">从 Google Play 下载</span></a>
-          <a class="btn btn-ghost" href="https://avatartulkun.github.io/keyscan/KeyScan-privacy-policy.html"><span data-zh="阅读隐私政策" data-en="Read Privacy Policy">阅读隐私政策</span></a>
         </div>
       </div>
       <div class="hero-carousel">
@@ -278,6 +294,13 @@
     </div>
   </section>
 
+  <section class="letter">
+    <div class="container">
+      <h2 class="section-title" data-zh="致用户" data-en="A Note to Users">致用户</h2>
+      <div class="letter-body" id="letter-body"></div>
+    </div>
+  </section>
+
   <footer>
     <div class="container">
       <div class="links">
@@ -353,6 +376,7 @@
       });
       document.getElementById('lang-zh').classList.toggle('active', lang === 'zh');
       document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+      renderLetter(lang);
       try { localStorage.setItem('keyscan_lang', lang); } catch (e) {}
     }
     function setLang(lang) { applyLang(lang); }
@@ -393,6 +417,15 @@
       tip.style.display = "block";
       clearTimeout(tip._t);
       tip._t = setTimeout(function () { tip.style.display = "none"; }, 2600);
+    }
+
+    /* Letter to users */
+    var LETTER_ZH = `<p>感谢你选择 KeyScan。</p><p>密码连接着我们的账号、身份、资料、工作和数字生活。我们认为，一款密码管理工具首先应该尊重用户对自己数据的控制权，而不是要求用户先注册账号、上传资料，再获得使用资格。</p><p>因此，KeyScan 坚持一个简单的理念：</p><blockquote><b>密码由你掌控，自由无需登录。</b></blockquote><h3>无需账号，打开即可使用</h3><p>与依赖账号登录和统一云端账户体系的密码管理工具不同，KeyScan 不要求你注册账号，也不需要先登录某个在线服务。</p><p>首次使用时，你只需要在自己的设备上创建安全保险箱、设置访问 PIN 和数据保护密钥，之后即可直接使用。</p><p>你的密码、OTP 密钥和安全资料默认保存在自己的设备中。每位用户的保险箱相互独立，KeyScan 不建立一个集中存放所有用户密码的云端账户数据库。</p><p>这样的设计减少了账号撞库、登录凭据被盗以及集中式数据库泄露所带来的风险。即使其他用户的账号、设备或数据发生安全问题，也不会因为所有人共用同一个 KeyScan 云端密码库，而直接连带暴露你的本地保险箱。</p><p>这并不意味着任何软件都能绝对免受攻击，而是尽量减少不必要的网络依赖和集中式单点风险，让每位用户的数据彼此独立。</p><blockquote><b>无需注册，不依赖统一账号，数据由你自己掌控。</b></blockquote><h3>AI 时代，更要保护自己的数字身份</h3><p>随着人工智能和在线服务快速发展，我们需要管理的已经不只是传统的账号和密码。</p><p>OTP 验证码、恢复代码、通行密钥、API 密钥、授权令牌、数字证书以及各种重要资料，都在成为数字身份的一部分。</p><p>服务越来越智能，账号越来越多，数字凭证的价值也越来越高。一次凭证泄露，影响的可能不只是某个账号，还可能涉及个人隐私、工作资料、数字资产，以及其他相互关联的服务。</p><p>AI 可以帮助我们提高效率，却不能代替我们保管自己的数字身份。重要数据存放在哪里、如何加密、怎样备份、谁能够访问，仍然需要我们自己认真决定。</p><p>KeyScan 希望帮助你把这些重要资料整理好、保护好、备份好，同时减少对统一账号、官方云端和长期订阅的依赖。</p><blockquote><b>AI 可以帮助我们管理世界，但自己的数字身份，仍应由自己掌控。</b></blockquote><h3>备份位置，也由你决定</h3><p>KeyScan 不强制使用官方云端，也不会把你绑定在某一家存储服务中。</p><p>你可以配置两个独立的 WebDAV 备份位置：一个连接免费的 WebDAV 服务，方便日常备份和恢复；另一个连接自己的家庭 NAS，保存一份由自己掌控的备份。</p><p>两个备份位置可以相互补充。当其中一个服务暂时无法访问、停止运营、设备故障或发生误删除时，你仍有机会通过另一个备份位置恢复数据，降低依赖单一存储位置带来的风险。</p><p>WebDAV 是一种开放协议。你可以自由选择服务商，也可以使用自己的服务器或家庭 NAS。将来更换存储位置时，不需要被 KeyScan 的专有云平台限制。</p><p>KeyScan 保存到 WebDAV 的应当是经过加密的备份文件，而不是可以直接阅读的明文密码。即使如此，你仍然需要妥善保护 WebDAV 账号、家庭 NAS 和数据保护密钥，并避免将密钥与备份文件存放在同一个位置。</p><blockquote><b>免费 WebDAV 或家庭 NAS，备份存在哪里，由你决定。</b></blockquote><h3>一次购买，不用订阅换取安全</h3><p>我们认为，密码管理是一项长期需求，但不应该因为用户保存的是重要数据，就通过持续订阅形成长期捆绑。</p><p>KeyScan 采用一次买断的授权方式，不通过每月或每年续费来持续解锁核心功能。购买后，你可以继续使用已购买版本提供的核心能力，也不会因为没有续费而失去对自己密码、OTP 密钥和安全资料的访问权。</p><p>我们不会利用“数据很重要”制造付费焦虑，也不会用停止订阅来限制用户访问已经保存的数据。</p><p>KeyScan 同样不强制销售官方云存储。你可以使用免费的 WebDAV，也可以使用自己的家庭 NAS。第三方存储服务或 NAS 产生的费用，由相应服务提供商决定，与 KeyScan 的软件授权相互独立。</p><blockquote><b>无需账号、无需强制订阅、不绑定官方云端。软件可以买断，数据始终属于你。</b></blockquote><h3>自由也意味着责任</h3><p>我们必须坦诚说明：没有任何软件、设备或存储方式能够承诺绝对安全。</p><p>本地加密、独立保险箱和自主备份可以降低部分风险，但设备丢失、恶意软件、过于简单的 PIN、数据保护密钥遗失、明文导出文件，以及配置不安全的 WebDAV 或家庭 NAS，仍可能影响你的数据安全。</p><p>为了更好地保护自己的数据，请你：</p><ul><li>设置不容易被猜到的访问 PIN；</li><li>开启生物识别和自动锁定；</li><li>妥善保存数据保护密钥；</li><li>定期创建加密备份；</li><li>尽量保留两个相互独立的备份位置；</li><li>定期确认备份文件能够正常恢复；</li><li>不要通过不可信渠道发送明文密码；</li><li>不要将数据保护密钥和备份文件保存在同一位置；</li><li>为 WebDAV 和家庭 NAS 设置强密码，并及时更新相关系统。</li></ul><p>KeyScan 无法替你找回遗失的数据保护密钥。这样的设计减少了开发者或第三方掌握恢复权限的可能，也意味着数据的最终控制权和保管责任属于你。</p><p>这正是“自由”的另一面：你拥有自己的数据，也拥有决定如何保护它的权利与责任。</p><h3>我们对安全的态度</h3><p>我们不会把“安全”只当作一句宣传语。KeyScan 会持续减少不必要的权限、网络依赖和数据暴露，尽量让敏感操作保持透明，并清楚地告诉你每项操作可能带来的影响。</p><p>我们希望 KeyScan 不只是一个保存密码的工具，更是一个由用户自己掌控的数字保险箱。</p><h3>欢迎反馈</h3><p>KeyScan 仍在不断完善。无论是功能建议、界面体验、兼容性问题，还是你对安全设计的想法，都欢迎发送到 <a href="mailto:keyscan.feedback@zohomail.com">keyscan.feedback@zohomail.com</a>。</p><p>为了保护你的安全，请不要在反馈邮件中发送真实密码、OTP 密钥、数据保护密钥、完整备份文件或其他敏感信息。</p><p>感谢你的选择与信任。愿 KeyScan 帮助你更自由、更安心地管理自己的数字生活。</p><p><b>KeyScan</b></p>`;
+    var LETTER_EN = `<p>Thank you for choosing KeyScan.</p><p>KeyScan is built on a simple principle: <b>your passwords are under your control, and freedom requires no login.</b> Your passwords, OTP secrets and secure records are stored on your device by default. KeyScan does not require a central KeyScan account or force you to use an official cloud.</p><p>You may use two independent WebDAV locations, including a public service and your own home NAS. Backups are encrypted, but you remain responsible for protecting your PIN, data-protection key, WebDAV credentials and recovery copies.</p><p>No software can promise absolute security. Use a strong PIN, enable biometrics and auto-lock, keep two independent backups, test recovery regularly, and never store a backup beside its key.</p><p>Feedback: <a href="mailto:keyscan.feedback@zohomail.com">keyscan.feedback@zohomail.com</a>. Never send real passwords, OTP secrets, protection keys or complete backups.</p>`;
+    function renderLetter(lang) {
+      var el = document.getElementById("letter-body");
+      if (!el) return;
+      el.innerHTML = lang === "en" ? LETTER_EN : LETTER_ZH;
     }
   </script>
 </body>
